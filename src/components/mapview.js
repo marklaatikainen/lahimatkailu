@@ -92,7 +92,7 @@ export default class MapViewComponent extends React.Component {
     } else if (icon == 'Nähtävyys') {
       return 'http://maps.gstatic.com/mapfiles/ms2/micons/tree.png'
     } else {
-      return 'http://maps.gstatic.com/mapfiles/ms2/micons/flag.png'
+      return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png'
     }
   }
 
