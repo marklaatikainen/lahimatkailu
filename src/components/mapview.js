@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {
-  StyleSheet,
   View,
-  Dimensions,
   AppRegistry,
   DeviceEventEmitter,
   Image
@@ -10,6 +8,9 @@ import {
 import MapView, {Marker} from 'react-native-maps';
 import getData from './getData';
 import RNALocation from 'react-native-android-location';
+
+// style
+import {styles} from './styles/mapviewstyle';
 
 export default class MapViewComponent extends React.Component {
   constructor(props) {
@@ -146,19 +147,3 @@ export default class MapViewComponent extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  map: {
-    height: Dimensions
-      .get('screen')
-      .height - 46,
-    width: Dimensions
-      .get('screen')
-      .width,
-    alignItems: 'center',
-    paddingTop: 0,
-  }
-});

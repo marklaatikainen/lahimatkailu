@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-    StyleSheet,
     View,
     FlatList,
     ActivityIndicator,
@@ -18,6 +17,8 @@ import TargetInfo from './targetInfo';
 import SearchBarComponent from './search';
 import getData from './getData';
 import Icon from 'react-native-vector-icons/FontAwesome';
+// style
+import { styles } from './styles/searchpagestyle';
 
 export default class SearchPage extends React.Component {
     constructor(props) {
@@ -154,61 +155,18 @@ export default class SearchPage extends React.Component {
                 ]}>
                     <View style={styles.topBar}>
                         <TouchableOpacity style={styles.icon} onPress={() => this.backToList()}>
-                            <Icon name='arrow-left' size={20} color='black'/>
+                            <Icon name='arrow-left' size={20} color='white'/>
                         </TouchableOpacity>
                         <Text style={styles.topBarText}>Kohteen tiedot</Text>
                         <TouchableOpacity
                             style={styles.openmap}
                             onPress={() => this.openMap(this.state.item.location.latitude, this.state.item.location.longitude)}>
-                            <Icon name="dot-circle-o" color="black" size={20}/>
+                            <Icon name="dot-circle-o" color="white" size={20}/>
                         </TouchableOpacity>
                     </View>
                     <TargetInfo data={this.state.item}/>
                 </Animated.View>
-
             )
         }
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    loading: {
-        marginTop: 180,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    text: {
-        fontSize: 15
-    },
-    topBar: {
-        backgroundColor: 'white',
-        opacity: 0.6,
-        height: 30,
-        zIndex: 1000
-    },
-    topBarText: {
-        position: 'absolute',
-        top: 5,
-        fontWeight: 'bold',
-        left: '38%',
-        fontSize: 14,
-        color: 'black'
-    },
-    icon: {
-        marginLeft: 5,
-        marginTop: 3
-    },
-    openmap: {
-        position: 'absolute',
-        top: 5,
-        right: 10
-    },
-    notfound: {
-        textAlign: 'center',
-        justifyContent: 'center',
-        marginTop: 70
-    }
-})

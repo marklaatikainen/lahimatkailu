@@ -1,14 +1,16 @@
 import React, {Component} from 'react'
 import {
-    StyleSheet,
     Text,
     View,
     Image,
     TouchableHighlight,
     Animated
-} from 'react-native'; //Step 1
+} from 'react-native';
 
-class Panel extends Component {
+// style
+import { styles } from './styles/panelstyle';
+
+export default class Panel extends Component {
     constructor(props) {
         super(props);
 
@@ -97,23 +99,3 @@ class Panel extends Component {
         );
     }
 }
-export default Panel;
-
-var styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'transparent',
-        marginTop: 10,
-        overflow: 'hidden'
-    },
-    iconContainer: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end'
-    },
-    button: {
-        marginRight: 10
-    },
-    body: {
-        alignItems: 'flex-end',
-        paddingTop: 10
-    }
-});
