@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
     View,
     FlatList,
@@ -40,17 +40,18 @@ export default class SearchPage extends React.Component {
         this.fetchData();
     }
 
-    fetchData = async() => {
-        const res = await getData.fetchData();
-        this.setState({data: res, initialData: res});
+    fetchData = async () => {
+        getData.fetchData().then(res => {
+            this.setState({ data: res, initialData: res });
+        });
     }
 
     componentDidUpdate() {
         this.fadeIntoTarget();
     }
 
-    function (item, id) {
-        this.setState({selectedItem: id, item: item})
+    function(item, id) {
+        this.setState({ selectedItem: id, item: item })
     }
 
     // Animaatiot
@@ -76,10 +77,10 @@ export default class SearchPage extends React.Component {
     backToList() {
         Animated
             .timing(this.opacityValue, {
-            toValue: 0,
-            duration: 200
-        })
-            .start(() => this.setState({selectedItem: '', item: []}))
+                toValue: 0,
+                duration: 200
+            })
+            .start(() => this.setState({ selectedItem: '', item: [] }))
     }
 
     openMap = (lat, lng) => {
@@ -89,7 +90,7 @@ export default class SearchPage extends React.Component {
     };
 
     filteredList = (newData) => {
-        this.setState({data: newData})
+        this.setState({ data: newData })
     }
 
     render() {
@@ -113,11 +114,11 @@ export default class SearchPage extends React.Component {
                         ? (
                             <View>
                                 <SearchBarComponent
-                                    textLength={(len) => this.setState({textLength: len})}
+                                    textLength={(len) => this.setState({ textLength: len })}
                                     filterList={this.state.initialData}
-                                    addFilter={(data) => this.filteredList(data)}/> 
-                                    {
-                                        renderdata.length === 0 && this.state.textLength > 0
+                                    addFilter={(data) => this.filteredList(data)} />
+                                {
+                                    renderdata.length === 0 && this.state.textLength > 0
                                         ? (
                                             <Text style={styles.notfound}>Ei hakutuloksia..</Text>
                                         )
@@ -125,16 +126,16 @@ export default class SearchPage extends React.Component {
                                             <FlatList
                                                 data={renderdata}
                                                 keyExtractor={item => item._id}
-                                                renderItem={({item, index}) => (<Item
-                                                openItem={() => this.function (item, item._id)}
-                                                data={item}
-                                                index={index}/>)}/>
+                                                renderItem={({ item, index }) => (<Item
+                                                    openItem={() => this.function(item, item._id)}
+                                                    data={item}
+                                                    index={index} />)} />
                                         )
-                                        }
+                                }
                             </View>
                         )
-                        : (<ActivityIndicator style={styles.loading} size="large" color="blue"/>)
-}
+                        : (<ActivityIndicator style={styles.loading} size="large" color="blue" />)
+                    }
                 </View>
             )
         } else {
@@ -143,28 +144,28 @@ export default class SearchPage extends React.Component {
 
                 <Animated.View
                     style={[
-                    styles.container, {
-                        opacity: this.opacityValue
-                    }, {
-                        transform: [
-                            {
-                                scale: scaleIt
-                            }
-                        ]
-                    }
-                ]}>
+                        styles.container, {
+                            opacity: this.opacityValue
+                        }, {
+                            transform: [
+                                {
+                                    scale: scaleIt
+                                }
+                            ]
+                        }
+                    ]}>
                     <View style={styles.topBar}>
                         <TouchableOpacity style={styles.icon} onPress={() => this.backToList()}>
-                            <Icon name='arrow-left' size={20} color='white'/>
+                            <Icon name='arrow-left' size={20} color='white' />
                         </TouchableOpacity>
                         <Text style={styles.topBarText}>Kohteen tiedot</Text>
                         <TouchableOpacity
                             style={styles.openmap}
                             onPress={() => this.openMap(this.state.item.location.latitude, this.state.item.location.longitude)}>
-                            <Icon name="dot-circle-o" color="white" size={20}/>
+                            <Icon name="dot-circle-o" color="white" size={20} />
                         </TouchableOpacity>
                     </View>
-                    <TargetInfo data={this.state.item}/>
+                    <TargetInfo data={this.state.item} />
                 </Animated.View>
             )
         }
