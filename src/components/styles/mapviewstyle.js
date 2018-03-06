@@ -13,5 +13,20 @@ export const styles = StyleSheet.create({
             .width,
         alignItems: 'center',
         paddingTop: 0
+    },
+    myClusterStyle: {
+        borderWidth: 3,
+        width: 40,
+        height: 40,
+        alignItems: 'center',
+        borderColor: 'white',
+        justifyContent: 'center',
+        backgroundColor: 'red',
+        borderRadius: 20,
+    },
+    myClusterTextStyle: {
+        fontSize: 16,
+        color: 'white',
+        fontWeight: 'bold'
     }
 });

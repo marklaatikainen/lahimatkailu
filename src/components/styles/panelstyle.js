@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
     container: {
         backgroundColor: 'transparent',
         marginTop: 10,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        zIndex: 9999999,
     },
     iconContainer: {
         flexDirection: 'row',
