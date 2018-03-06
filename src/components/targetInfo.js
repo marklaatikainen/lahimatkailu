@@ -10,6 +10,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MapView, {Marker} from 'react-native-maps';
 import CustomCarousel from './carousel';
+import TableOpenHours from './tableOpenHours'
 
 // style
 import { styles } from './styles/targetinfostyle';
@@ -46,12 +47,7 @@ export default class TargetInfo extends Component {
                     <Text style={styles.name}>{this.props.data.name}</Text>
                     <Text style={styles.subtitle}>{this.props.data.type}</Text>
                     <Text style={styles.description}>{this.props.data.info}</Text>
-                    <Text style={styles.openingTitle}>Aukioloajat</Text>
-                    <Text style={styles.opening}>
-                        ma - pe: {"\t\t" + this.props.data.openingHours.mon.start + ' - ' + this.props.data.openingHours.mon.end + "\n"}
-                        la: {"\t\t\t\t\t\t\t" + this.props.data.openingHours.sat.start + ' - ' + this.props.data.openingHours.sat.end + "\n"}
-                        su: {"\t\t\t\t\t\t" + this.props.data.openingHours.sun.start + ' - ' + this.props.data.openingHours.sun.end}
-                    </Text>
+                    <TableOpenHours data={this.props.data.openingHours} style={styles} />
                 </View>
                 <MapView
                     style={styles.map}
