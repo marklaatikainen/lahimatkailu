@@ -4,6 +4,9 @@ import MapView from 'react-native-maps';
 import {Marker} from 'react-native-maps';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+// style
+import {styles} from './styles/targetlocationstyle';
+
 export default class TargetLocation extends Component {
     constructor(props) {
         super(props);
@@ -37,19 +40,3 @@ export default class TargetLocation extends Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    map: {
-        marginTop: 10,
-        alignSelf: 'center',
-        width: Dimensions
-            .get('window')
-            .width,
-        height: Dimensions
-            .get('window')
-            .height - 140
-    }
-});

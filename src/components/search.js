@@ -3,6 +3,9 @@ import {StyleSheet, View} from 'react-native';
 import {SearchBar} from 'react-native-elements'
 import SearchPage from './searchpage';
 
+// style
+import {styles} from './styles/searchstyle';
+
 export default class SearchBarComponent extends Component {
     constructor(props) {
         super(props);
@@ -42,16 +45,3 @@ export default class SearchBarComponent extends Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    searchContainer: {
-        marginTop: 0,
-        paddingTop: 0,
-        backgroundColor: 'white'
-    },
-    searchBar: {
-        backgroundColor: 'white',
-        borderWidth: 1,
-        borderColor: 'green'
-    }
-});

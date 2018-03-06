@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import {
-    StyleSheet,
-    View,
-    Text,
-} from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, View, Text} from 'react-native';
+
+// style
+import {styles} from './styles/settingspagestyle';
 
 export default class SettingsPage extends React.Component {
     render() {
@@ -14,14 +13,3 @@ export default class SettingsPage extends React.Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    text: {
-        fontSize: 20,
-        textAlign: 'center',
-        marginTop: 20,
-    },
-});
