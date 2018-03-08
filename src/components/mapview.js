@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, AppRegistry, DeviceEventEmitter, Image, Text} from 'react-native';
+import {View, AppRegistry, DeviceEventEmitter, Image, Text, TouchableWithoutFeedback} from 'react-native';
 import {Callout, Marker} from 'react-native-maps';
 import ClusteredMapView from 'react-native-maps-super-cluster'
 
@@ -110,7 +110,7 @@ export default class MapViewComponent extends React.Component {
       clusteredPoints = clusteringEngine.getLeaves(clusterId, 100)
 
     return (
-      <Marker coordinate={coordinate} onPress={onPress} >
+      <Marker coordinate={coordinate} onPress={(onPress)} >
         <View style={styles.myClusterStyle}>
           <Text style={styles.myClusterTextStyle}>
             {pointCount}
@@ -128,16 +128,21 @@ export default class MapViewComponent extends React.Component {
     }}
     title={data.name}
     description={data.type}
+    onCalloutPress={() => this.handleCalloutPress(data)}
   >
-    <Image
-      style={{
-      width: 32,
-      height: 32
-    }}
-      source={{
-      uri: this.markerImgUrl(data.type)
-    }}/>
+      <Image
+        style={{
+        width: 32,
+        height: 32
+      }}
+        source={{
+        uri: this.markerImgUrl(data.type)
+      }}/>
   </Marker>
+
+  handleCalloutPress(data) {
+    this.props.setSelectedItem(data, data._id);
+  }
 
   render() {
     return (
