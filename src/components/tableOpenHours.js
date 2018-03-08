@@ -18,7 +18,7 @@ export default class TableOpenHours extends Component {
             <View>
                 <Text style={this.props.style.openingTitle}>Aukioloajat</Text>
                 <Table style={this.props.style.opening} borderStyle={{ borderWidth: 0 }}>
-                    <Rows flexArr={[1.5, 1.5, 0.5, 3, 1.5, 1.5, 0.5, 3]} heightArr={[18, 18, 18, 18]} data={tableRows2}></Rows>
+                    <Rows flexArr={[1.5, 1.5, 0.5, 3, 1.5, 1.5, 0.5, 3]} heightArr={[22, 22, 22, 22]} data={tableRows2}></Rows>
                 </Table>
             </View>
         )

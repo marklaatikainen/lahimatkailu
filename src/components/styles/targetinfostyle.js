@@ -74,5 +74,26 @@ export const styles = StyleSheet.create({
     },
     textarea: {
         backgroundColor: '#fff'
-    }
+    },  topBar: {
+        backgroundColor: '#74A335',
+        height: 30,
+        zIndex: 1000
+    },
+    topBarText: {
+        position: 'absolute',
+        top: 5,
+        fontWeight: 'bold',
+        left: '38%',
+        fontSize: 14,
+        color: 'white'
+    },
+    backIcon: {
+        marginLeft: 5,
+        marginTop: 3
+    },
+    openmap: {
+        position: 'absolute',
+        top: 5,
+        right: 10
+    },
 });

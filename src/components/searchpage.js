@@ -23,9 +23,6 @@ import { styles } from './styles/searchpagestyle';
 export default class SearchPage extends React.Component {
     constructor(props) {
         super(props);
-        this.opacityValue = new Animated.Value(0);
-        this.opacityItem = new Animated.Value(0);
-        this.scaleValue = new Animated.Value(0);
 
         this.state = {
             data: [],
@@ -46,62 +43,19 @@ export default class SearchPage extends React.Component {
         });
     }
 
-    componentDidUpdate() {
-        this.fadeIntoTarget();
-    }
-
-    function(item, id) {
+    setSelectedItem(item, id) {
         this.setState({ selectedItem: id, item: item })
     }
 
-    // Animaatiot
-    fadeIntoTarget() {
-        this
-            .scaleValue
-            .setValue(0)
-        this
-            .opacityValue
-            .setValue(0)
-        Animated.parallel([
-            Animated.timing(this.scaleValue, {
-                toValue: 1,
-                duration: 300
-            }),
-            Animated.timing(this.opacityValue, {
-                toValue: 1,
-                duration: 300
-            })
-        ]).start()
-    }
-
     backToList() {
-        Animated
-            .timing(this.opacityValue, {
-                toValue: 0,
-                duration: 200
-            })
-            .start(() => this.setState({ selectedItem: '', item: [] }))
+        this.setState({ selectedItem: '', item: [] });
     }
-
-    openMap = (lat, lng) => {
-        Linking
-            .openURL('http://maps.google.com/maps?daddr=' + lat + ',' + lng)
-            .catch(err => console.error('An error occurred', err));;
-    };
 
     filteredList = (newData) => {
         this.setState({ data: newData })
     }
 
     render() {
-        const scaleIt = this
-            .scaleValue
-            .interpolate({
-                inputRange: [
-                    0, 1
-                ],
-                outputRange: [0.94, 1]
-            })
 
         if (this.state.selectedItem == '') {
             let renderdata = this.state.data !== []
@@ -127,7 +81,7 @@ export default class SearchPage extends React.Component {
                                                 data={renderdata}
                                                 keyExtractor={item => item._id}
                                                 renderItem={({ item, index }) => (<Item
-                                                    openItem={() => this.function(item, item._id)}
+                                                    openItem={() => this.setSelectedItem(item, item._id)}
                                                     data={item}
                                                     index={index} />)} />
                                         )
@@ -141,32 +95,7 @@ export default class SearchPage extends React.Component {
         } else {
             // kohdesivu
             return (
-
-                <Animated.View
-                    style={[
-                        styles.container, {
-                            opacity: this.opacityValue
-                        }, {
-                            transform: [
-                                {
-                                    scale: scaleIt
-                                }
-                            ]
-                        }
-                    ]}>
-                    <View style={styles.topBar}>
-                        <TouchableOpacity style={styles.icon} onPress={() => this.backToList()}>
-                            <Icon name='arrow-left' size={20} color='white' />
-                        </TouchableOpacity>
-                        <Text style={styles.topBarText}>Kohteen tiedot</Text>
-                        <TouchableOpacity
-                            style={styles.openmap}
-                            onPress={() => this.openMap(this.state.item.location.latitude, this.state.item.location.longitude)}>
-                            <Icon name="dot-circle-o" color="white" size={20} />
-                        </TouchableOpacity>
-                    </View>
-                    <TargetInfo data={this.state.item} />
-                </Animated.View>
+                <TargetInfo data={this.state.item} backToList={() => this.backToList()} />
             )
         }
     }

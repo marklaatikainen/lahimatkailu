@@ -154,7 +154,9 @@ export default class MapViewComponent extends React.Component {
           showsMyLocationButton={false}
           showsUserLocation={true}
           minZoom={5}
-          maxZoom={12}/>
+          maxZoom={12}
+          showInfoWindow={true}
+          />
       </View>
     );
   }

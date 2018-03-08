@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         borderColor: 'white',
         justifyContent: 'center',
-        backgroundColor: 'red',
+        backgroundColor: '#74A335',
         borderRadius: 20,
     },
     myClusterTextStyle: {
