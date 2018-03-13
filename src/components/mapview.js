@@ -1,7 +1,15 @@
 import React, {Component} from 'react';
-import {View, AppRegistry, DeviceEventEmitter, Image, Text, TouchableWithoutFeedback} from 'react-native';
+import {
+  View,
+  AppRegistry,
+  DeviceEventEmitter,
+  Image,
+  Text,
+  TouchableWithoutFeedback
+} from 'react-native';
 import {Callout, Marker} from 'react-native-maps';
 import ClusteredMapView from 'react-native-maps-super-cluster'
+import {getDistance} from 'geolib';
 
 import { fetchData, fetchDataByLocation } from './getData';
 import RNALocation from 'react-native-android-location';
@@ -22,6 +30,8 @@ export default class MapViewComponent extends React.Component {
     super(props);
 
     this.state = {
+      latitude: 60.169856,
+      longitude: 24.938379,
       data: [],
       markers: [],
       options: {
@@ -31,6 +41,11 @@ export default class MapViewComponent extends React.Component {
       },
       region: this.setInitialRegion()
     };
+  }
+
+  precisionRound(number, precision) {
+    var factor = Math.pow(10, precision);
+    return Math.round(number * factor) / factor;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -120,7 +135,7 @@ export default class MapViewComponent extends React.Component {
       clusteredPoints = clusteringEngine.getLeaves(clusterId, 100)
 
     return (
-      <Marker coordinate={coordinate} onPress={(onPress)} >
+      <Marker coordinate={coordinate} onPress={(onPress)}>
         <View style={styles.myClusterStyle}>
           <Text style={styles.myClusterTextStyle}>
             {pointCount}
@@ -135,9 +150,9 @@ export default class MapViewComponent extends React.Component {
     coordinate={{
     latitude: data.location.latitude,
     longitude: data.location.longitude
-    }}
+  }}
     title={data.name}
-    description={data.type}
+    description={"Etäisyys linnuntietä: " + this.precisionRound(getDistance({latitude: this.state.latitude, longitude: this.state.longitude}, {latitude: data.location.latitude, longitude: data.location.longitude}) / 1000, 1) + "km"}
     onCalloutPress={() => this.handleCalloutPress(data)}
   >
     <View style={{
@@ -148,7 +163,7 @@ export default class MapViewComponent extends React.Component {
       <Image
         style={{
         width: 32,
-        height: 32,        
+        height: 32        
       }}
         source={{
         uri: this.markerImgUrl(data.type)
@@ -182,8 +197,7 @@ export default class MapViewComponent extends React.Component {
           showsUserLocation={true}
           minZoom={5}
           maxZoom={12}
-          showInfoWindow={true}
-          />
+          showInfoWindow={true}/>
       </View>
     );
   }

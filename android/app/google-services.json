@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "868155557963",
+    "firebase_url": "https://lahimatkailu-4db6f.firebaseio.com",
+    "project_id": "lahimatkailu-4db6f",
+    "storage_bucket": "lahimatkailu-4db6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868155557963:android:118481c3be71aa0a",
+        "android_client_info": {
+          "package_name": "com.lahimatkailu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868155557963-5dep5bfqskq9arjmeebdq8d2357a7pe8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZsfJ8LOJr0iNy2tnCyoEJ90VNw3FxOIU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
