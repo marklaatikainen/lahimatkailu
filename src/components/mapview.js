@@ -3,11 +3,12 @@ import {View, AppRegistry, DeviceEventEmitter, Image, Text, TouchableWithoutFeed
 import {Callout, Marker} from 'react-native-maps';
 import ClusteredMapView from 'react-native-maps-super-cluster'
 
-import getData from './getData';
+import { fetchData, fetchDataByLocation } from './getData';
 import RNALocation from 'react-native-android-location';
 
 // style
 import {styles} from './styles/mapviewstyle';
+import { customMapStyle } from './styles/mapviewstyle';
 
 const INIT_REGION = {
   latitude: 60.169856,
@@ -27,12 +28,21 @@ export default class MapViewComponent extends React.Component {
         food: true,
         sight: true,
         service: true
-      }
+      },
+      region: this.setInitialRegion()
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setProps(nextProps);
+  }
+
+  setInitialRegion() {
+    if (this.props.region != null) {
+      return this.props.region;
+    } else {
+      return INIT_REGION;
+    }
   }
 
   setProps(nextProps) {
@@ -85,7 +95,7 @@ export default class MapViewComponent extends React.Component {
   }
 
   fetchData = async() => {
-    const res = await getData.fetchData();
+    const res = await fetchDataByLocation(this.state.region, 0.09);
     this.setState({data: res, markers: res});
   };
 
@@ -130,27 +140,39 @@ export default class MapViewComponent extends React.Component {
     description={data.type}
     onCalloutPress={() => this.handleCalloutPress(data)}
   >
+    <View style={{
+      borderRadius: 32,
+      backgroundColor: 'rgba(255, 255, 255, 0.6)', 
+      padding: 3
+    }}>
       <Image
         style={{
         width: 32,
-        height: 32
+        height: 32,        
       }}
         source={{
         uri: this.markerImgUrl(data.type)
       }}/>
+    </View> 
   </Marker>
 
+  onRegionChange(region) {
+    this.setState({ region }, () => this.fetchData());
+  }
+
   handleCalloutPress(data) {
-    this.props.setSelectedItem(data, data._id);
+    this.props.setSelectedItem(data, data._id, this.state.region);
   }
 
   render() {
     return (
       <View style={styles.container}>
         <ClusteredMapView
+          customMapStyle={customMapStyle}
           style={styles.map}
           data={this.state.markers}
-          initialRegion={INIT_REGION}
+          initialRegion={this.state.region}
+          onRegionChange={region => this.onRegionChange(region)}
           ref={(r) => {
           this.map = r
         }}

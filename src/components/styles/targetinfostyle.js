@@ -6,11 +6,12 @@ export const styles = StyleSheet.create({
     },
     map: {
         elevation: 5,
+        marginTop: -100,
         marginBottom: 0,
         width: Dimensions
             .get('window')
             .width,
-        height: 100
+        height: 140
     },
     name: {
         fontSize: 20,
@@ -41,6 +42,7 @@ export const styles = StyleSheet.create({
         marginLeft: 25
     },
     opening: {
+        minHeight: (Dimensions.get('window').height / 2) - 100,
         marginLeft: 25,
         marginBottom: 10
     },

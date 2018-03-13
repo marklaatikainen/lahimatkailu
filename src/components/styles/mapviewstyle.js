@@ -1,5 +1,32 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
+export const customMapStyle = [
+    {
+      "featureType": "poi",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi.park",
+      "stylers": [
+        {
+          "visibility": "on"
+        }
+      ]
+    },
+    {
+      "featureType": "transit",
+      "stylers": [
+        {
+          "weight": 1
+        }
+      ]
+    }
+  ];
+
 export const styles = StyleSheet.create({
     container: {
         flex: 1

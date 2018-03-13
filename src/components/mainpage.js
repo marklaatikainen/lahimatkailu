@@ -10,12 +10,14 @@ export default class MainPage extends React.Component {
 
         this.state = {
             item: [],
+            selectedItem: '',
+            selectedItemRegion: null,
             options: {
                 food: true,
                 sight: true,
                 service: true
             },
-            selectedItem: '',
+            
         }
     }
 
@@ -28,8 +30,8 @@ export default class MainPage extends React.Component {
         this.setState({ selectedItem: '', item: [] });
     }
 
-    setSelectedItem(item, id) {
-        this.setState({ selectedItem: id, item: item })
+    setSelectedItem(item, id, region) {
+        this.setState({ selectedItem: id, item: item, selectedItemRegion: region })
     }
 
     render() {
@@ -37,7 +39,7 @@ export default class MainPage extends React.Component {
         if (selectedItem === '') {
             return (
                 <View>
-                    <MapViewComponent options={this.state.options} setSelectedItem={(item, id) => this.setSelectedItem(item, id)}  />
+                    <MapViewComponent options={this.state.options} setSelectedItem={(item, id, region) => this.setSelectedItem(item, id, region)} region={this.state.selectedItemRegion} />
                     <CheckBoxes onChange={(e) => this.checked(e)} />
                 </View>
             )
