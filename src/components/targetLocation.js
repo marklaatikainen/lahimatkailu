@@ -32,9 +32,7 @@ export default class TargetLocation extends Component {
                         coordinate={{
                         latitude: this.props.data.location.latitude,
                         longitude: this.props.data.location.longitude
-                    }}
-                        title={this.props.data.name}
-                        description={this.props.data.type}/>
+                    }}/>
                 </MapView>
             </View>
         )

@@ -138,12 +138,10 @@ export default class MapViewComponent extends React.Component {
   renderMarker = (data) => <Marker
     key={data.name}
     coordinate={{
-    latitude: data.location.latitude,
-    longitude: data.location.longitude
-  }}
-    title={data.name}
-    description={"Etäisyys linnuntietä: " + this.precisionRound(getDistance({latitude: this.state.latitude, longitude: this.state.longitude}, {latitude: data.location.latitude, longitude: data.location.longitude}) / 1000, 1) + "km"}
-    onCalloutPress={() => this.handleCalloutPress(data)}>
+      latitude: data.location.latitude,
+      longitude: data.location.longitude
+    }}
+   onCalloutPress={() => this.handleCalloutPress(data)}>
     <Image
       style={{
       width: 32,
@@ -152,6 +150,14 @@ export default class MapViewComponent extends React.Component {
       source={{
       uri: this.markerImgUrl(data.type)
     }}/>
+    <Callout style={{ width: 200, height: 100 }}>
+      <View>
+          <Text>{data.name}</Text>
+          <Text>{data.type}</Text>
+          <Text>Etäisyys linnuntietä: {this.precisionRound(getDistance({latitude: this.state.latitude, longitude: this.state.longitude}, {latitude: data.location.latitude, longitude: data.location.longitude}) / 1000, 1)} km</Text>
+          <Text>{}</Text>
+        </View>
+    </Callout>
   </Marker>
 
   handleCalloutPress(data) {
