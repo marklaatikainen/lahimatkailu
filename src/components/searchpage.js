@@ -20,6 +20,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 // style
 import { styles } from './styles/searchpagestyle';
 
+import ListFilter from './listFilter';
+//import CheckBoxes from './checkBoxComponent';
+
 export default class SearchPage extends React.Component {
     constructor(props) {
         super(props);
@@ -32,7 +35,13 @@ export default class SearchPage extends React.Component {
             initialData: [],
             selectedItem: '',
             item: [],
-            textLength: 0
+            textLength: 0,
+            filterList: [],
+            options: {
+                food: true,
+                sight: true,
+                service: true
+            }
         };
     }
 
@@ -43,11 +52,13 @@ export default class SearchPage extends React.Component {
     fetchData = async () => {
         getData.fetchData().then(res => {
             this.setState({ data: res, initialData: res });
+            //this.filter({data:res});
         });
     }
 
     componentDidUpdate() {
         this.fadeIntoTarget();
+        this.filter();
     }
 
     function(item, id) {
@@ -93,6 +104,54 @@ export default class SearchPage extends React.Component {
         this.setState({ data: newData })
     }
 
+    checked(data) {
+        this.setState({
+            options: data
+        });
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(prevState.options !== this.state.options){
+            this.filter();
+        }
+    }
+
+    componentWillUpdate(prevProps, prevState) {
+        if(prevState.options !== this.state.options){
+            this.filter(prevState);
+        }
+        
+    }
+
+    filter(prevState) {
+        let filterList = [];
+        let origData = this.state.initialData.length;
+        for(let i=0; i < origData; i++) {
+            if(this.state.options.food === true && this.state.initialData[i].type == "Ruoka") {
+                filterList.push(this.state.initialData[i]);
+            }
+            if(this.state.options.sight === true && this.state.initialData[i].type == "Nähtävyys") {
+                filterList.push(this.state.initialData[i]);
+            }
+            if(this.state.options.service === true && this.state.initialData[i].type == "Palvelu") {
+                filterList.push(this.state.initialData[i]);
+            }
+            // if(this.state.options.food === true && this.state.options.sight === true && this.state.options.service === true) {
+            //     filterList = this.state.initialData;
+            // }
+        };
+        if(origData > filterList.length) {
+            this.setState({
+                data: filterList
+            })
+            console.log("Toimii?!");
+        }else{
+            //filterList = this.state.data;
+            console.log("Ei toimi");
+            console.log("filter: "+filterList.length+" data: "+this.state.data.length+" orig: "+origData);
+        }
+    }
+    
     render() {
         const scaleIt = this
             .scaleValue
@@ -113,6 +172,8 @@ export default class SearchPage extends React.Component {
                     {this.state.initialData.length > 0
                         ? (
                             <View>
+                                <ListFilter onChange={( (e) => this.checked(e))}/>
+                                {/* <CheckBoxes onChange={( (e) => this.checked(e))}/> */}
                                 <SearchBarComponent
                                     textLength={(len) => this.setState({ textLength: len })}
                                     filterList={this.state.initialData}
@@ -132,6 +193,7 @@ export default class SearchPage extends React.Component {
                                                     index={index} />)} />
                                         )
                                 }
+                                
                             </View>
                         )
                         : (<ActivityIndicator style={styles.loading} size="large" color="blue" />)
