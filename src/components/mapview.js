@@ -110,7 +110,7 @@ export default class MapViewComponent extends React.Component {
   }
 
   fetchData = async() => {
-    const res = await fetchDataByLocation(this.state.region, 0.09);
+    const res = await fetchDataByLocation(this.state.region);
     this.setState({data: res, markers: res});
   };
 
@@ -187,7 +187,7 @@ export default class MapViewComponent extends React.Component {
           style={styles.map}
           data={this.state.markers}
           initialRegion={this.state.region}
-          onRegionChange={region => this.onRegionChange(region)}
+          onRegionChangeComplete={region => this.onRegionChange(region)}
           ref={(r) => {
           this.map = r
         }}

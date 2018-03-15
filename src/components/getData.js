@@ -6,7 +6,8 @@ export async function fetchData() {
         return json.kohteet;
     }
 
-export async function fetchDataByLocation(region, radius) {
+export async function fetchDataByLocation(region) {
+        const radius = (region.latitudeDelta + region.longitudeDelta) * 0.3;
         const res = await fetch(apiHost + `?location[lat]=${region.latitude}&location[long]=${region.longitude}&location[dist]=${radius}`)
         const json = await res.json();
         return json.kohteet;
