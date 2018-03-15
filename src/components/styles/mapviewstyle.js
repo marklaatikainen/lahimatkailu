@@ -34,10 +34,7 @@ export const styles = StyleSheet.create({
     map: {
         height: Dimensions
             .get('screen')
-            .height - 46,
-        width: Dimensions
-            .get('screen')
-            .width,
+            .height - 46,    
         alignItems: 'center',
         paddingTop: 0
     },

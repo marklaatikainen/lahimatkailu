@@ -8,9 +8,6 @@ export const styles = StyleSheet.create({
         elevation: 5,
         marginTop: -100,
         marginBottom: 0,
-        width: Dimensions
-            .get('window')
-            .width,
         height: 140
     },
     name: {

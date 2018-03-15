@@ -12,7 +12,7 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.syarul.rnalocation.RNALocation;
 import com.rnimmersive.RNImmersivePackage;
-
+import com.github.yamill.orientation.OrientationPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
           new VectorIconsPackage(),
           new MapsPackage(),
           new RNALocation(),
-          new RNImmersivePackage()
+          new RNImmersivePackage(),
+          new OrientationPackage()
       );
     }
 
