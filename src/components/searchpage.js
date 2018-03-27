@@ -52,7 +52,6 @@ export default class SearchPage extends React.Component {
     fetchData = async () => {
         getData.fetchData().then(res => {
             this.setState({ data: res, initialData: res });
-            //this.filter({data:res});
         });
     }
 
@@ -116,39 +115,26 @@ export default class SearchPage extends React.Component {
         }
     }
 
-    componentWillUpdate(prevProps, prevState) {
-        if(prevState.options !== this.state.options){
-            this.filter(prevState);
-        }
-        
-    }
-
+    //Checkbox filtteri
     filter(prevState) {
         let filterList = [];
         let origData = this.state.initialData.length;
         for(let i=0; i < origData; i++) {
-            if(this.state.options.food === true && this.state.initialData[i].type == "Ruoka") {
+            if(this.state.options.food && this.state.initialData[i].type == "Ruoka") {
                 filterList.push(this.state.initialData[i]);
             }
-            if(this.state.options.sight === true && this.state.initialData[i].type == "Nähtävyys") {
+            if(this.state.options.sight && this.state.initialData[i].type == "Nähtävyys") {
                 filterList.push(this.state.initialData[i]);
             }
-            if(this.state.options.service === true && this.state.initialData[i].type == "Palvelu") {
+            if(this.state.options.service && this.state.initialData[i].type == "Palvelu") {
                 filterList.push(this.state.initialData[i]);
             }
-            // if(this.state.options.food === true && this.state.options.sight === true && this.state.options.service === true) {
-            //     filterList = this.state.initialData;
-            // }
         };
-        if(origData > filterList.length) {
+        if(origData > filterList.length || this.state.data !== this.state.initialData) {
             this.setState({
                 data: filterList
             })
             console.log("Toimii?!");
-        }else{
-            //filterList = this.state.data;
-            console.log("Ei toimi");
-            console.log("filter: "+filterList.length+" data: "+this.state.data.length+" orig: "+origData);
         }
     }
     
