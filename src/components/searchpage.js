@@ -22,6 +22,8 @@ import TargetInfo from './targetInfo';
 import SearchBarComponent from './search';
 import {fetchData} from './getData';
 
+import ListFilter from './listFilter';
+
 export default class SearchPage extends React.Component {
     constructor(props) {
         super(props);
@@ -31,7 +33,13 @@ export default class SearchPage extends React.Component {
             initialData: [],
             selectedItem: '',
             item: [],
-            textLength: 0
+            textLength: 0,
+            filterList: [],
+            options: {
+                food: true,
+                sight: true,
+                service: true
+            }
         };
     }
 
@@ -66,6 +74,11 @@ export default class SearchPage extends React.Component {
         });
     }
 
+    componentDidUpdate() {
+        this.fadeIntoTarget();
+        this.filter();
+    }
+
     setSelectedItem(item, id) {
         this.setState({selectedItem: id, item: item})
     }
@@ -85,6 +98,40 @@ export default class SearchPage extends React.Component {
         this.setState({data: newData})
     }
 
+    checked(data) {
+        this.setState({
+            options: data
+        });
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(prevState.options !== this.state.options){
+            this.filter();
+        }
+    }
+
+    //Checkbox filtteri
+    filter(prevState) {
+        let filterList = [];
+        let origData = this.state.initialData.length;
+        for(let i=0; i < origData; i++) {
+            if(this.state.options.food && this.state.initialData[i].type == "Ruoka") {
+                filterList.push(this.state.initialData[i]);
+            }
+            if(this.state.options.sight && this.state.initialData[i].type == "Nähtävyys") {
+                filterList.push(this.state.initialData[i]);
+            }
+            if(this.state.options.service && this.state.initialData[i].type == "Palvelu") {
+                filterList.push(this.state.initialData[i]);
+            }
+        };
+        if(origData > filterList.length || this.state.data !== this.state.initialData) {
+            this.setState({
+                data: filterList
+            })
+        }
+    }
+    
     render() {
         const {data, initialData, textLength} = this.state;
 
@@ -98,11 +145,12 @@ export default class SearchPage extends React.Component {
                     {!!initialData
                         ? (
                             <View>
+                                <ListFilter onChange={( (e) => this.checked(e))}/>
+                                {/* <CheckBoxes onChange={( (e) => this.checked(e))}/> */}
                                 <SearchBarComponent
                                     textLength={(len) => this.setState({textLength: len})}
                                     filterList={initialData}
                                     addFilter={(data) => this.filteredList(data)} />
-
                                     {renderdata.length === 0 && textLength > 0
                                     ? (
                                         <Text style={styles.notfound}>Ei hakutuloksia..</Text>
