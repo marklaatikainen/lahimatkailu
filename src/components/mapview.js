@@ -10,8 +10,7 @@ import {
 } from 'react-native';
 import {Callout, Marker} from 'react-native-maps';
 import ClusteredMapView from 'react-native-maps-super-cluster'
-import {getDistance} from 'geolib';
-import Orientation from 'react-native-orientation'
+import { getDistance } from 'geolib';
 import RNALocation from 'react-native-android-location';
 import Snackbar from 'react-native-snackbar';
 // style
@@ -42,14 +41,16 @@ export default class MapViewComponent extends React.Component {
         service: true
       },
       region: this.setInitialRegion(),
-      width: Dimensions
-        .get('screen')
-        .width
+      width: Dimensions.get('screen').width,
+      height: Dimensions.get('screen').heigth
     };
   }
 
   componentDidMount() {
-    Orientation.addOrientationListener(this._orientationDidChange);
+    Dimensions.addEventListener('change', async (e) => {
+      const { width, height } = e.screen;
+      await this.setState({width, height });
+    })
     this.getData(() => {
       this.setProps(this.props);
     }, () => {
@@ -69,18 +70,6 @@ export default class MapViewComponent extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setProps(nextProps);
-  }
-
-  componentWillUnmount() {
-    Orientation.removeOrientationListener(this._orientationDidChange)
-  }
-
-  _orientationDidChange = (orientation) => {
-    this.setState({
-      width: Dimensions
-        .get('screen')
-        .width
-    });
   }
 
   precisionRound(number, precision) {
@@ -231,11 +220,12 @@ export default class MapViewComponent extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container} >
         <ClusteredMapView
           customMapStyle={customMapStyle}
           style={[styles.map]}
           width={this.state.width}
+          height={this.state.height}
           data={this.state.markers}
           initialRegion={this.state.region}
           onRegionChangeComplete={region => this.onRegionChange(region)}
@@ -248,7 +238,8 @@ export default class MapViewComponent extends React.Component {
           showsUserLocation={true}
           minZoom={5}
           maxZoom={12}
-          showInfoWindow={true}/>
+          showInfoWindow={true} 
+          />
       </View>
     );
   }

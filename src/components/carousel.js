@@ -9,7 +9,7 @@ export default class CustomCarousel extends Component {
     super(props);
 
     this.state = {
-      size: { width, height },
+      size: { width, height }
     };
   }
 
@@ -33,7 +33,7 @@ export default class CustomCarousel extends Component {
         >
             {images.map(image => (<Image
               key={images.indexOf(image)}
-              style={styles.image}
+              style={[styles.image, {width: this.state.size.width}]}
               source={{
               uri: image
             }}/>))}
@@ -49,9 +49,6 @@ const styles = StyleSheet.create({
     height: 200
   },
   image: {
-    width: Dimensions
-      .get('window')
-      .width,
     height: 200
   }
 });
