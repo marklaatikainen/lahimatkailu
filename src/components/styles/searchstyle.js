@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 export const styles = StyleSheet.create({
     searchContainer: {
@@ -7,8 +7,9 @@ export const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     searchBar: {
+        width: Dimensions.get('window').width - 55,
         backgroundColor: 'white',
         borderWidth: 1,
         borderColor: 'green'
-    }
+    },
 });

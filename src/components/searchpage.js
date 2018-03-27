@@ -145,12 +145,13 @@ export default class SearchPage extends React.Component {
                     {!!initialData
                         ? (
                             <View>
-                                <ListFilter onChange={( (e) => this.checked(e))}/>
-                                {/* <CheckBoxes onChange={( (e) => this.checked(e))}/> */}
-                                <SearchBarComponent
-                                    textLength={(len) => this.setState({textLength: len})}
-                                    filterList={initialData}
-                                    addFilter={(data) => this.filteredList(data)} />
+                                <View style={styles.bar}>
+                                    <SearchBarComponent
+                                        textLength={(len) => this.setState({textLength: len})}
+                                        filterList={initialData}
+                                        addFilter={(data) => this.filteredList(data)} />
+                                    <ListFilter onChange={( (e) => this.checked(e))}/>
+                                </View>
                                     {renderdata.length === 0 && textLength > 0
                                     ? (
                                         <Text style={styles.notfound}>Ei hakutuloksia..</Text>

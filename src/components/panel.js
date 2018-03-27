@@ -80,7 +80,6 @@ export default class Panel extends Component {
                     onLayout={this._setMaxHeight.bind(this)}>
                     {this.props.children}
                 </View>
-
             </Animated.View>
         );
     }
