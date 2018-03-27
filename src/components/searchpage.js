@@ -21,7 +21,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { styles } from './styles/searchpagestyle';
 
 import ListFilter from './listFilter';
-//import CheckBoxes from './checkBoxComponent';
 
 export default class SearchPage extends React.Component {
     constructor(props) {
@@ -134,7 +133,6 @@ export default class SearchPage extends React.Component {
             this.setState({
                 data: filterList
             })
-            console.log("Toimii?!");
         }
     }
     
