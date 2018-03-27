@@ -177,23 +177,38 @@ export default class MapViewComponent extends React.Component {
   openingHours (data) {
     let compare = new Date();
     let today = compare.getDay;
+    let hours = compare.getHours();
+    let closes;
 
     if (today = 0) {
-      return data.openingHours.mon.end;
+      closes = data.openingHours.mon.end;
     } else if (today = 1) {
-      return data.openingHours.tue.end;
+      closes = data.openingHours.tue.end;
     } else if (today = 2) {
-      return data.openingHours.wed.end;
+      closes = data.openingHours.wed.end;
     } else if (today = 3) {
-      return data.openingHours.thu.end;
+      closes = data.openingHours.thu.end;
     } else if (today = 4) {
-      return data.openingHours.fri.end;
+      closes = data.openingHours.fri.end;
     } else if (today = 5) {
-      return data.openingHours.sat.end;
+      closes = data.openingHours.sat.end;
     } else if (today = 6) {
-      return data.openingHours.sun.end;
+      closes = data.openingHours.sun.end;
+    }
+
+    let convertedClosing = closes;
+    convertedClosing = convertedClosing.split(':');
+    convertedClosing = parseFloat(parseInt(convertedClosing[0], 10) + '.' + parseInt((convertedClosing[1]/6)*10, 10));
+    
+    if (convertedClosing - hours < 0) {
+      return "Suljettu nyt";
+    } else if (convertedClosing - hours > 3) {
+      return closes;
+    } else {
+      return closes + " (Sulkeutuu pian)";
     }
   }
+
   renderMarker = (data) => <Marker
     key={data._id}
     coordinate={{
@@ -213,8 +228,7 @@ export default class MapViewComponent extends React.Component {
       width: 200,
       height: 100, 
       borderRadius: 32,
-      backgroundColor: 'rgba(255, 255, 255, 0.6)',
-      padding: 3 
+      backgroundColor: 'rgba(255, 255, 255, 0.6)'
     }}>
       <View>
           <Text>{data.name}</Text>
