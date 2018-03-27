@@ -13,6 +13,7 @@ import com.airbnb.android.react.maps.MapsPackage;
 import com.syarul.rnalocation.RNALocation;
 import com.rnimmersive.RNImmersivePackage;
 import com.github.yamill.orientation.OrientationPackage;
+import com.azendoo.reactnativesnackbar.SnackbarPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -33,7 +34,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MapsPackage(),
           new RNALocation(),
           new RNImmersivePackage(),
-          new OrientationPackage()
+          new OrientationPackage(),
+          new SnackbarPackage()
       );
     }
 

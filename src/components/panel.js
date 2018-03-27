@@ -26,27 +26,20 @@ export default class Panel extends Component {
     }
 
     toggle() {
-        let initialValue = this.state.expanded
-            ? this.state.maxHeight + this.state.minHeight
-            : this.state.minHeight;
-        let finalValue = this.state.expanded
-            ? this.state.minHeight
-            : this.state.maxHeight + this.state.minHeight;
+        const { maxHeight, minHeight, expanded } = this.state;
+
+        let initialValue = expanded ? maxHeight + minHeight : minHeight;
+        let finalValue = expanded ? minHeight : maxHeight + minHeight;
 
         this.setState({
-            expanded: !this.state.expanded
+            expanded: !expanded
         });
 
-        this
-            .state
-            .animation
-            .setValue(initialValue);
-        Animated
-            .spring(this.state.animation, {
+        this.state.animation.setValue(initialValue);
+        Animated.spring(this.state.animation, {
             toValue: finalValue,
             speed: 18
-        })
-            .start();
+        }).start();
     }
 
     _setMaxHeight(event) {
@@ -73,25 +66,18 @@ export default class Panel extends Component {
             ]}>
                 <View
                     style={styles.iconContainer}
-                    onLayout={this
-                    ._setMinHeight
-                    .bind(this)}>
+                    onLayout={this._setMinHeight.bind(this)}>
 
                     <TouchableHighlight
                         style={styles.button}
-                        onPress={this
-                        .toggle
-                        .bind(this)}
+                        onPress={this.toggle.bind(this)}
                         underlayColor="#f1f1f1">
                         <Image style={styles.buttonImage} source={icon} width={30} height={25}></Image>
                     </TouchableHighlight>
                 </View>
-
                 <View
                     style={styles.body}
-                    onLayout={this
-                    ._setMaxHeight
-                    .bind(this)}>
+                    onLayout={this._setMaxHeight.bind(this)}>
                     {this.props.children}
                 </View>
 

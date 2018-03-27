@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {SearchBar} from 'react-native-elements'
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { SearchBar } from 'react-native-elements'
 import SearchPage from './searchpage';
 
 // style
@@ -16,19 +16,12 @@ export default class SearchBarComponent extends Component {
     }
 
     SearchFilterFunction(text) {
-        const newData = this
-            .props
-            .filterList
-            .filter(function (item) {
-                return (item.name.toUpperCase().indexOf(text.toUpperCase()) > -1 || item.type.toUpperCase().indexOf(text.toUpperCase()) > -1 || item.address.city.toUpperCase().indexOf(text.toUpperCase()) > -1)
-            })
+        const newData = this.props.filterList.filter(function (item) {
+            return (item.name.toUpperCase().indexOf(text.toUpperCase()) > -1 || item.type.toUpperCase().indexOf(text.toUpperCase()) > -1 || item.address.city.toUpperCase().indexOf(text.toUpperCase()) > -1)
+        })
         this.setState({text: text})
-        this
-            .props
-            .addFilter(newData);
-        this
-            .props
-            .textLength(text.length)
+        this.props.addFilter(newData);
+        this.props.textLength(text.length)
     }
 
     render() {

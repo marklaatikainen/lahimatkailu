@@ -5,7 +5,8 @@ import {
     TouchableOpacity,
     Animated,
 } from 'react-native';
-import {ListItem} from 'react-native-elements';
+import PropTypes from 'prop-types';
+import { ListItem } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -64,3 +65,7 @@ export default class Item extends Component {
         )
     }
 }
+
+Item.propTypes = {
+    data: PropTypes.object.isRequired
+};

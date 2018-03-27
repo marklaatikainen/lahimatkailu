@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     View,
     StyleSheet,
@@ -8,17 +8,17 @@ import {
     TouchableOpacity,
     Animated,
     Easing,
-    LayoutAnimation,
     UIManager,
     Linking
 } from 'react-native';
+import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, {Marker} from 'react-native-maps';
 import CustomCarousel from './carousel';
 import TableOpenHours from './tableOpenHours';
 
 // style
-import { styles } from './styles/targetinfostyle';
+import {styles} from './styles/targetinfostyle';
 
 export default class TargetInfo extends Component {
     constructor(props) {
@@ -61,11 +61,13 @@ export default class TargetInfo extends Component {
     fadeOut() {
         Animated
             .timing(this.opacityValue, {
-                toValue: 0,
-                duration: 200
-            })
+            toValue: 0,
+            duration: 200
+        })
             .start(() => {
-                this.props.backToList()  
+                this
+                    .props
+                    .backToList()
             })
     }
 
@@ -82,52 +84,52 @@ export default class TargetInfo extends Component {
         return (
             <Animated.View
                 style={[
-                    styles.container, {
-                        opacity: this.opacityValue
-                    }, {
-                        transform: [
-                            {
-                                scale: scaleIt
-                            }
-                        ]
-                    }
-                ]}>
+                styles.container, {
+                    opacity: this.opacityValue
+                }, {
+                    transform: [
+                        {
+                            scale: scaleIt
+                        }
+                    ]
+                }
+            ]}>
                 <View style={styles.topBar}>
                     <TouchableOpacity style={styles.backIcon} onPress={() => this.fadeOut()}>
-                        <Icon name='arrow-left' size={20} color='white' />
+                        <Icon name='arrow-left' size={20} color='white'/>
                     </TouchableOpacity>
                     <Text style={styles.topBarText}>Kohteen tiedot</Text>
                     <TouchableOpacity
                         style={styles.openmap}
                         onPress={() => this.openMap(this.props.data.location.latitude, this.data.item.location.longitude)}>
-                        <Icon name="dot-circle-o" color="white" size={20} />
+                        <Icon name="dot-circle-o" color="white" size={20}/>
                     </TouchableOpacity>
                 </View>
                 <ScrollView style={styles.container}>
-                    <CustomCarousel images={this.props.data.picture} />
+                    <CustomCarousel images={this.props.data.picture}/>
                     <View style={styles.textarea}>
                         <View style={styles.icons}>
                             <View style={styles.iconwrapper}>
-                                <Icon style={styles.icon} name="wheelchair" size={40} />
+                                <Icon style={styles.icon} name="wheelchair" size={40}/>
                                 <Text numberOfLines={1} style={styles.icontext}>Esteetön</Text>
                             </View>
                             <View style={styles.iconwrapper}>
-                                <Icon style={styles.icon} name="clock-o" size={40} />
+                                <Icon style={styles.icon} name="clock-o" size={40}/>
                                 <Text style={styles.icontext}>24h</Text>
                             </View>
                             <View style={styles.iconwrapper}>
-                                <Icon style={styles.icon} name="car" size={40} />
+                                <Icon style={styles.icon} name="car" size={40}/>
                                 <Text style={styles.icontext}>Pysäköinti</Text>
                             </View>
                             <View style={styles.iconwrapper}>
-                                <Icon style={styles.icon} name="paw" size={40} />
+                                <Icon style={styles.icon} name="paw" size={40}/>
                                 <Text style={styles.icontext}>Lemmikit sallittu</Text>
                             </View>
                         </View>
                         <Text style={styles.name}>{this.props.data.name}</Text>
                         <Text style={styles.subtitle}>{this.props.data.type}</Text>
                         <Text style={styles.description}>{this.props.data.info}</Text>
-                        <TableOpenHours data={this.props.data.openingHours} style={styles} />
+                        <TableOpenHours data={this.props.data.openingHours} style={styles}/>
                     </View>
                     <MapView
                         style={styles.map}
@@ -136,19 +138,23 @@ export default class TargetInfo extends Component {
                         pitchEnabled={false}
                         rotateEnabled={false}
                         initialRegion={{
-                            latitude: this.props.data.location.latitude,
-                            longitude: this.props.data.location.longitude,
-                            latitudeDelta: 0.0922,
-                            longitudeDelta: 0.0421
-                        }}>
+                        latitude: this.props.data.location.latitude,
+                        longitude: this.props.data.location.longitude,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421
+                    }}>
                         <MapView.Marker
                             coordinate={{
-                                latitude: this.props.data.location.latitude,
-                                longitude: this.props.data.location.longitude
-                            }} />
+                            latitude: this.props.data.location.latitude,
+                            longitude: this.props.data.location.longitude
+                        }}/>
                     </MapView>
                 </ScrollView>
             </Animated.View>
         )
     }
 }
+
+TargetInfo.propTypes = {
+    data: PropTypes.object.isRequired
+};

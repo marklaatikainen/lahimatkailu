@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   View,
   AppRegistry,
@@ -8,16 +8,17 @@ import {
   TouchableWithoutFeedback,
   Dimensions
 } from 'react-native';
-import { Callout, Marker } from 'react-native-maps';
+import {Callout, Marker} from 'react-native-maps';
 import ClusteredMapView from 'react-native-maps-super-cluster'
-import { getDistance } from 'geolib';
+import {getDistance} from 'geolib';
 import Orientation from 'react-native-orientation'
-import { fetchData, fetchDataByLocation } from './getData';
 import RNALocation from 'react-native-android-location';
-
+import Snackbar from 'react-native-snackbar';
 // style
-import { styles } from './styles/mapviewstyle';
-import { customMapStyle } from './styles/mapviewstyle';
+import {styles} from './styles/mapviewstyle';
+import {customMapStyle} from './styles/mapviewstyle';
+
+import {fetchDataByLocation} from './getData';
 
 const INIT_REGION = {
   latitude: 60.169856,
@@ -41,7 +42,9 @@ export default class MapViewComponent extends React.Component {
         service: true
       },
       region: this.setInitialRegion(),
-      width: Dimensions.get('screen').width
+      width: Dimensions
+        .get('screen')
+        .width
     };
   }
 
@@ -64,7 +67,6 @@ export default class MapViewComponent extends React.Component {
     });
   }
 
-  
   componentWillReceiveProps(nextProps) {
     this.setProps(nextProps);
   }
@@ -74,7 +76,11 @@ export default class MapViewComponent extends React.Component {
   }
 
   _orientationDidChange = (orientation) => {
-    this.setState({ width: Dimensions.get('screen').width });
+    this.setState({
+      width: Dimensions
+        .get('screen')
+        .width
+    });
   }
 
   precisionRound(number, precision) {
@@ -113,18 +119,40 @@ export default class MapViewComponent extends React.Component {
           itemList = this.state.data;
         }
       };
-      this.setState({ markers: itemList });
+      this.setState({markers: itemList});
     })
   }
 
   getData() {
-    this.fetchData();
+    this
+      .fetchData()
+      .done();
   }
 
-  fetchData = async () => {
+  fetchData = async() => {
     const res = await fetchDataByLocation(this.state.region);
-    this.setState({ data: res, markers: res });
-  };
+
+    if (res !== undefined) {
+      this.setState({data: res, markers: res});
+    } else {
+      this.showErrorMessage("Latausvirhe");
+    }
+  }
+
+  showErrorMessage(error) {
+    Snackbar.show({
+      title: error,
+      color: 'white',
+      duration: Snackbar.LENGTH_INDEFINITE,
+      action: {
+        title: 'yritä uudelleen',
+        color: 'white',
+        onPress: () => {
+          this.fetchData();
+        }
+      }
+    });
+  }
 
   markerImgUrl(icon) {
     if (icon == 'Ruoka') {
@@ -142,8 +170,8 @@ export default class MapViewComponent extends React.Component {
       clusterId = cluster.clusterId
 
     const clusteringEngine = this
-      .map
-      .getClusteringEngine(),
+        .map
+        .getClusteringEngine(),
       clusteredPoints = clusteringEngine.getLeaves(clusterId, 100)
 
     return (
@@ -158,37 +186,47 @@ export default class MapViewComponent extends React.Component {
   }
 
   renderMarker = (data) => <Marker
-    key={data.name}
+    key={data._id}
     coordinate={{
-      latitude: data.location.latitude,
-      longitude: data.location.longitude
-    }}
+    latitude: data.location.latitude,
+    longitude: data.location.longitude
+  }}
     title={data.name}
-    description={"Etäisyys linnuntietä: " + this.precisionRound(getDistance({ latitude: this.state.latitude, longitude: this.state.longitude }, { latitude: data.location.latitude, longitude: data.location.longitude }) / 1000, 1) + "km"}
-    onCalloutPress={() => this.handleCalloutPress(data)}
-  >
-    <View style={{
+    description={"Etäisyys linnuntietä: " + this.precisionRound(getDistance({
+    latitude: this.state.latitude,
+    longitude: this.state.longitude
+  }, {
+    latitude: data.location.latitude,
+    longitude: data.location.longitude
+  }) / 1000, 1) + "km"}
+    onCalloutPress={() => this.handleCalloutPress(data)}>
+    <View
+      style={{
       borderRadius: 32,
       backgroundColor: 'rgba(255, 255, 255, 0.6)',
       padding: 3
     }}>
       <Image
         style={{
-          width: 32,
-          height: 32
-        }}
+        width: 32,
+        height: 32
+      }}
         source={{
-          uri: this.markerImgUrl(data.type)
-        }} />
+        uri: this.markerImgUrl(data.type)
+      }}/>
     </View>
   </Marker>
 
   onRegionChange(region) {
-    this.setState({ region }, () => this.fetchData());
+    this.setState({
+      region
+    }, () => this.fetchData());
   }
 
   handleCalloutPress(data) {
-    this.props.setSelectedItem(data, data._id, this.state.region);
+    this
+      .props
+      .setSelectedItem(data, data._id, this.state.region);
   }
 
   render() {
@@ -196,21 +234,21 @@ export default class MapViewComponent extends React.Component {
       <View style={styles.container}>
         <ClusteredMapView
           customMapStyle={customMapStyle}
-          style={ [styles.map] }
+          style={[styles.map]}
           width={this.state.width}
           data={this.state.markers}
           initialRegion={this.state.region}
           onRegionChangeComplete={region => this.onRegionChange(region)}
           ref={(r) => {
-            this.map = r
-          }}
+          this.map = r
+        }}
           renderMarker={this.renderMarker}
           renderCluster={this.renderCluster}
           showsMyLocationButton={false}
           showsUserLocation={true}
           minZoom={5}
           maxZoom={12}
-          showInfoWindow={true} />
+          showInfoWindow={true}/>
       </View>
     );
   }
