@@ -16,5 +16,8 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         justifyContent: 'center',
         marginTop: 70
-    }
+    },
+    bar: {
+        flexDirection: 'row',
+    },
 })

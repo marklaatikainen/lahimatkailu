@@ -174,36 +174,55 @@ export default class MapViewComponent extends React.Component {
     )
   }
 
+  openingHours (data) {
+    let compare = new Date();
+    let today = compare.getDay;
+
+    if (today = 0) {
+      return data.openingHours.mon.end;
+    } else if (today = 1) {
+      return data.openingHours.tue.end;
+    } else if (today = 2) {
+      return data.openingHours.wed.end;
+    } else if (today = 3) {
+      return data.openingHours.thu.end;
+    } else if (today = 4) {
+      return data.openingHours.fri.end;
+    } else if (today = 5) {
+      return data.openingHours.sat.end;
+    } else if (today = 6) {
+      return data.openingHours.sun.end;
+    }
+  }
   renderMarker = (data) => <Marker
     key={data._id}
     coordinate={{
-    latitude: data.location.latitude,
-    longitude: data.location.longitude
-  }}
-    title={data.name}
-    description={"Etäisyys linnuntietä: " + this.precisionRound(getDistance({
-    latitude: this.state.latitude,
-    longitude: this.state.longitude
-  }, {
-    latitude: data.location.latitude,
-    longitude: data.location.longitude
-  }) / 1000, 1) + "km"}
-    onCalloutPress={() => this.handleCalloutPress(data)}>
-    <View
+      latitude: data.location.latitude,
+      longitude: data.location.longitude
+    }}
+   onCalloutPress={() => this.handleCalloutPress(data)}>
+    <Image
       style={{
+      width: 32,
+      height: 32
+    }}
+      source={{
+      uri: this.markerImgUrl(data.type)
+    }}/>
+    <Callout style={{ 
+      width: 200,
+      height: 100, 
       borderRadius: 32,
       backgroundColor: 'rgba(255, 255, 255, 0.6)',
-      padding: 3
+      padding: 3 
     }}>
-      <Image
-        style={{
-        width: 32,
-        height: 32
-      }}
-        source={{
-        uri: this.markerImgUrl(data.type)
-      }}/>
-    </View>
+      <View>
+          <Text>{data.name}</Text>
+          <Text>{data.type}</Text>
+          <Text>Etäisyys linnuntietä: {this.precisionRound(getDistance({latitude: this.state.latitude, longitude: this.state.longitude}, {latitude: data.location.latitude, longitude: data.location.longitude}) / 1000, 1)} km</Text>
+          <Text>Sulkeutuu tänään: {this.openingHours(data)}</Text>
+        </View>
+    </Callout>
   </Marker>
 
   onRegionChange(region) {
