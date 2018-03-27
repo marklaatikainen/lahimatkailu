@@ -15,7 +15,7 @@ import {
 import Item from './listItem';
 import TargetInfo from './targetInfo';
 import SearchBarComponent from './search';
-import getData from './getData';
+import { fetchData } from './getData';
 import Icon from 'react-native-vector-icons/FontAwesome';
 // style
 import { styles } from './styles/searchpagestyle';
@@ -38,7 +38,7 @@ export default class SearchPage extends React.Component {
     }
 
     fetchData = async () => {
-        getData.fetchData().then(res => {
+        fetchData().then(res => {
             this.setState({ data: res, initialData: res });
         });
     }

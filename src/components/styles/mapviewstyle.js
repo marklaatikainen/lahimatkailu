@@ -31,10 +31,7 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1
     },
-    map: {
-        height: Dimensions
-            .get('screen')
-            .height - 46,    
+    map: { 
         alignItems: 'center',
         paddingTop: 0
     },
