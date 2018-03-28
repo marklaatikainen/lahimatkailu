@@ -48,8 +48,9 @@ export default class MapViewComponent extends React.Component {
 
   componentDidMount() {
     Dimensions.addEventListener('change', async (e) => {
-      const { width, height } = e.screen;
-      await this.setState({width, height });
+      await e.screen.then((width, height) => {
+        this.setState({ width, height });
+      });
     })
     this.getData(() => {
       this.setProps(this.props);
@@ -175,29 +176,27 @@ export default class MapViewComponent extends React.Component {
   }
 
   openingHours (data) {
-    let compare = new Date();
-    let today = compare.getDay;
-    let hours = compare.getHours();
+    const compare = new Date();
+    const today = compare.getDay();
+    const hours = compare.getHours();
     let closes;
 
-    if (today = 0) {
-      closes = data.openingHours.mon.end;
-    } else if (today = 1) {
-      closes = data.openingHours.tue.end;
-    } else if (today = 2) {
-      closes = data.openingHours.wed.end;
-    } else if (today = 3) {
-      closes = data.openingHours.thu.end;
-    } else if (today = 4) {
-      closes = data.openingHours.fri.end;
-    } else if (today = 5) {
-      closes = data.openingHours.sat.end;
-    } else if (today = 6) {
+    if (today === 0) {
       closes = data.openingHours.sun.end;
+    } else if (today === 1) {
+      closes = data.openingHours.mon.end;
+    } else if (today === 2) {
+      closes = data.openingHours.tue.end;
+    } else if (today === 3) {
+      closes = data.openingHours.wed.end;
+    } else if (today === 4) {
+      closes = data.openingHours.thu.end;
+    } else if (today === 5) {
+      closes = data.openingHours.fri.end;
+    } else if (today === 6) {
+      closes = data.openingHours.sat.end;
     }
-
-    let convertedClosing = closes;
-    convertedClosing = convertedClosing.split(':');
+    let convertedClosing = closes.split(':');
     convertedClosing = parseFloat(parseInt(convertedClosing[0], 10) + '.' + parseInt((convertedClosing[1]/6)*10, 10));
     
     if (convertedClosing - hours < 0) {
@@ -256,7 +255,7 @@ export default class MapViewComponent extends React.Component {
       <View style={styles.container} >
         <ClusteredMapView
           customMapStyle={customMapStyle}
-          style={[styles.map]}
+          style={styles.map}
           width={this.state.width}
           height={this.state.height}
           data={this.state.markers}

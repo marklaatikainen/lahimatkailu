@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "postinstall": "del .\\node_modules\\react-native\\local-cli\\core\\__fixtures__\\files\\package.json && rd .\\node_modules\\react-native-vector-icons\\lib /s /q && md .\\node_modules\\react-native-vector-icons\\lib && xcopy .\\customizedComponents\\react-native-vector-icons\\lib\\* .\\node_modules\\react-native-vector-icons\\lib\\ /s /e /i && del .\\node_modules\\react-native-looped-carousel-improved\\index.js && copy customizedComponents\\react-native-looped-carousel-improved\\index.js node_modules\\react-native-looped-carousel-improved\\"
+    "postinstall": "del .\\node_modules\\react-native\\local-cli\\core\\__fixtures__\\files\\package.json && rd .\\node_modules\\react-native-vector-icons\\lib /s /q && md .\\node_modules\\react-native-vector-icons\\lib && xcopy .\\customizedComponents\\react-native-vector-icons\\lib\\* .\\node_modules\\react-native-vector-icons\\lib\\ /s /e /i && del .\\node_modules\\react-native-looped-carousel-improved\\index.js && copy customizedComponents\\react-native-looped-carousel-improved\\index.js node_modules\\react-native-looped-carousel-improved\\ && del .\\node_modules\\react-native-MultiSlider\\MultiSlider.js && copy customizedComponents\\react-native-MultiSlider\\MultiSlider.js node_modules\\react-native-MultiSlider\\"
   },
   "dependencies": {
     "dms-conversion": "^3.0.0",
@@ -13,6 +13,7 @@
     "npm": "^5.7.1",
     "react": "16.2.0",
     "react-native": "0.53.3",
+    "react-native-MultiSlider": "^0.2.1",
     "react-native-android-location": "^1.0.2",
     "react-native-checkbox": "^2.0.0",
     "react-native-elements": "^0.19.0",

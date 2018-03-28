@@ -18,6 +18,6 @@ export const styles = StyleSheet.create({
         marginTop: 70
     },
     bar: {
-        flexDirection: 'row',
+        flexDirection: 'column',
     },
 })

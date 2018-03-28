@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
-import {View, Dimensions, Text} from 'react-native'
+import React, { Component } from 'react';
+import { View, Dimensions, Text } from 'react-native'
 import CheckBox from 'react-native-checkbox';
+
 import getData from './getData';
 import Panel from './panel'
-import {styles} from './styles/listFilterStyle';
+
+import { styles } from './styles/listFilterStyle';
 
 export default class ListFilter extends React.Component {
 
@@ -43,22 +45,20 @@ export default class ListFilter extends React.Component {
 
     render() {
         return (
-            <Panel>
-                <View checked={this.state} style={styles.container}>
-                    <CheckBox
-                        label="Ruoka"
-                        checked={this.state.food}
-                        onChange={() => this.changeCBState('food')}/>
-                    <CheckBox
-                        label="Kohteet"
-                        checked={this.state.sight}
-                        onChange={() => this.changeCBState('sight')}/>
-                    <CheckBox
-                        label="Palvelut"
-                        checked={this.state.service}
-                        onChange={() => this.changeCBState('service')}/>
-                </View>
-            </Panel>
+            <View checked={this.state} style={styles.container}>
+                <CheckBox
+                    label="Ruoka"
+                    checked={this.state.food}
+                    onChange={() => this.changeCBState('food')}/>
+                <CheckBox
+                    label="Kohteet"
+                    checked={this.state.sight}
+                    onChange={() => this.changeCBState('sight')}/>
+                <CheckBox
+                    label="Palvelut"
+                    checked={this.state.service}
+                    onChange={() => this.changeCBState('service')}/>
+            </View>
         );
     }
 }

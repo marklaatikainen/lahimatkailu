@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     searchBar: {
-        width: Dimensions.get('window').width - 55,
+        width: Dimensions.get('screen').width - 15,
         backgroundColor: 'white',
         borderWidth: 1,
         borderColor: 'green'

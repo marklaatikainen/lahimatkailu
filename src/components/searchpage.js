@@ -5,6 +5,7 @@ import {
     ActivityIndicator,
     Text,
     TouchableOpacity,
+    DeviceEventEmitter,
     Animated,
     Easing,
     UIManager,
@@ -13,10 +14,13 @@ import {
     BackHandler
 } from 'react-native';
 import Snackbar from 'react-native-snackbar';
+import RNALocation from 'react-native-android-location';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {getDistance} from 'geolib';
 // style
 import {styles} from './styles/searchpagestyle';
 
+import SliderComponent from './slider';
 import Item from './listItem';
 import TargetInfo from './targetInfo';
 import SearchBarComponent from './search';
@@ -39,15 +43,22 @@ export default class SearchPage extends React.Component {
                 food: true,
                 sight: true,
                 service: true
-            }
+            },
+            range: 500
         };
     }
 
     componentDidMount() {
         BackHandler.addEventListener("hardwareBackPress", this.androidBackHandler);
-        this
-            .fetchData()
-            .done();
+        this.fetchData().done();
+        DeviceEventEmitter.addListener('updateLocation', function (e) {
+            this.setState({
+                lng: e.Longitude,
+                lat: e.Latitude
+            });
+        }.bind(this));
+
+        RNALocation.getLocation();
     }
 
     componentWillUnmount() {
@@ -72,6 +83,23 @@ export default class SearchPage extends React.Component {
                 }
             }
         });
+    }
+
+    precisionRound(number, precision) {
+        var factor = Math.pow(10, precision);
+        return Math.round(number * factor) / factor;
+    }
+
+    setRange(l,r) {
+        const {initialData, lat, lng} = this.state;
+        let list = [];
+        for (let i = 0; i < initialData.length; i++) {
+            let range = this.precisionRound(getDistance({latitude: lat, longitude: lng}, {latitude: initialData[i].location.latitude, longitude: initialData[i].location.longitude}) / 1000, 1);
+            if(range >= l && range <= r) {
+                list.push(initialData[i]);
+            }
+        }
+        this.setState({data: list})
     }
 
     componentDidUpdate() {
@@ -99,13 +127,11 @@ export default class SearchPage extends React.Component {
     }
 
     checked(data) {
-        this.setState({
-            options: data
-        });
+        this.setState({options: data});
     }
 
     componentDidUpdate(prevProps, prevState) {
-        if(prevState.options !== this.state.options){
+        if (prevState.options !== this.state.options) {
             this.filter();
         }
     }
@@ -114,24 +140,22 @@ export default class SearchPage extends React.Component {
     filter(prevState) {
         let filterList = [];
         let origData = this.state.initialData.length;
-        for(let i=0; i < origData; i++) {
-            if(this.state.options.food && this.state.initialData[i].type == "Ruoka") {
+        for (let i = 0; i < origData; i++) {
+            if (this.state.options.food && this.state.initialData[i].type == "Ruoka") {
                 filterList.push(this.state.initialData[i]);
             }
-            if(this.state.options.sight && this.state.initialData[i].type == "Nähtävyys") {
+            if (this.state.options.sight && this.state.initialData[i].type == "Nähtävyys") {
                 filterList.push(this.state.initialData[i]);
             }
-            if(this.state.options.service && this.state.initialData[i].type == "Palvelu") {
+            if (this.state.options.service && this.state.initialData[i].type == "Palvelu") {
                 filterList.push(this.state.initialData[i]);
             }
         };
-        if(origData > filterList.length || this.state.data !== this.state.initialData) {
-            this.setState({
-                data: filterList
-            })
+        if (origData > filterList.length || this.state.data !== this.state.initialData) {
+            this.setState({data: filterList})
         }
     }
-    
+
     render() {
         const {data, initialData, textLength} = this.state;
 
@@ -145,14 +169,15 @@ export default class SearchPage extends React.Component {
                     {!!initialData
                         ? (
                             <View>
+                                <SearchBarComponent
+                                    textLength={(len) => this.setState({textLength: len})}
+                                    filterList={initialData}
+                                    addFilter={(data) => this.filteredList(data)}/>
                                 <View style={styles.bar}>
-                                    <SearchBarComponent
-                                        textLength={(len) => this.setState({textLength: len})}
-                                        filterList={initialData}
-                                        addFilter={(data) => this.filteredList(data)} />
-                                    <ListFilter onChange={( (e) => this.checked(e))}/>
+                                    <ListFilter onChange={((e) => this.checked(e))}/>
+                                    <SliderComponent range={(l,r) => this.setRange(l,r)}/>
                                 </View>
-                                    {renderdata.length === 0 && textLength > 0
+                                {renderdata.length === 0 && textLength > 0
                                     ? (
                                         <Text style={styles.notfound}>Ei hakutuloksia..</Text>
                                     )
