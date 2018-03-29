@@ -189,19 +189,19 @@ export default class MapViewComponent extends React.Component {
     const hours = compare.getHours();
     let closes;
 
-    if (today === 0) {
+    if (today == 0) {
       closes = data.openingHours.sun.end;
-    } else if (today === 1) {
+    } else if (today == 1) {
       closes = data.openingHours.mon.end;
-    } else if (today === 2) {
+    } else if (today == 2) {
       closes = data.openingHours.tue.end;
-    } else if (today === 3) {
+    } else if (today == 3) {
       closes = data.openingHours.wed.end;
-    } else if (today === 4) {
+    } else if (today == 4) {
       closes = data.openingHours.thu.end;
-    } else if (today === 5) {
+    } else if (today == 5) {
       closes = data.openingHours.fri.end;
-    } else if (today === 6) {
+    } else if (today == 6) {
       closes = data.openingHours.sat.end;
     }
     let convertedClosing = closes.split(':');
@@ -210,9 +210,15 @@ export default class MapViewComponent extends React.Component {
     if (convertedClosing - hours < 0) {
       return "Suljettu nyt";
     } else if (convertedClosing - hours > 3) {
-      return closes;
+      return "Sulkeutuu tänään: " + closes;
+    } else if (convertedClosing - hours < 3) {
+      if (convertedClosing - hours >= 1) {
+        return "Sulkeutuu tänään: " + closes + "\n(Sulkeutuu " + Math.floor(convertedClosing - hours) +  "h päästä)";
+      } else {
+        return "Sulkeutuu tänään: " + closes + "\n(Sulkeutuu <1h päästä)";
+      } 
     } else {
-      return closes + " (Sulkeutuu pian)";
+      return "Avoinna 24h"
     }
   }
 
@@ -241,7 +247,7 @@ export default class MapViewComponent extends React.Component {
           <Text>{data.name}</Text>
           <Text>{data.type}</Text>
           <Text>Etäisyys linnuntietä: {this.precisionRound(getDistance({latitude: this.state.latitude, longitude: this.state.longitude}, {latitude: data.location.latitude, longitude: data.location.longitude}) / 1000, 1)} km</Text>
-          <Text>Sulkeutuu tänään: {this.openingHours(data)}</Text>
+          <Text>{this.openingHours(data)}</Text>
         </View>
     </Callout>
   </Marker>
