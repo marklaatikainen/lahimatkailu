@@ -7,7 +7,6 @@ export default class SliderComponent extends Component {
         super(props);
 
         this.state = {
-            value: 500,
             leftValue: 0,
             rightValue: 1
         };
@@ -27,8 +26,8 @@ export default class SliderComponent extends Component {
         this.setState({
             leftValue: value
         }, () => {
-            const left = this.precisionRound(this.map(leftValue, 0, 1, 0, 1000), 0);
-            const right = this.precisionRound(this.map(rightValue, 0, 1, 0, 1000), 0);
+            const left = this.precisionRound(this.map(leftValue, 0, 1, 0, 100), 0);
+            const right = this.precisionRound(this.map(rightValue, 0, 1, 0, 100), 0);
             this.props.range(left, right);
         })
     }
@@ -38,8 +37,8 @@ export default class SliderComponent extends Component {
         this.setState({
             rightValue: value
         }, () => {
-            const left = this.precisionRound(this.map(leftValue, 0, 1, 0, 1000), 0);
-            const right = this.precisionRound(this.map(rightValue, 0, 1, 0, 1000), 0);
+            const left = this.precisionRound(this.map(leftValue, 0, 1, 0, 100), 0);
+            const right = this.precisionRound(this.map(rightValue, 0, 1, 0, 100), 0);
             this.props.range(left, right);
         })
     }
@@ -63,7 +62,7 @@ export default class SliderComponent extends Component {
                     onRightValueChange=
                     {(rightValue) => this.changeRight(rightValue)}/>
 
-                <Text style={styles.text}>Etäisyys: {this.precisionRound(this.map(leftValue, 0, 1, 0, 1000), 0)} - {this.precisionRound(this.map(rightValue, 0, 1, 0, 1000), 0)}km</Text>
+                <Text style={styles.text}>Etäisyys: {this.precisionRound(this.map(leftValue, 0, 1, 0, 100), 0)} - {this.precisionRound(this.map(rightValue, 0, 1, 0, 100), 0)}km</Text>
             </View>
         );
     }
