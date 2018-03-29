@@ -48,9 +48,13 @@ export default class MapViewComponent extends React.Component {
 
   componentDidMount() {
     Dimensions.addEventListener('change', async (e) => {
-      await e.screen.then((width, height) => {
-        this.setState({ width, height });
-      });
+      try {
+          await e.screen.then((width, height) => {
+          this.setState({ width, height });
+        });
+      } catch(error) {
+          console.warn("Dimensions event listener: " + error) // temporary, katotaan heitteleekö vielä
+      }
     })
     this.getData(() => {
       this.setProps(this.props);
@@ -120,13 +124,17 @@ export default class MapViewComponent extends React.Component {
   }
 
   fetchData = async() => {
-    const res = await fetchDataByLocation(this.state.region);
-
-    if (res !== undefined) {
-      this.setState({data: res, markers: res});
-    } else {
-      this.showErrorMessage("Latausvirhe");
+    try {
+      const res = await fetchDataByLocation(this.state.region);
+      if (res !== undefined) {
+        this.setState({data: res, markers: res});
+      } else {
+        this.showErrorMessage("Latausvirhe");
+      }
+    } catch(e) {
+      this.showErrorMessage("Yhteysvirhe");
     }
+    
   }
 
   showErrorMessage(error) {

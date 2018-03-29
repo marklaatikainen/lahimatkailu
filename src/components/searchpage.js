@@ -66,9 +66,17 @@ export default class SearchPage extends React.Component {
     }
 
     fetchData = async() => {
-        fetchData().then(res => {
-            this.setState({data: res, initialData: res});
-        });
+        try {
+            const res = await fetchData();
+            if (res !== undefined) {
+                this.setState({data: res, initialData: res});
+              } else {
+                this.showErrorMessage("Latausvirhe");
+              };
+        } catch(error) {
+            this.showErrorMessage("Yhteysvirhe")
+        }
+        
     }
 
     showErrorMessage(error) {

@@ -3,11 +3,17 @@ const apiHost = 'http://topiniskala.com:3000/v1/kohteet.json';
 export async function fetchData() {
   return fetch(apiHost)
     .then(response => {
-      return response.json();
+      if(response.ok) {
+        return response.json()
+      }
+      throw new Error("Response not ok");
     })
     .then(responseJson => {
       return responseJson.kohteet;
     })
+    .catch((error) => {
+      throw error;
+    });
 }
 
 export async function fetchDataByLocation(region) {
@@ -15,9 +21,15 @@ export async function fetchDataByLocation(region) {
 
   return fetch(apiHost + `?location[lat]=${region.latitude}&location[long]=${region.longitude}&location[dist]=${radius}`)
     .then(response => {
-      return response.json()
+      if(response.ok) {
+        return response.json()
+      }
+      throw new Error("Response not ok");
     })
     .then(responseJson => {
       return responseJson.kohteet;
     })
+    .catch((error) => {
+      throw error;
+    });
 }
