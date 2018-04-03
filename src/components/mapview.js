@@ -70,10 +70,29 @@ export default class MapViewComponent extends React.Component {
 
       RNALocation.getLocation();
     });
+    this.monitorUserPosition();
   }
 
   componentWillReceiveProps(nextProps) {
     this.setProps(nextProps);
+  }
+
+  componentWillUnmount() {
+    navigator.geolocation.clearWatch(this.watchId);
+  }
+
+  monitorUserPosition() {
+    this.watchId = navigator.geolocation.watchPosition(
+      (position) => {
+        this.setState({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          error: null,
+        });
+      },
+      (error) => this.setState({ error: error.message }),
+      { enableHighAccuracy: false, timeout: 20000, maximumAge: 1000, distanceFilter: 10 },
+    );
   }
 
   precisionRound(number, precision) {
