@@ -102,7 +102,7 @@ export default class SearchPage extends React.Component {
         const {initialData, lat, lng} = this.state;
         let list = [];
         for (let i = 0; i < initialData.length; i++) {
-            let range = this.precisionRound(getDistance({latitude: lat, longitude: lng}, {latitude: initialData[i].location.latitude, longitude: initialData[i].location.longitude}) / 1000, 1);
+            let range = this.precisionRound(getDistance({latitude: lat, longitude: lng}, {latitude: initialData[i].location.latitude, longitude: initialData[i].location.longitude}) / 100, 1);
             if(range >= l && range <= r) {
                 list.push(initialData[i]);
             }

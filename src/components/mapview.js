@@ -49,9 +49,8 @@ export default class MapViewComponent extends React.Component {
   componentDidMount() {
     Dimensions.addEventListener('change', async (e) => {
       try {
-          await e.screen.then((width, height) => {
-          this.setState({ width, height });
-        });
+        const { width, height } = await e.screen;
+        this.setState({ width, height });
       } catch(error) {
           console.warn("Dimensions event listener: " + error) // temporary, katotaan heitteleekö vielä
       }
