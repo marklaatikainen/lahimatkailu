@@ -4,11 +4,10 @@ import {
     View,
     TouchableOpacity,
     Animated,
+    Image
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { ListItem } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
 
 export default class Item extends Component {
     constructor(props) {
@@ -43,11 +42,11 @@ export default class Item extends Component {
 
     targetIcon(type) {
         if (type === 'Ruoka') {
-            return 'cutlery'
+            return 'http://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png'
           } else if (type === 'Nähtävyys') {
-            return 'pagelines'
+            return 'http://maps.gstatic.com/mapfiles/ms2/micons/tree.png'
           } else if (type === 'Palvelu') {
-            return 'fa'
+            return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png'
           }      
     }
 
@@ -56,7 +55,14 @@ export default class Item extends Component {
             <Animated.View style={{opacity: 1}}>
                 <TouchableOpacity onPress={() => this.props.openItem(this.props.data._id)}>
                     <ListItem
-                        avatar={<Icon name={this.targetIcon(this.props.data.type)} size={30} color="black" />}
+                        avatar={
+                            <Image source={
+                                { uri: this.targetIcon(this.props.data.type) }
+                            } style={{
+                                width: 30,
+                                height: 32
+                            }} />
+                        }
                         title={this.props.data.name}
                         subtitle={this.props.data.address.street + ", " + this.props.data.address.city}
                     />
