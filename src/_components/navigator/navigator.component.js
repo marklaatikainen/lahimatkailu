@@ -30,7 +30,7 @@ export const TargetStack = StackNavigator({
       title: 'Koheen tiedot',
       headerStyle: styles.topBar,
       headerTitleStyle: styles.topBarText,
-      headerLeft: <TouchableOpacity style={styles.backIcon} onPress={() => this.props.dispatch(targetActions.closeTarget())}><Icon name='arrow-left' size={20} color='white'/></TouchableOpacity>,
+      headerLeft: <TouchableOpacity style={styles.backIcon} onPress={() => { this.props.navigation.navigate('Tabs'); this.props.dispatch(targetActions.closeTarget())}}><Icon name='arrow-left' size={20} color='white'/></TouchableOpacity>,
     },
   }
 }, { headerMode: 'screen'}

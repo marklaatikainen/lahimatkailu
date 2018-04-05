@@ -6,6 +6,7 @@ import { region } from './region.reducer';
 import { checkbox } from './checkbox.reducer';
 import { target } from './target.reducer';
 import { userlocation } from './userlocation.reducer';
+import { filter } from './filter.reducer';
 
 const AppReducer = combineReducers({
   data,
@@ -13,7 +14,8 @@ const AppReducer = combineReducers({
   region,
   checkbox,
   target,
-  userlocation
+  userlocation,
+  filter
 });
 
 export default AppReducer;

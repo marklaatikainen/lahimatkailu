@@ -4,3 +4,4 @@ export * from './region.action';
 export * from './checkbox.action';
 export * from './target.action';
 export * from './userlocation.action';
+export * from './filter.action';

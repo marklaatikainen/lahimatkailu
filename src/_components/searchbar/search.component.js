@@ -3,9 +3,11 @@ import { View } from 'react-native';
 import { SearchBar } from 'react-native-elements'
 
 import { styles } from '../searchbar';
+import { filterActions } from '../../_actions';
 
 export class Search extends Component {
     render() {
+        const { dispatch } = this.props;
         return (
             <View style={styles.container}>
                 <SearchBar
@@ -13,7 +15,7 @@ export class Search extends Component {
                     round
                     containerStyle={styles.searchContainer}
                     inputStyle={styles.searchBar}
-                    onChangeText={(text) => console.log(text)}
+                    onChangeText={(text) => dispatch(filterActions.setFilterText(text))}
                     placeholder='Etsi...'/>
             </View>
         )

@@ -10,10 +10,7 @@ class SearchContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  data: state.data,
-  dimensions: state.dimensions, 
-  region: state.region, 
-  userlocation: state.userlocation
+  filter: state.filter
 });
 
 export default connect(mapStateToProps)(SearchContainer);

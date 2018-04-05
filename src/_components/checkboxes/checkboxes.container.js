@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { CheckBoxes } from '../checkboxes';
-import { checkboxActions } from '../../_actions';
 
 class CheckBoxesContainer extends Component {
     render() {
