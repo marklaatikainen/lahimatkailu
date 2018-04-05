@@ -22,7 +22,7 @@ $ npm install
 
 #### Installing and running the app on a phone or emulator
 
-To run the app (install it on a phone or emulator), you will need to have the Android SDK installed. You can either install Android Studio (that comes with the SDK and is also equipped with an emulator) or install the SDK separately (see https://www.androidauthority.com/how-to-install-android-sdk-software-development-kit-21137/). If you install Android Studio, you will also need to run it in order to install the SDK (Android Studio will run a setup the first time you run it). You will also need to accept licenses for Android SDK Platform and Build-Tools. This can be done with the sdkmanager (which is typically in a directory like C:\Users\Username\AppData\Local\Android\sdk\tools\bin) by running the sdkmanager with the option --licences: 
+To run the app (install it on a phone or emulator), you will need to have the Android SDK installed. You can either install Android Studio (that comes with the SDK and is also equipped with an emulator) or install the SDK separately (see https://www.androidauthority.com/how-to-install-android-sdk-software-development-kit-21137/). If you install Android Studio, you will also need to run it in order to install the SDK (Android Studio will run a setup the first time you run it). You will also need to accept licenses for Android SDK Platform and Build-Tools. This can be done with the sdkmanager (which is typically in a directory like C:\Users\Username\AppData\Local\Android\sdk\tools\bin) by running the sdkmanager with the option --licenses: 
 
 $ sdkmanager --licenses.
 
