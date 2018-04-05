@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import {
-  View,
-  StyleSheet,
-} from 'react-native';
-import NavigatorComponent from './components/navigationComponent';
+import { AppRegistry, View, Text, StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
 
-export default class App extends Component {
+import { Navigator } from './_components/navigator/navigator.component';
+
+import { store } from './_helpers';
+
+class App extends Component {
+  componentDidMount() {
+    StatusBar.setHidden(true);
+  }
 
   render() {
-        return (
-          <View style={styles.container}>
-            <NavigatorComponent />
-          </View>
-        );
-    }
+    return (
+      <Provider style={{ flex: 1 }} store={store}>
+        <Navigator {...this.props} />
+      </Provider>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-});
+AppRegistry.registerComponent('Lähimatkailu', () => App);
+
+export default App;
