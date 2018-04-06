@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { i18nState } from 'redux-i18n';
 
 import { data } from './data.reducer';
 import { dimensions } from './dimensions.reducer';
@@ -15,7 +16,8 @@ const AppReducer = combineReducers({
   checkbox,
   target,
   userlocation,
-  filter
+  filter,
+  i18nState
 });
 
 export default AppReducer;

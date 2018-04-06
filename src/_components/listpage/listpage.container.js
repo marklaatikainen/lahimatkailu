@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { SearchPage } from '../listpage';
+import { SearchPage, filter } from '../listpage';
 
 class ListPageContainer extends Component {
   render() {
-    return (<SearchPage {...this.props}/>);
+    return <SearchPage {...this.props} />;
   }
 }
 
 const mapStateToProps = state => ({
-  data: state.data,
-  dimensions: state.dimensions, 
-  region: state.region, 
+  data: filter(state.data.data, state.filter.filterText),
+  dimensions: state.dimensions,
+  region: state.region,
   userlocation: state.userlocation
 });
 

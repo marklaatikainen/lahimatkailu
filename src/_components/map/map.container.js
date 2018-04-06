@@ -3,7 +3,7 @@ import { DeviceEventEmitter } from 'react-native';
 import RNALocation from 'react-native-android-location';
 import { connect } from 'react-redux';
 
-import { MapComponent } from '../map';
+import { MapComponent, filter } from '../map';
 import { dataActions, dimensionsActions, regionActions, userlocationActions } from '../../_actions';
 
 class MapContainer extends Component {
@@ -28,10 +28,11 @@ class MapContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  data: state.data, 
+  data: filter(state.data.data, state.checkbox), 
   dimensions: state.dimensions, 
   region: state.region, 
-  userlocation: state.userlocation
+  userlocation: state.userlocation,
+  checkbox: state.checkbox,
 });
 
 export default connect(mapStateToProps)(MapContainer);

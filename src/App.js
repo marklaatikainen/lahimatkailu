@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { AppRegistry, View, Text, StatusBar } from 'react-native';
 import { Provider } from 'react-redux';
+import I18n from 'redux-i18n';
 
+import { translations } from './_helpers';
 import { Navigator } from './_components/navigator/navigator.component';
-
 import { store } from './_helpers';
 
 class App extends Component {
@@ -14,7 +15,9 @@ class App extends Component {
   render() {
     return (
       <Provider style={{ flex: 1 }} store={store}>
-        <Navigator {...this.props} />
+        <I18n translations={translations} fallbackLang="fi">
+          <Navigator {...this.props} />
+        </I18n>
       </Provider>
     );
   }

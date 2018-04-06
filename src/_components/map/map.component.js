@@ -7,7 +7,7 @@ import { styles, ClusteredMap } from '../map';
 export class MapComponent extends Component {
   render() {
     const { region } = this.props.region;
-    const { data } = this.props.data;
+    const { data } = this.props;
 
     return (
       <View style={styles.container}>
@@ -19,6 +19,6 @@ export class MapComponent extends Component {
 
 MapComponent.propTypes = {
   dimensions: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
   region: PropTypes.object.isRequired
 };

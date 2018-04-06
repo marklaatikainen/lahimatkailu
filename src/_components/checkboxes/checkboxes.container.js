@@ -12,7 +12,8 @@ class CheckBoxesContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  checkbox: state.checkbox
+  checkbox: state.checkbox,
+  lang: state.i18nState.lang
 });
 
 export default connect(mapStateToProps)(CheckBoxesContainer);
