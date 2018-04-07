@@ -13,6 +13,7 @@ class MainPage extends Component {
       <View>
         <MapContainer />
         {target.target && navigation.navigate('Target')}
+        {/* navigation.navigate('Tabs')} */}
         <Panel>
           <CheckBoxesContainer />
         </Panel>

@@ -32,6 +32,10 @@ export const styles = StyleSheet.create({
     right: 5,
     alignSelf: 'flex-end'
   },
+  list: {
+    top: -40,
+    paddingBottom: 148
+  },
   listpageCheckboxes: {
     flexDirection: 'row',
     width: '100%',

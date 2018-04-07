@@ -6,3 +6,14 @@ export function precisionRound(number, precision) {
 export function mapValues(num, in_min, in_max, out_min, out_max) {
   return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+
+export function translate(t) {
+  if (t === 'Ruoka') {
+    type = 'food';
+  } else if (t === 'Palvelu') {
+    type = 'service';
+  } else {
+    type = 'sight';
+  }
+  return type;
+}

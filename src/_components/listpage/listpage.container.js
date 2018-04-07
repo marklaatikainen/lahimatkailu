@@ -13,7 +13,8 @@ const mapStateToProps = state => ({
   data: filter(state.data.data, state.filter.filterText),
   dimensions: state.dimensions,
   region: state.region,
-  userlocation: state.userlocation
+  userlocation: state.userlocation,
+  filter: state.filter
 });
 
 export default connect(mapStateToProps)(ListPageContainer);

@@ -33,7 +33,7 @@ export const translations = {
   fi: {
     sight: 'nähtävyys',
     service: 'palvelu',
-    food: 'ruokapaikka',
+    food: 'ruoka',
     opening: 'Aukioloajat',
     target: 'Kohteen tiedot',
     bookmark: 'Tallenna suosikkeihin',

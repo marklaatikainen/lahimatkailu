@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import I18n from 'redux-i18n';
 
 import { translations } from './_helpers';
-import { Navigator } from './_components/navigator/navigator.component';
+import { Navigator } from './_components/navigator';
 import { store } from './_helpers';
 
 class App extends Component {

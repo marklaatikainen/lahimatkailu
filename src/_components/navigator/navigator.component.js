@@ -1,10 +1,6 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import {
-  TabNavigator,
-  StackNavigator,
-  HeaderBackButton
-} from 'react-navigation';
+import { TabNavigator, StackNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 // components
 import MainPage from '../mainpage/main.component';
@@ -16,23 +12,7 @@ import { styles } from '../navigator';
 export const TargetStack = StackNavigator(
   {
     Target: {
-      screen: TargetContainer,
-      navigationOptions: {
-        title: 'Kohteen tiedot',
-        headerStyle: styles.topBar,
-        headerTitleStyle: styles.topBarText,
-        headerLeft: (
-          <TouchableOpacity
-            style={styles.backIcon}
-            onPress={() => {
-              this.props.navigation.navigate('Tabs');
-              this.props.dispatch(targetActions.closeTarget());
-            }}
-          >
-            <Icon name="arrow-left" size={20} color="white" />
-          </TouchableOpacity>
-        )
-      }
+      screen: TargetContainer
     }
   },
   { headerMode: 'screen' }

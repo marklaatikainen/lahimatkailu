@@ -11,7 +11,7 @@ import SliderContainer from '../slider/slider.container';
 
 export class SearchPage extends Component {
   render() {
-    const { data } = this.props;
+    const { data, filter } = this.props;
     return (
       <View style={styles.container}>
         <SearchContainer />
@@ -23,13 +23,17 @@ export class SearchPage extends Component {
             </View>
           </Panel>
         </View>
-        <FlatList
-          data={data}
-          keyExtractor={item => item._id}
-          renderItem={({ item, index }) => (
-            <Item {...this.props} data={item} index={index} />
-          )}
-        />
+        {data.length === 0 && filter.filterText !== '' ? (
+          <Text style={styles.notfound}>Ei hakutuloksia..</Text>
+        ) : (
+          <FlatList
+            data={data}
+            keyExtractor={item => item._id}
+            renderItem={({ item, index }) => (
+              <Item {...this.props} data={item} index={index} />
+            )}
+          />
+        )}
       </View>
     );
   }

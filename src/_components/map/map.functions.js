@@ -15,7 +15,7 @@ export function markerImgUrl(icon) {
   }
 }
 
-export function openingHours(data) {
+export function openingHours(data, context) {
   const compare = new Date();
   const { openingHours } = data;
   const today = compare.getDay();
@@ -31,20 +31,20 @@ export function openingHours(data) {
   );
 
   if (convertedClosing - hours < 0) {
-    return 'Suljettu nyt';
+    return context.t('closed');
   } else if (convertedClosing - hours > 3) {
     return 'Sulkeutuu tänään: ' + closes;
   } else if (convertedClosing - hours < 3) {
     if (convertedClosing - hours >= 1) {
       return (
-        'Sulkeutuu tänään: ' +
+        context.t('closesToday') +
         closes +
         '\n(Sulkeutuu ' +
         Math.floor(convertedClosing - hours) +
         'h päästä)'
       );
     } else {
-      return 'Sulkeutuu tänään: ' + closes + '\n(Sulkeutuu <1h päästä)';
+      return context.t('closesToday') + " " + closes + '\n(Sulkeutuu <1h päästä)';
     }
   } else {
     return 'Avoinna 24h';
