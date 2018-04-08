@@ -1,15 +1,15 @@
-import { filterConstants } from "../_constants";
+import { filterConstants } from '../_constants';
 
 export const filterActions = {
-    setFilterText
+  updateFilter
 };
 
-function setFilterText(filterText) {
-    return dispatch => {
-        dispatch(setFilter(filterText));
-    };
+function updateFilter(filter) {
+  return dispatch => {
+    dispatch(setFilter(filter));
+  };
 
-    function setFilter(filterText) {
-        return {type: filterConstants.SET_FILTER_TEXT, filterText};
-    }
+  function setFilter(filter) {
+    return { type: filterConstants.SET_FILTER, filter };
+  }
 }

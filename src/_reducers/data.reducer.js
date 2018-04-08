@@ -1,16 +1,27 @@
 import { dataConstants } from '../_constants';
 
-export function data(state = {}, action) {
+export function alldata(state = {}, action) {
   switch (action.type) {
-    case dataConstants.DATA_REQUEST:
-      return { loading: true };
-    case dataConstants.DATA_SUCCESS:
+    case dataConstants.ALL_DATA_SUCCESS:
       return {
         ...state,
-        loading: false,
         data: action.data
       };
-    case dataConstants.DATA_FAILURE:
+    case dataConstants.ALL_DATA_FAILURE:
+      return { error: action.error };
+    default:
+      return state;
+  }
+}
+
+export function locationdata(state = {}, action) {
+  switch (action.type) {
+    case dataConstants.LOCATION_DATA_SUCCESS:
+      return {
+        ...state,
+        data: action.data
+      };
+    case dataConstants.LOCATION_DATA_FAILURE:
       return { error: action.error };
     default:
       return state;

@@ -1,12 +1,15 @@
 import { filterConstants } from '../_constants';
 
-export function filter(state = { filterText: "" }, action) {
-    switch (action.type) {
-        case filterConstants.SET_FILTER_TEXT:
-            return {
-                filterText: action.filterText
-            };
-        default:
-            return state;
-    }
+export function filter(
+  state = { filters: { filterText: '', filterSlider: [0, 100] } },
+  action
+) {
+  switch (action.type) {
+    case filterConstants.SET_FILTER:
+      return {
+        filters: action.filter
+      };
+    default:
+      return state;
+  }
 }

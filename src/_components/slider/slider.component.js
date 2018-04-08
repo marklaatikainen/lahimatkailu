@@ -1,53 +1,44 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { View, Text, Slider } from 'react-native';
 import MultiSlider from 'react-native-MultiSlider';
 
 import { precisionRound, mapValues } from '../../_helpers';
-
+import { filterActions } from '../../_actions';
 import { styles } from '../slider';
 
 export class SliderComponent extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      leftValue: 0.5,
-      rightValue: 1
-    };
-  }
-
   changeLeft(value) {
-    const { leftValue, rightValue } = this.state;
-    this.setState(
-      {
-        leftValue: value
-      },
-      () => {
-        const left = precisionRound(mapValues(leftValue, 0, 1, 0, 100), 0);
-        const right = precisionRound(mapValues(rightValue, 0, 1, 0, 100),
-          0
-        );
-      }
+    const { dispatch } = this.props;
+    const { filterSlider } = this.props.filter.filters;
+
+    dispatch(
+      filterActions.updateFilter({
+        ...filters,
+        filterSlider: [this.mapped(value), filterSlider[1]]
+      })
     );
   }
 
   changeRight(value) {
-    const { leftValue, rightValue } = this.state;
-    this.setState(
-      {
-        rightValue: value
-      },
-      () => {
-        const left = precisionRound(mapValues(leftValue, 0, 1, 0, 100), 0);
-        const right = precisionRound(mapValues(rightValue, 0, 1, 0, 100),
-          0
-        );
-      }
+    const { dispatch } = this.props;
+    const { filters } = this.props.filter;
+    const { filterSlider } = this.props.filter.filters;
+
+    dispatch(
+      filterActions.updateFilter({
+        ...filters,
+        filterSlider: [filterSlider[0], this.mapped(value)]
+      })
     );
   }
 
+  mapped(slider) {
+    return precisionRound(mapValues(slider, 0, 1, 0, 100), 0);
+  }
+
   render() {
-    const { value, leftValue, rightValue } = this.state;
+    const { filterSlider } = this.props.filter.filters;
 
     return (
       <View style={styles.container}>
@@ -59,17 +50,20 @@ export class SliderComponent extends Component {
           leftThumbColor={'#f0f0f0'}
           rightThumbColor={'#f0f0f0'}
           rangeColor={'#74A335'}
-          leftValue={this.state.leftValue}
-          rightValue={this.state.rightValue}
+          leftValue={mapValues(filterSlider[0], 0, 100, 0, 1)}
+          rightValue={mapValues(filterSlider[1], 0, 100, 0, 1)}
           onLeftValueChange={leftValue => this.changeLeft(leftValue)}
           onRightValueChange={rightValue => this.changeRight(rightValue)}
         />
 
         <Text style={styles.text}>
-          Etäisyys: {precisionRound(mapValues(leftValue, 0, 1, 0, 100), 0)}{' '}
-          - {precisionRound(mapValues(rightValue, 0, 1, 0, 100), 0)}km
+          Etäisyys: {filterSlider[0]} - {filterSlider[1]}km
         </Text>
       </View>
     );
   }
 }
+
+SliderComponent.propTypes = {
+  filter: PropTypes.object.isRequired
+};

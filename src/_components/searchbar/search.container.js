@@ -5,7 +5,7 @@ import { Search } from '../searchbar';
 
 class SearchContainer extends Component {
   render() {
-    return (<Search {...this.props}/>);
+    return <Search {...this.props} />;
   }
 }
 
