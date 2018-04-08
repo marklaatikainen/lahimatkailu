@@ -3,24 +3,16 @@ import { PropTypes } from 'prop-types';
 import { View, Text, Slider } from 'react-native';
 import MultiSlider from 'react-native-MultiSlider';
 
-import { precisionRound, mapValues } from '../../_helpers';
+import { mapped, mapValues } from '../../_helpers';
 import { filterActions } from '../../_actions';
 import { styles } from '../slider';
 
 export class SliderComponent extends Component {
-  changeLeft(value) {
-    const { dispatch } = this.props;
-    const { filterSlider } = this.props.filter.filters;
-
-    dispatch(
-      filterActions.updateFilter({
-        ...filters,
-        filterSlider: [this.mapped(value), filterSlider[1]]
-      })
-    );
-  }
-
-  changeRight(value) {
+  /*
+    @param: value = new slider value
+    @param: slider = 'left|right'
+  */
+  changeSliderValue(value, slider) {
     const { dispatch } = this.props;
     const { filters } = this.props.filter;
     const { filterSlider } = this.props.filter.filters;
@@ -28,13 +20,12 @@ export class SliderComponent extends Component {
     dispatch(
       filterActions.updateFilter({
         ...filters,
-        filterSlider: [filterSlider[0], this.mapped(value)]
+        filterSlider:
+          slider === 'right'
+            ? [filterSlider[0], mapped(value)]
+            : [mapped(value), filterSlider[1]]
       })
     );
-  }
-
-  mapped(slider) {
-    return precisionRound(mapValues(slider, 0, 1, 0, 100), 0);
   }
 
   render() {
@@ -52,8 +43,12 @@ export class SliderComponent extends Component {
           rangeColor={'#74A335'}
           leftValue={mapValues(filterSlider[0], 0, 100, 0, 1)}
           rightValue={mapValues(filterSlider[1], 0, 100, 0, 1)}
-          onLeftValueChange={leftValue => this.changeLeft(leftValue)}
-          onRightValueChange={rightValue => this.changeRight(rightValue)}
+          onLeftValueChange={leftValue =>
+            this.changeSliderValue(leftValue, 'left')
+          }
+          onRightValueChange={rightValue =>
+            this.changeSliderValue(rightValue, 'right')
+          }
         />
 
         <Text style={styles.text}>
