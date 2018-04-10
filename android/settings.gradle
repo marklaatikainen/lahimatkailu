@@ -3,17 +3,11 @@ rootProject.name = 'Lähimatkailu'
 include ':react-native-vector-icons'
 project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 
-include ':RNAlocation', ':app'
+include ':RNAlocation' //, ':app'
 project(':RNAlocation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-android-location')
 
 include ':react-native-maps'
-project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
-
-include ':react-native-immersive'
-project(':react-native-immersive').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-immersive/android')
-
-include ':react-native-orientation', ':app'
-project(':react-native-orientation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-orientation/android')
+project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/android')
 
 include ':react-native-snackbar'
 project(':react-native-snackbar').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-snackbar/android')

@@ -1,15 +1,26 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 export const styles = StyleSheet.create({
-    searchContainer: {
-        marginTop: 0,
-        paddingTop: 0,
-        backgroundColor: 'white'
-    },
-    searchBar: {
-        width: Dimensions.get('screen').width - 60,
-        backgroundColor: 'white',
-        borderWidth: 1,
-        borderColor: 'green'
-    },
+  container: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    width: Dimensions.get('screen').width
+  },
+  searchContainer: {
+    width: Dimensions.get('screen').width - 60,
+    marginTop: 0,
+    paddingTop: 0,
+    backgroundColor: 'white'
+  },
+  searchBar: {
+    backgroundColor: 'white',
+    borderWidth: 1,
+    borderColor: 'green'
+  },
+  button: {
+    backgroundColor: 'white',
+    width: 60,
+    paddingTop: 10,
+    paddingLeft: 10
+  }
 });

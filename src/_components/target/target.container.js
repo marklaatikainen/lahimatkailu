@@ -4,12 +4,12 @@ import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { connect } from 'react-redux';
 
+import { targetActions } from '../../_actions';
 import { styles } from '../navigator';
 import { Target } from '../target';
 
 function navigateBack() {
-  console.log(this.props);
-  // dispatch(targetActions.closeTarget());
+  this.props.dispatch(targetActions.closeTarget());
 }
 
 class TargetContainer extends Component {
@@ -19,7 +19,6 @@ class TargetContainer extends Component {
 
   static navigationOptions = ({ navigation }) => {
     const { params } = navigation.state;
-    const { dispatch, goBack } = navigation;
     return {
       title: params && params.target,
       headerStyle: styles.topBar,
@@ -28,7 +27,7 @@ class TargetContainer extends Component {
         <TouchableOpacity
           style={styles.backIcon}
           onPress={() => {
-            navigateBack();
+            this.props.dispatch(targetActions.closeTarget());
           }}
         >
           <Icon name="arrow-left" size={20} color="white" />

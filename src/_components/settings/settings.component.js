@@ -36,10 +36,10 @@ export class Settings extends Component {
           dialogDescription={this.context.t('chooseLang')}
           possibleValues={[
             { label: '...', value: '' },
-            { label: this.context.t('fi'), value: this.context.t('fi') },
-            { label: this.context.t('en'), value: this.context.t('en') },
-            { label: this.context.t('se'), value: this.context.t('se') },
-            { label: this.context.t('ru'), value: this.context.t('ru') }
+            { label: this.context.t('fi'), value: 'fi' },
+            { label: this.context.t('en'), value: 'en' },
+            { label: this.context.t('se'), value: 'se' },
+            { label: this.context.t('ru'), value: 'ru' }
           ]}
           positiveButtonTitle={'Ok'}
           negativeButtonTitle={'Cancel'}
@@ -50,7 +50,7 @@ export class Settings extends Component {
           styleModalButtonsText={styles.text}
         />
         <SettingsSwitch
-          title={'Allow Push Notifications'}
+          title={this.context.t('notifications')}
           onSaveValue={value => {
             this.setState({
               allowPushNotifications: value

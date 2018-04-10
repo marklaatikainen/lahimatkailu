@@ -45,7 +45,6 @@ function sliderFilter(item, location, slider) {
     ) / 1000,
     1
   );
-  console.log(range)
   return range >= slider[0] && range <= slider[1];
 }
 

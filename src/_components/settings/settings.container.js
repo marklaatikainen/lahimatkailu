@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { AsyncStorage } from 'react-native';
 import { connect } from 'react-redux';
 import { setLanguage } from 'redux-i18n';
 
@@ -10,7 +11,9 @@ class SettingsContainer extends Component {
       <Settings
         {...this.props}
         changeLanguage={newLang => {
-          this.props.dispatch(setLanguage(newLang));
+          this.props.dispatch(setLanguage(newLang), () => {
+            AsyncStorage.setItem('lang', newLang);
+          });
         }}
       />
     );

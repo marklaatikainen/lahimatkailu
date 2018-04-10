@@ -11,8 +11,6 @@ import com.facebook.soloader.SoLoader;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.syarul.rnalocation.RNALocation;
-import com.rnimmersive.RNImmersivePackage;
-import com.github.yamill.orientation.OrientationPackage;
 import com.azendoo.reactnativesnackbar.SnackbarPackage;
 
 import java.util.Arrays;
@@ -32,8 +30,6 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
           new VectorIconsPackage(),
           new SnackbarPackage(),
-          new OrientationPackage(),
-          new RNImmersivePackage(),
           new MapsPackage(),
           new RNALocation()
       );

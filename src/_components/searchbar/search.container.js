@@ -10,7 +10,8 @@ class SearchContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  filter: state.filter
+  filter: state.filter,
+  dropdown: state.dropdown
 });
 
 export default connect(mapStateToProps)(SearchContainer);

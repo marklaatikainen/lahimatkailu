@@ -19,7 +19,8 @@ const mapStateToProps = state => ({
   dimensions: state.dimensions,
   region: state.region,
   userlocation: state.userlocation,
-  filter: state.filter
+  filter: state.filter,
+  dropdown: state.dropdown
 });
 
 export default connect(mapStateToProps)(ListPageContainer);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { View, FlatList, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -12,10 +13,8 @@ export class SearchPage extends Component {
     return (
       <View style={styles.container}>
         <SearchContainer />
-        <View style={styles.button}>
-          <ListFilters />
-        </View>
-        {data.length === 0 && filter.filterText !== '' ? (
+        <ListFilters {...this.props} />
+        {data.length === 0 && filter.filters.filterText !== '' ? (
           <Text style={styles.notfound}>Ei hakutuloksia..</Text>
         ) : (
           <FlatList
@@ -30,3 +29,9 @@ export class SearchPage extends Component {
     );
   }
 }
+
+SearchPage.propTypes = {
+  dropdown: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
+  filter: PropTypes.object.isRequired
+};
