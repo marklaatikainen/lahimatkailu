@@ -48,14 +48,13 @@ export const styles = StyleSheet.create({
         marginBottom: 10
     },
     icons: {
-        flexWrap: 'wrap',
         alignItems: 'flex-start',
         flexDirection: 'row',
         backgroundColor: '#74A335',
         height: 60,
         marginBottom: 10,
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         paddingLeft: 30,
         paddingRight: 30,
         width: '100%',
