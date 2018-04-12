@@ -9,7 +9,7 @@ export const targetActions = {
 function openTarget(target) {
   return dispatch => {
     dispatch(open(target));
-    NavigationActions.navigate({ routeName: 'Target' });
+    // NavigationActions.navigate({ routeName: 'Target' });
   };
 
   function open(target) {
@@ -20,7 +20,7 @@ function openTarget(target) {
 function closeTarget() {
   return dispatch => {
     dispatch(close());
-    NavigationActions.navigate({ routeName: 'Tabs' });
+    // NavigationActions.navigate({ routeName: 'Tabs' });
   };
 
   function close() {

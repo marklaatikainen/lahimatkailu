@@ -3,6 +3,7 @@ package com.lahimatkailu;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -11,6 +12,8 @@ import com.facebook.soloader.SoLoader;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.syarul.rnalocation.RNALocation;
+import com.rnimmersive.RNImmersivePackage;
+import com.github.yamill.orientation.OrientationPackage;
 import com.azendoo.reactnativesnackbar.SnackbarPackage;
 
 import java.util.Arrays;
@@ -29,9 +32,11 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new VectorIconsPackage(),
-          new SnackbarPackage(),
           new MapsPackage(),
-          new RNALocation()
+          new RNALocation(),
+          new RNImmersivePackage(),
+          new OrientationPackage(),
+          new SnackbarPackage()
       );
     }
 

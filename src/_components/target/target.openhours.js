@@ -14,6 +14,12 @@ import {
 import { styles } from '../target';
 
 export class TableOpenHours extends Component {
+
+  empty(hours) {
+    const { mon, tue, wed, thu, fri, sat, sun } = hours;
+    return mon.start === "" && mon.end === "" && tue.start === "" && tue.end === "" && wed.start === "" && wed.end === "" && thu.start === "" && thu.end === "" && fri.start === "" && fri.end === "" && sat.start === "" && sat.end === "" && sun.start === "" && sun.end === "";
+  }
+
   render() {
     const { target } = this.props.target;
     const { openingHours } = target;
@@ -28,14 +34,20 @@ export class TableOpenHours extends Component {
 
     return (
       <View>
-        <Text style={styles.openingTitle}>{this.context.t('opening')}</Text>
-        <Table style={styles.opening} borderStyle={{ borderWidth: 0 }}>
-          <Rows
-            flexArr={[1.5, 1.5, 0.5, 3, 1.5, 1.5, 0.5, 3]}
-            heightArr={[22, 22, 22, 22]}
-            data={tableRows2}
-          />
-        </Table>
+        {this.empty(openingHours) ? (
+          <Text style={styles.opening}>{this.context.t('clock-o')}</Text>
+        ) : (
+          <View>
+            <Text style={styles.openingTitle}>{this.context.t('opening')}</Text>
+            <Table style={styles.opening} borderStyle={{ borderWidth: 0 }}>
+              <Rows
+                flexArr={[1.5, 1.5, 0.5, 3, 1.5, 1.5, 0.5, 3]}
+                heightArr={[22, 22, 22, 22]}
+                data={tableRows2}
+              />
+            </Table>
+          </View>
+        )}
       </View>
     );
   }

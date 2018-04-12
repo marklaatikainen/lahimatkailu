@@ -6,12 +6,14 @@ import { styles, AccessibilityIcon } from '../target';
 
 export class IconBar extends Component {
   render() {
+    const { symbols } = this.props.target;
+
     return (
       <View style={styles.icons}>
-        <AccessibilityIcon name="wheelchair" text={this.context.t('accessible')} />
-        <AccessibilityIcon name="clock-o" text={this.context.t('alwaysopen')} />
-        <AccessibilityIcon name="car" text={this.context.t('parking')} />
-        <AccessibilityIcon name="paw" text={this.context.t('pets')} />
+        {symbols &&
+          symbols.map(symbol => (
+            <AccessibilityIcon key={symbol} name={symbol} text={this.context.t(symbol)} />
+          ))}
       </View>
     );
   }
@@ -19,4 +21,8 @@ export class IconBar extends Component {
 
 IconBar.contextTypes = {
   t: PropTypes.func.isRequired
+};
+
+IconBar.propTypes = {
+  target: PropTypes.object.isRequired
 };
