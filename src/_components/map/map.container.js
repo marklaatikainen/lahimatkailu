@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { DeviceEventEmitter } from 'react-native';
 import RNALocation from 'react-native-android-location';
 import { connect } from 'react-redux';
@@ -40,5 +41,10 @@ const mapStateToProps = state => ({
   userlocation: state.userlocation,
   checkbox: state.checkbox
 });
+
+MapContainer.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  region: PropTypes.object.isRequired
+};
 
 export default connect(mapStateToProps)(MapContainer);

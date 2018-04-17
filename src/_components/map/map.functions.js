@@ -1,18 +1,10 @@
-import React from 'react';
-import { View, Text, Image } from 'react-native';
-import { Callout, Marker } from 'react-native-maps';
-import { getDistance } from 'geolib';
-
-import { styles } from '../map';
-
 export function markerImgUrl(icon) {
   if (icon == 'Ruoka') {
     return 'http://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png';
   } else if (icon == 'Nähtävyys') {
     return 'http://maps.gstatic.com/mapfiles/ms2/micons/tree.png';
-  } else {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png';
   }
+  return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png';
 }
 
 export function openingHours(data, context) {
@@ -44,7 +36,9 @@ export function openingHours(data, context) {
         'h päästä)'
       );
     } else {
-      return context.t('closesToday') + " " + closes + '\n(Sulkeutuu <1h päästä)';
+      return (
+        context.t('closesToday') + ' ' + closes + '\n(Sulkeutuu <1h päästä)'
+      );
     }
   } else {
     return 'Avoinna 24h';

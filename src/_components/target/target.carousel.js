@@ -26,18 +26,16 @@ export class CustomCarousel extends Component {
                 style={[styles.image, { width: dimensions.screenWidth }]}
                 source={{ uri: image }}
               />
-            ))
-            }
+            ))}
           </Carousel>
         </View>
       );
-    } else {
-      return (null);
     }
+    return null;
   }
 }
 
 CustomCarousel.propTypes = {
   target: PropTypes.object.isRequired,
   dimensions: PropTypes.object.isRequired
-}
+};

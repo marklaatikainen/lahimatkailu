@@ -13,10 +13,7 @@ export class CheckBoxes extends Component {
     const { dispatch, checkbox } = this.props;
 
     return (
-      <View
-        checked={checkbox.values}
-        style={style ? style : styles.container}
-      >
+      <View checked={checkbox.values} style={style ? style : styles.container}>
         <CheckBox
           labelStyle={styles.label}
           labelBefore
@@ -63,5 +60,7 @@ CheckBoxes.contextTypes = {
 };
 
 CheckBoxes.propTypes = {
-  checkbox: PropTypes.object.isRequired
+  checkbox: PropTypes.object.isRequired,
+  style: PropTypes.number,
+  dispatch: PropTypes.func.isRequired
 };

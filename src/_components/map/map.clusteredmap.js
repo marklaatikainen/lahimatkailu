@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { PropTypes } from 'prop-types';
-import { Marker, Callout } from 'react-native-maps';
+import { Marker } from 'react-native-maps';
 import ClusteredMapView from 'react-native-maps-super-cluster';
 
 import { styles, customMapStyle, MapMarker } from '../map';
 import { regionActions, dataActions } from '../../_actions';
 
-export class ClusteredMap extends React.Component {
+export class ClusteredMap extends Component {
   renderMarker = data => (
     <MapMarker {...this.props} key={data._id} data={data} />
   );
@@ -70,5 +70,6 @@ ClusteredMap.defaultProps = {
 ClusteredMap.propTypes = {
   dimensions: PropTypes.object.isRequired,
   data: PropTypes.array.isRequired,
-  region: PropTypes.object.isRequired
+  region: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
 };

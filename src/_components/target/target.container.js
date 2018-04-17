@@ -51,4 +51,9 @@ const mapStateToProps = state => ({
   lang: state.i18nState.lang
 });
 
+TargetContainer.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  navigation: PropTypes.object.isRequired
+};
+
 export default connect(mapStateToProps)(TargetContainer);

@@ -7,7 +7,6 @@ import { openingHours } from '../map';
 import { translate, precisionRound } from '../../_helpers';
 
 export class CalloutContent extends Component {
-
   render() {
     const { data } = this.props;
     const { location } = this.props.userlocation;
@@ -15,7 +14,7 @@ export class CalloutContent extends Component {
       <View>
         <Text>{data.name}</Text>
         <Text>{this.context.t(translate(data.type))}</Text>
-        {/* <Text>
+        <Text>
           {this.context.t('distance')}:{' '}
           {precisionRound(
             getDistance(
@@ -31,7 +30,7 @@ export class CalloutContent extends Component {
             1
           )}
           km
-        </Text> */}
+        </Text>
         <Text>{openingHours(data, this.context)}</Text>
       </View>
     );
@@ -44,5 +43,6 @@ CalloutContent.contextTypes = {
 
 CalloutContent.propTypes = {
   data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  userlocation: PropTypes.object.isRequired
 };

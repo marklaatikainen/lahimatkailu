@@ -1,10 +1,5 @@
 import { apiHost } from '../_helpers';
 
-export const dataService = {
-  fetchData,
-  fetchDataByLocation
-};
-
 async function fetchData() {
   return fetch(apiHost)
     .then(response => {
@@ -31,3 +26,8 @@ async function fetchDataByLocation(region) {
       return responseJson.kohteet;
     });
 }
+
+export const dataService = {
+  fetchData,
+  fetchDataByLocation
+};

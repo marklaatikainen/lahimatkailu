@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { View, Text } from 'react-native';
-import {
-  Table,
-  TableWrapper,
-  Row,
-  Rows,
-  Col,
-  Cols,
-  Cell
-} from 'react-native-table-component';
+import { Table, Rows } from 'react-native-table-component';
 
 import { styles } from '../target';
 
 export class TableOpenHours extends Component {
-
   empty(hours) {
     const { mon, tue, wed, thu, fri, sat, sun } = hours;
-    return mon.start === "" && mon.end === "" && tue.start === "" && tue.end === "" && wed.start === "" && wed.end === "" && thu.start === "" && thu.end === "" && fri.start === "" && fri.end === "" && sat.start === "" && sat.end === "" && sun.start === "" && sun.end === "";
+    return (
+      mon.start === '' &&
+      mon.end === '' &&
+      tue.start === '' &&
+      tue.end === '' &&
+      wed.start === '' &&
+      wed.end === '' &&
+      thu.start === '' &&
+      thu.end === '' &&
+      fri.start === '' &&
+      fri.end === '' &&
+      sat.start === '' &&
+      sat.end === '' &&
+      sun.start === '' &&
+      sun.end === ''
+    );
   }
 
   render() {
@@ -26,9 +32,36 @@ export class TableOpenHours extends Component {
     const { mon, tue, wed, thu, fri, sat, sun } = openingHours;
 
     const tableRows2 = [
-      [this.context.t('mon'), mon.start, '-', mon.end, this.context.t('fri'), fri.start, '-', fri.end],
-      [this.context.t('tue'), tue.start, '-', tue.end, this.context.t('sat'), sat.start, '-', sat.end],
-      [this.context.t('wed'), wed.start, '-', wed.end, this.context.t('sun'), sun.start, '-', sun.end],
+      [
+        this.context.t('mon'),
+        mon.start,
+        '-',
+        mon.end,
+        this.context.t('fri'),
+        fri.start,
+        '-',
+        fri.end
+      ],
+      [
+        this.context.t('tue'),
+        tue.start,
+        '-',
+        tue.end,
+        this.context.t('sat'),
+        sat.start,
+        '-',
+        sat.end
+      ],
+      [
+        this.context.t('wed'),
+        wed.start,
+        '-',
+        wed.end,
+        this.context.t('sun'),
+        sun.start,
+        '-',
+        sun.end
+      ],
       [this.context.t('thu'), thu.start, '-', thu.end, '', '', '', '']
     ];
 

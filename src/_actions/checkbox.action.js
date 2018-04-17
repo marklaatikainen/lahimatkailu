@@ -1,15 +1,15 @@
-import { checkboxConstants } from "../_constants";
-
-export const checkboxActions = {
-    updateValues
-};
+import { checkboxConstants } from '../_constants';
 
 function updateValues(value) {
-    return dispatch => {
-        dispatch(setVal(value));
-    };
+  function setVal(values) {
+    return { type: checkboxConstants.SET_VALUES, values };
+  }
 
-    function setVal(values) {
-        return {type: checkboxConstants.SET_VALUES, values};
-    }
+  return dispatch => {
+    dispatch(setVal(value));
+  };
 }
+
+export const checkboxActions = {
+  updateValues
+};

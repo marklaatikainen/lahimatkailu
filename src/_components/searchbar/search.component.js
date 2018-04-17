@@ -51,5 +51,6 @@ export class Search extends Component {
 
 Search.propTypes = {
   dropdown: PropTypes.object.isRequired,
-  filter: PropTypes.object.isRequired
+  filter: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
 };

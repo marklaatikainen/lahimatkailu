@@ -9,12 +9,13 @@ export function targetIcon(type) {
   } else if (type === 'Palvelu') {
     return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png';
   }
+  return null;
 }
 
 export function filter(data, location, filters, checkboxes) {
   const { filterSlider, filterText } = filters;
-  let filteredData = [];
-  for (var _id in data) {
+  let filteredData = []; // eslint-disable-line
+  for (const _id in data) {
     if (
       sliderFilter(data[_id], location.location, filterSlider) &&
       checkboxFilter(data[_id], checkboxes) &&
@@ -29,16 +30,16 @@ export function filter(data, location, filters, checkboxes) {
 function checkboxFilter(item, checkboxes) {
   const { food, service, sight } = checkboxes.values;
   return (
-    (food && item.type == 'Ruoka') ||
-    (sight && item.type == 'Nähtävyys') ||
-    (service && item.type == 'Palvelu')
+    (food && item.type === 'Ruoka') ||
+    (sight && item.type === 'Nähtävyys') ||
+    (service && item.type === 'Palvelu')
   );
 }
 
 function sliderFilter(item, location, slider) {
   // user's location
   const { Latitude, Longitude } = location;
-  let range = precisionRound(
+  const range = precisionRound(
     getDistance(
       { latitude: Latitude, longitude: Longitude },
       { latitude: item.location.latitude, longitude: item.location.longitude }
@@ -55,7 +56,6 @@ function textFilter(item, text) {
       item.type.toUpperCase().indexOf(text.toUpperCase()) > -1 ||
       item.address.city.toUpperCase().indexOf(text.toUpperCase()) > -1
     );
-  } else {
-    return true;
   }
+  return true;
 }

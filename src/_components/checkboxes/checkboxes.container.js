@@ -4,11 +4,9 @@ import { connect } from 'react-redux';
 import { CheckBoxes } from '../checkboxes';
 
 class CheckBoxesContainer extends Component {
-    render() {
-        return (
-            <CheckBoxes {...this.props} />
-        );
-    }
+  render() {
+    return <CheckBoxes {...this.props} />;
+  }
 }
 
 const mapStateToProps = state => ({
