@@ -11,7 +11,7 @@ export class ListFilters extends Component {
     const { state } = this.props.dropdown;
 
     return (
-      <View style={[styles.filterContainer, { height: state ? 80 : 0 }]}>
+      <View style={[styles.filterContainer, { height: state ? 120 : 0 }]}>
         <CheckBoxesContainer style={styles.listpageCheckboxes} />
         <SliderContainer />
       </View>
