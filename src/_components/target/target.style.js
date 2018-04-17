@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
         flex: 1
     },
     dimensions: {
-        height: Dimensions.get('window').height,
+        height: Dimensions.get('window').height - 430,
         width: Dimensions.get('window').width
     },
     map: {
