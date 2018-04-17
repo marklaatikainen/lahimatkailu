@@ -31,7 +31,12 @@ export class CustomCarousel extends Component {
         </View>
       );
     }
-    return null;
+    return (
+      <Image
+        style={[styles.image, { width: dimensions.screenWidth }]}
+        source={require('../../../images/kohteesta_ei_kuvia.png')} //eslint-disable-line
+      />
+    );
   }
 }
 
