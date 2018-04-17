@@ -13,7 +13,7 @@ export class Search extends Component {
   };
 
   render() {
-    const { dispatch, filter, dropdown } = this.props;
+    const { dispatch, dropdown } = this.props;
     const { filters } = this.props.filter;
 
     let icon = this.icons[dropdown.state ? 'up' : 'down'];
@@ -52,5 +52,6 @@ export class Search extends Component {
 
 Search.propTypes = {
   dropdown: PropTypes.object.isRequired,
-  filter: PropTypes.object.isRequired
+  filter: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
 };

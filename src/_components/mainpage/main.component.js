@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -25,5 +26,10 @@ class MainPage extends Component {
 const mapStateToProps = state => ({
   target: state.target
 });
+
+MainPage.propTypes = {
+  target: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
+};
 
 export default connect(mapStateToProps)(MainPage);

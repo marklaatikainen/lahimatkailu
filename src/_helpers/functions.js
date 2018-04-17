@@ -1,5 +1,5 @@
 export function precisionRound(number, precision) {
-  var factor = Math.pow(10, precision);
+  const factor = Math.pow(10, precision);
   return Math.round(number * factor) / factor;
 }
 
@@ -12,6 +12,7 @@ export function mapped(slider) {
 }
 
 export function translate(t) {
+  let type;
   if (t === 'Ruoka') {
     type = 'food';
   } else if (t === 'Palvelu') {

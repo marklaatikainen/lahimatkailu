@@ -4,7 +4,6 @@ import { ScrollView } from 'react-native';
 import {
   SettingsDividerShort,
   SettingsDividerLong,
-  SettingsEditText,
   SettingsCategoryHeader,
   SettingsSwitch,
   SettingsPicker
@@ -70,4 +69,8 @@ export class Settings extends Component {
 
 Settings.contextTypes = {
   t: PropTypes.func.isRequired
+};
+
+Settings.propTypes = {
+  changeLanguage: PropTypes.func.isRequired
 };

@@ -1,16 +1,15 @@
-import { regionConstants } from "../_constants";
-import { dataActions } from ".";
+import { regionConstants } from '../_constants';
+
+function setRegion(reg) {
+  function setReg(region) {
+    return { type: regionConstants.SET_REGION, region };
+  }
+
+  return dispatch => {
+    dispatch(setReg(reg));
+  };
+}
 
 export const regionActions = {
-    setRegion
+  setRegion
 };
-
-function setRegion(region) {
-    return dispatch => {
-        dispatch(setReg(region));
-    };
-
-    function setReg(region) {
-        return {type: regionConstants.SET_REGION, region};
-    }
-}

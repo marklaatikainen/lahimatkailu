@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { TouchableHighlight, View, Animated, Image } from 'react-native';
 
 import { styles } from '../panel';
@@ -21,8 +22,8 @@ export default class Panel extends Component {
   toggle() {
     const { maxHeight, minHeight, expanded } = this.state;
 
-    let initialValue = expanded ? maxHeight + minHeight : minHeight;
-    let finalValue = expanded ? minHeight : maxHeight + minHeight;
+    const initialValue = expanded ? maxHeight + minHeight : minHeight;
+    const finalValue = expanded ? minHeight : maxHeight + minHeight;
 
     this.setState({
       expanded: !expanded
@@ -78,3 +79,7 @@ export default class Panel extends Component {
     );
   }
 }
+
+Panel.propTypes = {
+  children: PropTypes.object.isRequired
+};

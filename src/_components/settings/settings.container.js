@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { AsyncStorage } from 'react-native';
 import { connect } from 'react-redux';
 import { setLanguage } from 'redux-i18n';
@@ -23,5 +24,10 @@ class SettingsContainer extends Component {
 const mapStateToProps = state => ({
   lang: state.i18nState.lang
 });
+
+SettingsContainer.propTypes = {
+  changeLanguage: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps)(SettingsContainer);

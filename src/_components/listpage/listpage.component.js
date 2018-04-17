@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { View, FlatList, Text } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { styles, ListFilters } from '../listpage';
 import SearchContainer from '../searchbar/search.container';

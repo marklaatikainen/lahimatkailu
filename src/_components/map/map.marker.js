@@ -28,5 +28,6 @@ export class MapMarker extends Component {
 
 MapMarker.propTypes = {
   data: PropTypes.object.isRequired,
-  userlocation: PropTypes.object.isRequired
+  userlocation: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
 };

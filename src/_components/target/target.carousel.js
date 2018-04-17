@@ -12,32 +12,31 @@ export class CustomCarousel extends Component {
 
     if (picture && picture.length) {
       return (
-        <View style={ styles.scrollContainer } onLayout={ onLayoutDidChange }>
-            <Carousel
-                delay={4000}
-                style={ styles.dimensions }
-                autoplay
-                pageInfo
-                pageInfoBackgroundColor="rgba(255, 255, 255, 0.55)"
-                isLooped>
-            { picture.map(image => (
-              <Image 
-                key={picture.indexOf(image)} 
-                style={[styles.image, {width: dimensions.screenWidth }]} 
+        <View style={styles.scrollContainer} onLayout={onLayoutDidChange}>
+          <Carousel
+            delay={4000}
+            style={styles.dimensions}
+            autoplay
+            pageInfo
+            pageInfoBackgroundColor="rgba(255, 255, 255, 0.55)"
+            isLooped
+          >
+            {picture.map(image => (
+              <Image
+                key={picture.indexOf(image)}
+                style={[styles.image, { width: dimensions.screenWidth }]}
                 source={{ uri: image }}
               />
-            ))
-            }
+            ))}
           </Carousel>
         </View>
       );
-    } else {
-        return ( null );
     }
+    return null;
   }
 }
 
 CustomCarousel.propTypes = {
   target: PropTypes.object.isRequired,
   dimensions: PropTypes.object.isRequired
-}
+};

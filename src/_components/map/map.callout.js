@@ -5,16 +5,16 @@ import { Callout } from 'react-native-maps';
 import { styles, CalloutContent } from '../map';
 
 export class MapMarkerCallout extends Component {
-    render() {
-        return (
-            <Callout style={styles.callout}>
-                <CalloutContent {...this.props} />
-            </Callout>
-        );
-    }
+  render() {
+    return (
+      <Callout style={styles.callout}>
+        <CalloutContent {...this.props} />
+      </Callout>
+    );
+  }
 }
 
 MapMarkerCallout.propTypes = {
-    data: PropTypes.object.isRequired,
-    userlocation: PropTypes.object.isRequired
-}
+  data: PropTypes.object.isRequired,
+  userlocation: PropTypes.object.isRequired
+};

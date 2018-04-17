@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { View, Text, Slider } from 'react-native';
+import { View, Text } from 'react-native';
 import MultiSlider from 'react-native-MultiSlider';
 
 import { mapped, mapValues } from '../../_helpers';
@@ -60,5 +60,6 @@ export class SliderComponent extends Component {
 }
 
 SliderComponent.propTypes = {
-  filter: PropTypes.object.isRequired
+  filter: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
 };

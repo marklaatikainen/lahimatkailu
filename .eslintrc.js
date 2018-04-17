@@ -183,6 +183,8 @@ module.exports = {
     'no-plusplus': 0,
     'no-prototype-builtins': 2,
     'prefer-template': 2,
-    'template-curly-spacing': [2, 'never']
+    'template-curly-spacing': [2, 'never'],
+    // globals
+    'globals': { 'fetch': false }
   }
 };

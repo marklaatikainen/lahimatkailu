@@ -1,5 +1,4 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 // components
@@ -23,19 +22,19 @@ export const Tabs = TabNavigator(
     Settings: {
       screen: SettingsContainer,
       navigationOptions: {
-        tabBarIcon: () => <Icon name="gears" size={22} style={styles.icon} />
+        tabBarIcon: () => <Icon name="gears" size={22} style={styles.icon} /> // eslint-disable-line
       }
     },
     Map: {
       screen: MainPage,
       navigationOptions: {
-        tabBarIcon: () => <Icon name="home" size={22} style={styles.icon} />
+        tabBarIcon: () => <Icon name="home" size={22} style={styles.icon} /> // eslint-disable-line
       }
     },
     List: {
       screen: ListPageContainer,
       navigationOptions: {
-        tabBarIcon: () => <Icon name="search" size={22} style={styles.icon} />
+        tabBarIcon: () => <Icon name="search" size={22} style={styles.icon} /> // eslint-disable-line
       }
     }
   },
