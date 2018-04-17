@@ -5,6 +5,7 @@ import I18n from 'redux-i18n';
 import { translations } from './_helpers';
 import ConnectedApp from './App.connected';
 import { store } from './_helpers';
+import { styles } from './App.style';
 
 class App extends Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <Provider style={{ flex: 1 }} store={store}>
+      <Provider style={styles.container} store={store}>
         <I18n translations={translations} fallbackLang="fi">
           <ConnectedApp />
         </I18n>
