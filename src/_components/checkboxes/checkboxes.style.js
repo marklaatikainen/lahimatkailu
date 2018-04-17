@@ -6,7 +6,6 @@ export const styles = StyleSheet.create({
     alignItems: 'flex-end',
     top: 0,
     height: 130,
-    width: 110,
     paddingTop: 7,
     paddingBottom: 7,
     paddingRight: 10,
