@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import { MapComponent, filter } from '../map';
 import {
   dataActions,
-  dimensionsActions,
   regionActions,
   userlocationActions
 } from '../../_actions';
@@ -27,7 +26,6 @@ class MapContainer extends Component {
 
     dispatch(dataActions.fetchData());
     dispatch(dataActions.fetchDataByLocation(region));
-    dispatch(dimensionsActions.getDimensions());
   }
 
   render() {
