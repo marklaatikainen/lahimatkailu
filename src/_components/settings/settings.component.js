@@ -21,6 +21,10 @@ export class Settings extends Component {
     };
   }
 
+  shouldComponentUpdate(props) {
+    return props.navigation.index === 0 ? true : false;
+  }
+
   render() {
     return (
       <ScrollView style={styles.container}>
@@ -72,5 +76,6 @@ Settings.contextTypes = {
 };
 
 Settings.propTypes = {
-  changeLanguage: PropTypes.func.isRequired
+  changeLanguage: PropTypes.func.isRequired,
+  navigation: PropTypes.object.isRequired
 };

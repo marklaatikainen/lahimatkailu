@@ -1,29 +1,48 @@
 import { targetConstants } from '../_constants';
-// import { NavigationActions } from 'react-navigation';
 
-function openTarget(targ) {
+function openMapTarget(targ) {
   function open(target) {
-    return { type: targetConstants.SELECT_TARGET, target };
+    return { type: targetConstants.SELECT_MAP_TARGET, target };
   }
 
   return dispatch => {
     dispatch(open(targ));
-    // NavigationActions.navigate({ routeName: 'Target' });
   };
 }
 
-function closeTarget() {
+function closeMapTarget() {
   function close() {
-    return { type: targetConstants.DESELECT_TARGET };
+    return { type: targetConstants.DESELECT_MAP_TARGET };
   }
 
   return dispatch => {
     dispatch(close());
-    // NavigationActions.navigate({ routeName: 'Tabs' });
+  };
+}
+
+function openListTarget(targ) {
+  function open(target) {
+    return { type: targetConstants.SELECT_LIST_TARGET, target };
+  }
+
+  return dispatch => {
+    dispatch(open(targ));
+  };
+}
+
+function closeListTarget() {
+  function close() {
+    return { type: targetConstants.DESELECT_LIST_TARGET };
+  }
+
+  return dispatch => {
+    dispatch(close());
   };
 }
 
 export const targetActions = {
-  openTarget,
-  closeTarget
+  openMapTarget,
+  closeMapTarget,
+  openListTarget,
+  closeListTarget
 };

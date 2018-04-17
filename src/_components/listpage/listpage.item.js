@@ -8,29 +8,27 @@ import { targetIcon } from '../listpage';
 
 export default class Item extends Component {
   render() {
+    const { data } = this.props;
+
     return (
       <View>
         <TouchableOpacity
           onPress={() =>
-            this.props.dispatch(targetActions.openTarget(this.props.data))
+            this.props.dispatch(targetActions.openListTarget(data))
           }
         >
           <ListItem
             avatar={
               <Image
-                source={{ uri: targetIcon(this.props.data.type) }}
+                source={{ uri: targetIcon(data.type) }}
                 style={{
                   width: 30,
                   height: 32
                 }}
               />
             }
-            title={this.props.data.name}
-            subtitle={
-              this.props.data.address.street +
-              ', ' +
-              this.props.data.address.city
-            }
+            title={data.name}
+            subtitle={`${data.address.street} , ${data.address.city}`}
           />
         </TouchableOpacity>
       </View>

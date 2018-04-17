@@ -10,7 +10,8 @@ class TableOpenHoursContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  target: state.target
+  target: state.target,
+  navigation: state.navigation
 });
 
 export default connect(mapStateToProps)(TableOpenHoursContainer);

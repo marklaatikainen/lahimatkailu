@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import { View, Text } from 'react-native';
 import { getDistance } from 'geolib';
 
-import { openingHours } from '../map';
+import { opHours } from '../map';
 import { translate, precisionRound } from '../../_helpers';
 
 export class CalloutContent extends Component {
@@ -31,7 +31,7 @@ export class CalloutContent extends Component {
           )}
           km
         </Text>
-        <Text>{openingHours(data, this.context)}</Text>
+        <Text>{opHours(data, this.context)}</Text>
       </View>
     );
   }

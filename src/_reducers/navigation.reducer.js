@@ -1,10 +1,26 @@
 import { navigationConstants } from '../_constants';
 
-export function navigation(state = { index: 1 }, action) {
+const routes = [
+  {
+    key: 'settings',
+    icon: 'gears'
+  },
+  {
+    key: 'map',
+    icon: 'home'
+  },
+  {
+    key: 'search',
+    icon: 'search'
+  }
+];
+
+export function navigation(state = { index: 1, routes: routes }, action) {
   switch (action.type) {
     case navigationConstants.CHANGE_INDEX:
       return {
-        index: action.index
+        index: action.index,
+        routes: routes
       };
     default:
       return state;

@@ -10,3 +10,4 @@ export * from './target.carousel';
 export * from './target.iconbar';
 export * from './target.textarea';
 export * from './target.actionbutton';
+export * from './target.topbar';

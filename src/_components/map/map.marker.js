@@ -8,7 +8,7 @@ import { targetActions } from '../../_actions';
 
 export class MapMarker extends Component {
   handleCalloutPress(data) {
-    this.props.dispatch(targetActions.openTarget(data));
+    this.props.dispatch(targetActions.openMapTarget(data));
   }
 
   render() {

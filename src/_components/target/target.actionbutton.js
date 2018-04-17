@@ -14,7 +14,7 @@ export class ActionButtonContainer extends Component {
         <ActionButton.Item
           buttonColor="blue"
           title={this.context.t('bookmark')}
-          onPress={() => console.log('kohde lisätty')}
+          onPress={() => console.log('kohde lisätty')} // eslint-disable-line
         >
           <Icon name="save" style={styles.icon} />
         </ActionButton.Item>

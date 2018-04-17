@@ -1,3 +1,3 @@
 export const navigationConstants = {
-  SET_ROUTE: 'SET_ROUTE'
+  CHANGE_INDEX: 'CHANGE_INDEX'
 };

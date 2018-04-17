@@ -27,8 +27,15 @@ export class TableOpenHours extends Component {
   }
 
   render() {
-    const { target } = this.props.target;
-    const { openingHours } = target;
+    const { mapPageTarget, listPageTarget } = this.props.target;
+    const { navigation } = this.props;
+
+    let rightTarget = navigation.index === 1 ? mapPageTarget : listPageTarget;
+    if (!rightTarget) {
+      rightTarget = mapPageTarget ? mapPageTarget : listPageTarget;
+    }
+
+    const { openingHours } = rightTarget;
     const { mon, tue, wed, thu, fri, sat, sun } = openingHours;
 
     const tableRows2 = [
@@ -91,5 +98,6 @@ TableOpenHours.contextTypes = {
 };
 
 TableOpenHours.propTypes = {
-  target: PropTypes.object.isRequired
+  target: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };

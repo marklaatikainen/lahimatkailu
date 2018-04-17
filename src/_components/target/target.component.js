@@ -1,27 +1,33 @@
 import React, { Component } from 'react';
 import { View, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
-
 import TargetMapContainer from './target.map.container';
 import {
   styles,
   TargetTextArea,
   CustomCarousel,
-  ActionButtonContainer
+  ActionButtonContainer,
+  TargetTopbar
 } from '../target';
 
 export class Target extends Component {
   render() {
-    const { target } = this.props.target;
-    const { dimensions } = this.props;
+    const { mapPageTarget, listPageTarget } = this.props.target;
+    const { dimensions, navigation } = this.props;
+    let rightTarget = navigation.index === 1 ? mapPageTarget : listPageTarget;
+    if (!rightTarget) {
+      rightTarget = mapPageTarget ? mapPageTarget : listPageTarget;
+    }
+
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container}>
-          <CustomCarousel target={target} dimensions={dimensions} />
-          <TargetTextArea data={target} />
+          <TargetTopbar {...this.props} {...this.context} />
+          <CustomCarousel target={rightTarget} dimensions={dimensions} />
+          <TargetTextArea data={rightTarget} />
           <TargetMapContainer />
         </ScrollView>
-        <ActionButtonContainer location={target.location} />
+        <ActionButtonContainer location={rightTarget.location} />
       </View>
     );
   }
@@ -33,5 +39,6 @@ Target.contextTypes = {
 
 Target.propTypes = {
   target: PropTypes.object.isRequired,
-  dimensions: PropTypes.object.isRequired
+  dimensions: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };

@@ -6,7 +6,13 @@ import { styles } from '../target';
 
 export class TargetMap extends Component {
   render() {
-    const { target } = this.props.target;
+    const { navigation } = this.props;
+    const { mapPageTarget, listPageTarget } = this.props.target;
+    let rightTarget = navigation.index === 1 ? mapPageTarget : listPageTarget;
+    if (!rightTarget) {
+      rightTarget = mapPageTarget ? mapPageTarget : listPageTarget;
+    }
+
     return (
       <MapView
         style={styles.map}
@@ -15,16 +21,16 @@ export class TargetMap extends Component {
         pitchEnabled={false}
         rotateEnabled={false}
         initialRegion={{
-          latitude: target.location.latitude,
-          longitude: target.location.longitude,
+          latitude: rightTarget.location.latitude,
+          longitude: rightTarget.location.longitude,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421
         }}
       >
         <Marker
           coordinate={{
-            latitude: target.location.latitude,
-            longitude: target.location.longitude
+            latitude: rightTarget.location.latitude,
+            longitude: rightTarget.location.longitude
           }}
         />
       </MapView>
@@ -33,5 +39,6 @@ export class TargetMap extends Component {
 }
 
 TargetMap.propTypes = {
-  target: PropTypes.object.isRequired
+  target: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };

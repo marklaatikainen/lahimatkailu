@@ -22,11 +22,11 @@ class SettingsContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  lang: state.i18nState.lang
+  lang: state.i18nState.lang,
+  navigation: state.navigation
 });
 
 SettingsContainer.propTypes = {
-  changeLanguage: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired
 };
 
