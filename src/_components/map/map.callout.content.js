@@ -15,7 +15,7 @@ export class CalloutContent extends Component {
       <View>
         <Text>{data.name}</Text>
         <Text>{this.context.t(translate(data.type))}</Text>
-        <Text>
+        {/* <Text>
           {this.context.t('distance')}:{' '}
           {precisionRound(
             getDistance(
@@ -31,7 +31,7 @@ export class CalloutContent extends Component {
             1
           )}
           km
-        </Text>
+        </Text> */}
         <Text>{openingHours(data, this.context)}</Text>
       </View>
     );
