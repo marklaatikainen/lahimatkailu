@@ -4,10 +4,10 @@ export const styles = StyleSheet.create({
   container: {
     flexWrap: 'wrap',
     flexDirection: 'row',
-    width: Dimensions.get('screen').width
+    // width: Dimensions.get('screen').width
   },
   searchContainer: {
-    width: Dimensions.get('screen').width - 60,
+    // width: Dimensions.get('window').width - 60,
     marginTop: 0,
     paddingTop: 0,
     backgroundColor: 'white'
@@ -19,8 +19,10 @@ export const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: 'white',
-    width: 60,
+    width: buttonWidth,
     paddingTop: 10,
     paddingLeft: 10
   }
 });
+
+export const buttonWidth = 60;

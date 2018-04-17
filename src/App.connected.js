@@ -17,6 +17,7 @@ class ConnectedApp extends Component {
         dispatch(setLanguage('fi'));
       }
     });
+    dispatch(dimensionsActions.getDimensions())
     Dimensions.addEventListener('change', () => dispatch(dimensionsActions.getDimensions()))
   }
 

@@ -4,10 +4,6 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1
     },
-    dimensions: {
-        height: Dimensions.get('window').height - 430,
-        width: Dimensions.get('window').width
-    },
     map: {
         elevation: 5,
         marginTop: -100,

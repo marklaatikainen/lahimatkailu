@@ -6,7 +6,9 @@ export function dimensions(state = {}, action) {
     case dimensionsConstants.GET_DIMENSIONS:
       return {
         screenHeight: Dimensions.get('screen').height,
-        screenWidth: Dimensions.get('screen').width
+        screenWidth: Dimensions.get('screen').width,
+        windowHeight: Dimensions.get('window').height,
+        windowWidth: Dimensions.get('window').width
       };
     default:
       return state;
