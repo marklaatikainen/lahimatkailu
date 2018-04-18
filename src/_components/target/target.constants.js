@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -13,13 +14,16 @@ export const LANDSCAPE_LAYOUT = {
   heightArr: [22, 22, 22, 22]
 };
 
-export const AccessibilityIcon = props => {
-  return (
-    <View style={styles.iconwrapper}>
-      <Icon style={styles.icon} name={props.name} size={40} />
-      <Text numberOfLines={1} style={styles.icontext}>
-        {props.text}
-      </Text>
-    </View>
-  );
+export const AccessibilityIcon = props => (
+  <View style={styles.iconwrapper}>
+    <Icon style={styles.icon} name={props.name} size={40} />
+    <Text numberOfLines={1} style={styles.icontext}>
+      {props.text}
+    </Text>
+  </View>
+);
+
+AccessibilityIcon.propTypes = {
+  text: PropTypes.string,
+  name: PropTypes.string
 };

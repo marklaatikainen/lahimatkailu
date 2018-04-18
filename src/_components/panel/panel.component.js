@@ -9,8 +9,8 @@ export default class Panel extends Component {
     super(props);
 
     this.icons = {
-      up: require('../../../images/up-arrow.png'),
-      down: require('../../../images/ic_filter_list_black_24dp.png')
+      up: require('../../../images/up-arrow.png'), // eslint-disable-line
+      down: require('../../../images/ic_filter_list_black_24dp.png') // eslint-disable-line
     };
 
     this.state = {
@@ -45,10 +45,10 @@ export default class Panel extends Component {
   }
 
   render() {
-    let icon = this.icons['down'];
+    let icon = this.icons.down;
 
     if (this.state.expanded) {
-      icon = this.icons['up'];
+      icon = this.icons.up;
     }
 
     return (
@@ -81,5 +81,5 @@ export default class Panel extends Component {
 }
 
 Panel.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.element.isRequired
 };

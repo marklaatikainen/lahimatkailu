@@ -9,6 +9,7 @@ export class CustomCarousel extends Component {
   render() {
     const { picture } = this.props.target;
     const { dimensions } = this.props;
+    const notFoundImage = require('../../../images/kohteesta_ei_kuvia.png'); // eslint-disable-line
 
     if (picture && picture.length) {
       return (
@@ -19,12 +20,13 @@ export class CustomCarousel extends Component {
             autoplay
             pageInfo
             pageInfoBackgroundColor="rgba(255, 255, 255, 0.55)"
-            isLooped>
+            isLooped
+          >
             {picture.map(image => (
               <Image
                 key={picture.indexOf(image)}
                 style={[styles.image, { width: dimensions.screenWidth }]}
-                source={{ uri: image }}
+                source={image ? { uri: image } : notFoundImage}
               />
             ))}
           </Carousel>
@@ -34,7 +36,7 @@ export class CustomCarousel extends Component {
     return (
       <Image
         style={[styles.image, { width: dimensions.screenWidth }]}
-        source={require('../../../images/kohteesta_ei_kuvia.png')} //eslint-disable-line
+        source={notFoundImage}
       />
     );
   }

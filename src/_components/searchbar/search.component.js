@@ -8,15 +8,15 @@ import { filterActions, dropdownActions } from '../../_actions';
 
 export class Search extends Component {
   icons = {
-    up: require('../../../images/up-arrow.png'),
-    down: require('../../../images/ic_filter_list_black_24dp.png')
+    up: require('../../../images/up-arrow.png'), // eslint-disable-line
+    down: require('../../../images/ic_filter_list_black_24dp.png') // eslint-disable-line
   };
 
   render() {
-    const { dispatch, filter, dropdown, dimensions } = this.props;
+    const { dispatch, dropdown, dimensions } = this.props;
     const { filters } = this.props.filter;
-    let icon = this.icons[dropdown.state ? 'up' : 'down'];
-    
+    let icon = this.icons[dropdown.state ? 'up' : 'down']; // eslint-disable-line
+
     return (
       <View style={[styles.container, {width: dimensions.windowWidth}]}>
         <SearchBar
@@ -29,7 +29,7 @@ export class Search extends Component {
               filterActions.updateFilter({ ...filters, filterText: text })
             )
           }
-          placeholder="Etsi..."
+          placeholder={this.context.t('search')}
         />
         <TouchableHighlight
           style={styles.button}
@@ -49,8 +49,13 @@ export class Search extends Component {
   }
 }
 
+Search.contextTypes = {
+  t: PropTypes.func.isRequired
+};
+
 Search.propTypes = {
   dropdown: PropTypes.object.isRequired,
   filter: PropTypes.object.isRequired,
-  dispatch: PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired,
+  dimensions: PropTypes.object.isRequired
 };

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   parser: 'babel-eslint',
   plugins: ['react', 'react-native'],
   parserOptions: {
@@ -185,6 +185,6 @@ module.exports = {
     'prefer-template': 2,
     'template-curly-spacing': [2, 'never'],
     // globals
-    'globals': { 'fetch': false }
+    globals: { fetch: false, require: false }
   }
 };

@@ -52,12 +52,16 @@ export class SliderComponent extends Component {
         />
 
         <Text style={styles.text}>
-          Etäisyys: {filterSlider[0]} - {filterSlider[1]}km
+          {this.context.t('distance')}: {filterSlider[0]} - {filterSlider[1]}km
         </Text>
       </View>
     );
   }
 }
+
+SliderComponent.contextTypes = {
+  t: PropTypes.func.isRequired
+};
 
 SliderComponent.propTypes = {
   filter: PropTypes.object.isRequired,

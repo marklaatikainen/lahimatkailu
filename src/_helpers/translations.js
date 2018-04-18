@@ -32,7 +32,8 @@ export const translations = {
     se: 'Swedish',
     ru: 'Russian',
     notifications: 'Allow Push Notifications',
-    settings: 'settings'
+    settings: 'settings',
+    search: 'Search'
   },
   fi: {
     sight: 'Nähtävyys',
@@ -67,7 +68,8 @@ export const translations = {
     se: 'ruotsi',
     ru: 'venäjä',
     notifications: 'Salli push-ilmoitukset',
-    settings: 'asetukset'
+    settings: 'asetukset',
+    search: 'Etsi'
   },
   se: {
     sight: 'Sevärdhet',
@@ -102,7 +104,8 @@ export const translations = {
     se: 'Svenska',
     ru: 'Rysska',
     notifications: 'Tillåt push-notifikationer',
-    settings: 'Inställningar'
+    settings: 'Inställningar',
+    search: 'Sök efter'
   },
   ru: {
     sight: 'Достопримечательность',
@@ -137,6 +140,7 @@ export const translations = {
     se: 'Шведский',
     ru: 'Русский',
     notifications: 'Разрешить push-уведомления',
-    settings: 'настройки'
+    settings: 'настройки',
+    search: 'Поиск'
   }
 };

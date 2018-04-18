@@ -7,6 +7,9 @@ import CheckBoxesContainer from '../checkboxes/checkboxes.container';
 import SliderContainer from '../slider/slider.container';
 
 export class ListFilters extends Component {
+  shouldComponentUpdate(props) {
+    return props.navigation.index === 2 ? true : false;
+  }
   render() {
     const { state } = this.props.dropdown;
 
@@ -20,5 +23,6 @@ export class ListFilters extends Component {
 }
 
 ListFilters.propTypes = {
-  dropdown: PropTypes.object.isRequired
+  dropdown: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };
