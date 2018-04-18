@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { black, white } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,13 +10,13 @@ export const styles = StyleSheet.create({
     paddingTop: 7,
     paddingBottom: 7,
     paddingRight: 10,
-    backgroundColor: 'white',
+    backgroundColor: white,
     opacity: 0.75,
     borderRadius: 5,
     elevation: 3
   },
   label: {
     opacity: 1,
-    color: 'black'
+    color: black
   }
 });

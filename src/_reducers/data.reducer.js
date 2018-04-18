@@ -1,5 +1,8 @@
 import { dataConstants } from '../_constants';
 
+/* eslint-disable no-nested-ternary */
+/* eslint-disable prefer-arrow-callback */
+
 export function alldata(state = {}, action) {
   switch (action.type) {
     case dataConstants.ALL_DATA_SUCCESS:

@@ -1,18 +1,19 @@
 import { StyleSheet } from 'react-native';
+import { white, appgreen, transparent } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: '#74A335'
+    backgroundColor: appgreen
   },
   icon: {
-    backgroundColor: 'transparent',
-    color: 'white'
+    backgroundColor: transparent,
+    color: white
   },
   backIcon: {
     marginLeft: 5
   },
   topBar: {
-    backgroundColor: '#74A335',
+    backgroundColor: appgreen,
     height: 32
   },
   topBarText: {
@@ -21,7 +22,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     left: '20%',
     fontSize: 14,
-    color: 'white'
+    color: white
   },
   openmap: {
     position: 'absolute',

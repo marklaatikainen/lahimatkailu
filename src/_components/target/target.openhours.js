@@ -73,6 +73,7 @@ export class TableOpenHours extends Component {
     ];
 
     return (
+      /* eslint-disable react-native/no-inline-styles */
       <View>
         {this.empty(openingHours) ? (
           <Text style={styles.opening}>{this.context.t('clock-o')}</Text>

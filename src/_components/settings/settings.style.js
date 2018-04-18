@@ -1,23 +1,24 @@
 import { StyleSheet } from 'react-native';
+import { red06, grey, white, red, blue } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF'
+    backgroundColor: white
   },
   text: {
-    color: '#C70039'
+    color: red
   },
   switchEnabled: {
-    color: '#C70039'
+    color: red
   },
   switchDisabled: {
-    color: '#efeff3'
+    color: grey
   },
   switchOnTintColor: {
-    color: 'rgba(199, 0, 57, 0.6)'
+    color: red06
   },
   blueGem: {
-    color: '#27139A'
+    color: blue
   }
 });

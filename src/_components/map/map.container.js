@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { DeviceEventEmitter } from 'react-native';
 import RNALocation from 'react-native-android-location';
 import { connect } from 'react-redux';
 
 import { MapComponent, filter } from '../map';
-import {
-  dataActions,
-  regionActions,
-  userlocationActions
-} from '../../_actions';
+import { dataActions } from '../../_actions';
 
 class MapContainer extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
     const { region } = this.props.region;
 
-    DeviceEventEmitter.addListener(
-      'updateLocation',
-      function(e) {
-        dispatch(userlocationActions.updateLocation(e));
-      }.bind(this)
-    );
-
     RNALocation.getLocation();
-
     dispatch(dataActions.fetchData());
     dispatch(dataActions.fetchDataByLocation(region));
   }

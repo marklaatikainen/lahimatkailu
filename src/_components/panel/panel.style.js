@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
+import { transparent } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'transparent',
+    backgroundColor: transparent,
     marginTop: 10,
     overflow: 'hidden',
     zIndex: 9999999

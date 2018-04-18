@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import { green, appgreen, grey, white } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,7 +20,7 @@ export const styles = StyleSheet.create({
   subtitle: {
     fontSize: 10,
     marginLeft: 25,
-    color: 'green'
+    color: green
   },
   description: {
     marginTop: 15,
@@ -45,7 +46,7 @@ export const styles = StyleSheet.create({
   },
   icons: {
     flexDirection: 'row',
-    backgroundColor: '#74A335',
+    backgroundColor: appgreen,
     height: 60,
     marginBottom: 10,
     alignItems: 'center',
@@ -60,17 +61,17 @@ export const styles = StyleSheet.create({
   },
   icon: {
     fontSize: 21,
-    color: '#EAF1DB',
+    color: grey,
     textAlign: 'center',
     elevation: 7
   },
   icontext: {
-    color: '#EAF1DB',
+    color: grey,
     fontSize: 10,
     textAlign: 'center'
   },
   textarea: {
-    backgroundColor: '#fff'
+    backgroundColor: white
   },
   backIcon: {
     marginLeft: 5,
@@ -84,7 +85,7 @@ export const styles = StyleSheet.create({
   },
   topBar: {
     height: 35,
-    backgroundColor: '#74A335'
+    backgroundColor: appgreen
   },
   topBarText: {
     position: 'absolute',
@@ -92,6 +93,6 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     left: '38%',
     fontSize: 14,
-    color: 'white'
+    color: white
   }
 });

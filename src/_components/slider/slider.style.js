@@ -9,5 +9,9 @@ export const styles = StyleSheet.create({
   text: {
     fontSize: 20,
     textAlign: 'center'
+  },
+  track: {
+    marginTop: 10,
+    height: 10
   }
 });

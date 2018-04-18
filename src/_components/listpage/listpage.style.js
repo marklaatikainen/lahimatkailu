@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { white } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: white
   },
   text: {
     fontSize: 15
@@ -24,6 +25,6 @@ export const styles = StyleSheet.create({
     paddingTop: 10
   },
   filterContainer: {
-    backgroundColor: '#fff'
+    backgroundColor: white
   }
 });

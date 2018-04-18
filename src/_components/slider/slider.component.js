@@ -35,8 +35,8 @@ export class SliderComponent extends Component {
       <View style={styles.container}>
         <MultiSlider
           trackWidth={300}
-          trackStyle={{ marginTop: 10, height: 10 }}
-          rangeStyle={{ marginTop: 10, height: 10 }}
+          trackStyle={styles.track}
+          rangeStyle={styles.track}
           defaultTrackColor={'#999999'}
           leftThumbColor={'#f0f0f0'}
           rightThumbColor={'#f0f0f0'}

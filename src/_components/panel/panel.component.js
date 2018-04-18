@@ -4,14 +4,12 @@ import { TouchableHighlight, View, Animated, Image } from 'react-native';
 
 import { styles } from '../panel';
 
+import up from '../../../images/up-arrow.png';
+import down from '../../../images/ic_filter_list_black_24dp.png';
+
 export default class Panel extends Component {
   constructor(props) {
     super(props);
-
-    this.icons = {
-      up: require('../../../images/up-arrow.png'), // eslint-disable-line
-      down: require('../../../images/ic_filter_list_black_24dp.png') // eslint-disable-line
-    };
 
     this.state = {
       expanded: false,
@@ -45,10 +43,10 @@ export default class Panel extends Component {
   }
 
   render() {
-    let icon = this.icons.down;
+    let icon = down;
 
     if (this.state.expanded) {
-      icon = this.icons.up;
+      icon = up;
     }
 
     return (

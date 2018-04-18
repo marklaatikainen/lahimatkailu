@@ -13,6 +13,7 @@ export class ListFilters extends Component {
   render() {
     const { state } = this.props.dropdown;
 
+    /* eslint-disable react-native/no-inline-styles */
     return (
       <View style={[styles.filterContainer, { height: state ? 120 : 0 }]}>
         <CheckBoxesContainer style={styles.listpageCheckboxes} />

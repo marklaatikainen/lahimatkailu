@@ -2,15 +2,29 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { AsyncStorage, BackHandler } from 'react-native';
 import { connect } from 'react-redux';
+import { DeviceEventEmitter } from 'react-native';
 import { setLanguage } from 'redux-i18n';
 import { Navigator } from './_components/navigator';
 import { Dimensions } from 'react-native';
-import { dimensionsActions, targetActions } from './_actions';
+import {
+  dimensionsActions,
+  targetActions,
+  userlocationActions
+} from './_actions';
 
 class ConnectedApp extends Component {
   componentDidMount() {
-    BackHandler.addEventListener('hardwareBackPress', this.androidBackHandler);
     const { dispatch } = this.props;
+    // backhandler listener
+    BackHandler.addEventListener('hardwareBackPress', this.androidBackHandler);
+    // dimensions listener
+    Dimensions.addEventListener('change', () =>
+      dispatch(dimensionsActions.getDimensions())
+    );
+    // own location listener
+    DeviceEventEmitter.addListener('updateLocation', e =>
+      dispatch(userlocationActions.updateLocation(e))
+    );
     AsyncStorage.getItem('lang', (err, result) => {
       if (result !== null) {
         dispatch(setLanguage(result));
@@ -18,10 +32,6 @@ class ConnectedApp extends Component {
         dispatch(setLanguage('fi'));
       }
     });
-    dispatch(dimensionsActions.getDimensions());
-    Dimensions.addEventListener('change', () =>
-      dispatch(dimensionsActions.getDimensions())
-    );
   }
 
   componentWillUnmount() {

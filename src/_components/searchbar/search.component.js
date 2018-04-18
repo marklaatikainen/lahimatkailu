@@ -2,27 +2,25 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { View, TouchableHighlight, Image } from 'react-native';
 import { SearchBar } from 'react-native-elements';
-import { buttonWidth } from '../searchbar';
-import { styles } from '../searchbar';
+
+import { styles, buttonWidth } from '../searchbar';
 import { filterActions, dropdownActions } from '../../_actions';
 
-export class Search extends Component {
-  icons = {
-    up: require('../../../images/up-arrow.png'), // eslint-disable-line
-    down: require('../../../images/ic_filter_list_black_24dp.png') // eslint-disable-line
-  };
+import up from '../../../images/up-arrow.png';
+import down from '../../../images/ic_filter_list_black_24dp.png';
 
+export class Search extends Component {
   render() {
     const { dispatch, dropdown, dimensions } = this.props;
     const { filters } = this.props.filter;
-    let icon = this.icons[dropdown.state ? 'up' : 'down']; // eslint-disable-line
+    let icon = dropdown.state ? up : down; // eslint-disable-line
 
     return (
-      <View style={[styles.container, {width: dimensions.windowWidth}]}>
+      <View style={[styles.container, { width: dimensions.windowWidth }]}>
         <SearchBar
           lightTheme
           round
-          containerStyle={[styles.searchContainer, {width: dimensions.windowWidth - buttonWidth}]}
+          containerStyle={[styles.searchContainer, { width: dimensions.windowWidth - buttonWidth }]}
           inputStyle={styles.searchBar}
           onChangeText={text =>
             dispatch(

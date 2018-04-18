@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   parser: 'babel-eslint',
   plugins: ['react', 'react-native'],
   parserOptions: {
@@ -185,6 +185,11 @@ export default {
     'prefer-template': 2,
     'template-curly-spacing': [2, 'never'],
     // globals
-    globals: { fetch: false, require: false }
+    globals: { fetch: false, require: false },
+    // react-native
+    'react-native/no-unused-styles': 2,
+    'react-native/split-platform-components': 2,
+    'react-native/no-inline-styles': 2,
+    'react-native/no-color-literals': 2
   }
 };

@@ -4,12 +4,12 @@ import { View, Image } from 'react-native';
 import Carousel from 'react-native-looped-carousel-improved';
 
 import { styles } from '../target';
+import notFoundImage from '../../../images/kohteesta_ei_kuvia.png';
 
 export class CustomCarousel extends Component {
   render() {
     const { picture } = this.props.target;
     const { dimensions } = this.props;
-    const notFoundImage = require('../../../images/kohteesta_ei_kuvia.png'); // eslint-disable-line
 
     if (picture && picture.length) {
       return (

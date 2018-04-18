@@ -12,13 +12,15 @@ export class ClusteredMap extends Component {
     <MapMarker {...this.props} key={data._id} data={data} />
   );
 
+  /* eslint-disable sort-vars */
+
   renderCluster = (cluster, onPress) => {
     const pointCount = cluster.pointCount,
       coordinate = cluster.coordinate,
       clusterId = cluster.clusterId;
 
     const clusteringEngine = this.map.getClusteringEngine(),
-      clusteredPoints = clusteringEngine.getLeaves(clusterId, 100);
+      clusteredPoints = clusteringEngine.getLeaves(clusterId, 100); // eslint-disable-line
 
     return (
       <Marker coordinate={coordinate} onPress={onPress}>
@@ -54,8 +56,9 @@ export class ClusteredMap extends Component {
             showsMyLocationButton={false}
             showsUserLocation={true}
             minZoom={5}
-            maxZoom={12}
+            maxZoom={10}
             showInfoWindow={true}
+            preserveClusterPressBehavior={true}
           />
         )}
       </View>
