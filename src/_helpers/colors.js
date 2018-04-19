@@ -7,6 +7,7 @@ export const blue = '#27139A';
 export const lightblue = '#efeff3';
 export const transparent = 'transparent';
 export const appgreen = '#74A335';
+export const disabled = '#D3D3D3';
 // opacity
 export const red06 = 'rgba(199, 0, 57, 0.6)';
 export const white06 = 'rgba(255, 255, 255, 0.6)';

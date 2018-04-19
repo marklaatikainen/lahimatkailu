@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { red06, grey, white, red, blue } from '../../_helpers';
+import { red06, grey, disabled, white, red, blue } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
@@ -20,5 +20,11 @@ export const styles = StyleSheet.create({
   },
   blueGem: {
     color: blue
+  },
+  version: {
+    color: disabled,
+    marginTop: 7,
+    marginLeft: 17,
+    fontSize: 16
   }
 });

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { ScrollView } from 'react-native';
+import { ScrollView, Text } from 'react-native';
+import VersionNumber from 'react-native-version-number';
 import {
   SettingsDividerShort,
-  SettingsDividerLong,
   SettingsCategoryHeader,
   SettingsSwitch,
   SettingsPicker
@@ -30,15 +30,11 @@ export class Settings extends Component {
       <ScrollView style={styles.container}>
         <SettingsCategoryHeader
           title={this.context.t('settings')}
-          textStyle={styles.text}
         />
-        <SettingsDividerLong android={false} />
-        <SettingsDividerShort />
         <SettingsPicker
           title={this.context.t('lang')}
           dialogDescription={this.context.t('chooseLang')}
           possibleValues={[
-            { label: '...', value: '' },
             { label: this.context.t('fi'), value: 'fi' },
             { label: this.context.t('en'), value: 'en' },
             { label: this.context.t('se'), value: 'se' },
@@ -52,6 +48,7 @@ export class Settings extends Component {
           value={this.state.language}
           styleModalButtonsText={styles.text}
         />
+        <SettingsDividerShort />
         <SettingsSwitch
           title={this.context.t('notifications')}
           onSaveValue={value => {
@@ -66,6 +63,8 @@ export class Settings extends Component {
               : styles.switchDisabled
           }
         />
+        <SettingsDividerShort />
+        <Text style={styles.version}>{this.context.t('version')} {VersionNumber.appVersion}</Text>
       </ScrollView>
     );
   }

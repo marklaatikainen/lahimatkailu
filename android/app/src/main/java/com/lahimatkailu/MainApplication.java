@@ -15,6 +15,7 @@ import com.syarul.rnalocation.RNALocation;
 import com.rnimmersive.RNImmersivePackage;
 import com.github.yamill.orientation.OrientationPackage;
 import com.azendoo.reactnativesnackbar.SnackbarPackage;
+import com.apsl.versionnumber.RNVersionNumberPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,7 +37,8 @@ public class MainApplication extends Application implements ReactApplication {
           new RNALocation(),
           new RNImmersivePackage(),
           new OrientationPackage(),
-          new SnackbarPackage()
+          new SnackbarPackage(),
+          new RNVersionNumberPackage()
       );
     }
 
