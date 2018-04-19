@@ -32,7 +32,7 @@ export function opHours(data, context) {
   if (convertedClosing - hours < 0) {
     return context.t('closed');
   } else if (convertedClosing - hours > 3) {
-    return `${context.t('closesToday')}${closes}`;
+    return `${context.t('slosesToday')}${closes}`;
   } else if (convertedClosing - hours < 3) {
     if (convertedClosing - hours >= 1) {
       return `${context.t('closesToday')}${closes} '\n(Sulkeutuu ' ${Math.floor(convertedClosing - hours)} h päästä`;
