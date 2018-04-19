@@ -5,6 +5,7 @@ import { View } from 'react-native';
 import { styles } from '../listpage';
 import CheckBoxesContainer from '../checkboxes/checkboxes.container';
 import SliderContainer from '../slider/slider.container';
+import SliderComponent2 from '../slider/slider.component2';
 
 export class ListFilters extends Component {
   shouldComponentUpdate(props) {
@@ -18,6 +19,7 @@ export class ListFilters extends Component {
       <View style={[styles.filterContainer, { height: state ? 120 : 0 }]}>
         <CheckBoxesContainer style={styles.listpageCheckboxes} />
         <SliderContainer />
+        <SliderComponent2 />
       </View>
     );
   }
