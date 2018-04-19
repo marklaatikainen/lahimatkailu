@@ -58,7 +58,7 @@ export class ClusteredMap extends Component {
             minZoom={5}
             maxZoom={10}
             showInfoWindow={true}
-            preserveClusterPressBehavior={true}
+            preserveClusterPressBehavior
           />
         )}
       </View>
