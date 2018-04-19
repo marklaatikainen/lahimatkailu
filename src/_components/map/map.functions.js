@@ -41,20 +41,15 @@ export function opHours(data, context) {
   if (convertedClosing - hours < 0) {
     return context.t('closed');
   } else if (convertedClosing - hours > 3) {
-    return `Sulkeutuu tänään: ${closes}`;
+    return `${context.t('slosesToday')}${closes}`;
   } else if (convertedClosing - hours < 3) {
-    if (convertedClosing - hours > 1) {
-      return `${context.t(
-        'closesToday'
-      )} ${closes} '\n(Sulkeutuu ${Math.floor(
-        convertedClosing - hours
-      )} h päästä`;
+    if (convertedClosing - hours >= 1) {
+      return `${context.t('closesToday')}${closes} '\n(Sulkeutuu ' ${Math.floor(convertedClosing - hours)} h päästä`;
     }
     return `${context.t('closesToday')} ${closes} '\n(Sulkeutuu <1h päästä)`;
   }
   return context.t('clock-o');
 }
-
 
 export function filter(data, checkbox) {
   let filteredData = []; // eslint-disable-line
