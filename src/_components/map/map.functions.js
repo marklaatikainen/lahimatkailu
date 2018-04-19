@@ -1,10 +1,12 @@
+import { foodIcon, serviceIcon, sightIcon } from '../../_helpers';
+
 export function markerImgUrl(icon) {
   if (icon === 'Ruoka') {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png';
+    return foodIcon;
   } else if (icon === 'Nähtävyys') {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/tree.png';
+    return sightIcon;
   }
-  return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png';
+  return serviceIcon;
 }
 
 function selectDay(today, opHo) {
@@ -30,14 +32,10 @@ export function opHours(data, context) {
   if (convertedClosing - hours < 0) {
     return context.t('closed');
   } else if (convertedClosing - hours > 3) {
-    return `Sulkeutuu tänään: ' ${closes}`;
+    return `${context.t('closesToday')}${closes}`;
   } else if (convertedClosing - hours < 3) {
     if (convertedClosing - hours >= 1) {
-      return `${context.t(
-        'closesToday'
-      )} ${closes} '\n(Sulkeutuu ' ${Math.floor(
-        convertedClosing - hours
-      )} h päästä`;
+      return `${context.t('closesToday')}${closes} '\n(Sulkeutuu ' ${Math.floor(convertedClosing - hours)} h päästä`;
     }
     return `${context.t('closesToday')} ${closes} '\n(Sulkeutuu <1h päästä)`;
   }
