@@ -56,6 +56,10 @@ export const customMapStyle = [
     ]
   },
   {
+    featureType: 'poi.business',
+    stylers: [{ visibility: 'off' }]
+  },
+  {
     featureType: 'transit',
     stylers: [
       {
