@@ -30,11 +30,12 @@ export class SliderComponent extends Component {
 
   render() {
     const { filterSlider } = this.props.filter.filters;
+    const { dimensions } = this.props;
 
     return (
       <View style={styles.container}>
         <MultiSlider
-          trackWidth={300}
+          trackWidth={dimensions.windowWidth}
           trackStyle={styles.track}
           rangeStyle={styles.track}
           defaultTrackColor={'#999999'}
@@ -65,5 +66,6 @@ SliderComponent.contextTypes = {
 
 SliderComponent.propTypes = {
   filter: PropTypes.object.isRequired,
-  dispatch: PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired,
+  dimensions: PropTypes.object.isRequired
 };

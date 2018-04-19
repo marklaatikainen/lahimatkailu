@@ -10,7 +10,8 @@ class SliderContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  filter: state.filter
+  filter: state.filter,
+  dimensions: state.dimensions
 });
 
 export default connect(mapStateToProps)(SliderContainer);
