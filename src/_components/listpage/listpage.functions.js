@@ -1,13 +1,18 @@
 import { getDistance } from 'geolib';
-import { precisionRound } from '../../_helpers';
+import {
+  foodIcon,
+  serviceIcon,
+  sightIcon,
+  precisionRound
+} from '../../_helpers';
 
 export function targetIcon(type) {
   if (type === 'Ruoka') {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png';
+    return foodIcon;
   } else if (type === 'Nähtävyys') {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/tree.png';
+    return sightIcon;
   } else if (type === 'Palvelu') {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png';
+    return serviceIcon;
   }
   return null;
 }

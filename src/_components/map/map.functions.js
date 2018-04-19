@@ -1,10 +1,12 @@
+import { foodIcon, serviceIcon, sightIcon } from '../../_helpers';
+
 export function markerImgUrl(icon) {
   if (icon === 'Ruoka') {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/restaurant.png';
+    return foodIcon;
   } else if (icon === 'Nähtävyys') {
-    return 'http://maps.gstatic.com/mapfiles/ms2/micons/tree.png';
+    return sightIcon;
   }
-  return 'http://maps.gstatic.com/mapfiles/ms2/micons/realestate.png';
+  return serviceIcon;
 }
 
 function selectDay(today, opHo) {

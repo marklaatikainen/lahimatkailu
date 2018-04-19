@@ -83,7 +83,7 @@ module.exports = {
     'no-with': 2,
     'prefer-arrow-callback': 2,
     radix: 2,
-    'vars-on-top': 0,
+    'vars-on-top': 2,
     'wrap-iife': 2,
     yoda: 2,
     // Strict Mode
@@ -114,12 +114,12 @@ module.exports = {
     'arrow-parens': [2, 'as-needed'],
     'arrow-spacing': 2,
     'brace-style': 2,
-    camelcase: 0,
+    camelcase: 2,
     'comma-spacing': 2,
     'comma-style': 2,
     'consistent-this': 0,
     'eol-last': 2,
-    'func-names': 0,
+    'func-names': 2,
     'func-style': 0,
     'key-spacing': [
       2,
