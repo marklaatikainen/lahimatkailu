@@ -152,7 +152,6 @@ dependencies {
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile 'com.google.android.gms:play-services-maps:+'
-    compile project(':react-native-immersive')
 	compile project(':react-native-vector-icons')
     compile project(':react-native-maps')
     compile project(':RNAlocation')

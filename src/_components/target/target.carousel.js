@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { View, Image } from 'react-native';
+import { View } from 'react-native';
 import Carousel from 'react-native-looped-carousel-improved';
+import ImageLoad from 'react-native-image-placeholder';
 
 import { styles } from '../target';
 import notFoundImage from '../../../images/kohteesta_ei_kuvia.png';
@@ -23,8 +24,9 @@ export class CustomCarousel extends Component {
             isLooped
           >
             {picture.map(image => (
-              <Image
+              <ImageLoad
                 key={picture.indexOf(image)}
+                loadingStyle={styles.loading}
                 style={[styles.image, { width: dimensions.screenWidth }]}
                 source={image ? { uri: image } : notFoundImage}
               />
@@ -34,8 +36,9 @@ export class CustomCarousel extends Component {
       );
     }
     return (
-      <Image
+      <ImageLoad
         style={[styles.image, { width: dimensions.screenWidth }]}
+        loadingStyle={styles.loading}
         source={notFoundImage}
       />
     );

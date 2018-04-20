@@ -94,5 +94,8 @@ export const styles = StyleSheet.create({
     left: '38%',
     fontSize: 14,
     color: white
+  },
+  loading: {
+    color: green
   }
 });
