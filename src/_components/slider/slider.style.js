@@ -8,14 +8,12 @@ export const styles = StyleSheet.create({
   },
   sliderContainerStyle: {
     height: 30,
-    marginLeft: '10%'
+    marginLeft: '10%',
+    marginTop: 10
   },
   text: {
     fontSize: 20,
     textAlign: 'center'
-  },
-  slider: {
-    marginTop: 10
   },
   track: {
     height: 6

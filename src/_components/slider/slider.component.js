@@ -49,7 +49,7 @@ export class SliderComponent extends Component {
           markerStyle={styles.markerStyle}
           pressedMarkerStyle={styles.pressedMarkerStyle}
           markerOffsetY={2}
-          style={styles.slider}
+          // style={styles.slider}
           trackStyle={styles.track}
           selectedStyle={styles.selectedStyle}
           unselectedStyle={styles.unselectedStyle}
