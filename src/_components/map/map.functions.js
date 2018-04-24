@@ -23,22 +23,17 @@ export function opHours(data, context) {
   const hours = compare.getHours();
 
   const closes = selectDay(today, openingHours).end;
-  // const opens = selectDay(today, openingHours).start;
+  const opens = selectDay(today, openingHours).start;
 
   let convertedClosing = closes.split(':');
-  // let convertedOpen = opens.split(':');
+  let convertedOpen = opens.split(':');
 
   convertedClosing = parseFloat(`${parseInt(convertedClosing[0], 10)}.${parseInt(convertedClosing[1] / 6 * 10, 10)}`);
-  // convertedOpen = parseFloat(`${parseInt(convertedOpen[0], 10)}.${parseInt(convertedOpen[1] / 6 * 10, 10)}`);
+  convertedOpen = parseFloat(`${parseInt(convertedOpen[0], 10)}.${parseInt(convertedOpen[1] / 6 * 10, 10)}`);
 
-  // if (convertedOpen > hours) {
-  //   return (
-  //     context.t('closed') +
-  //     '. Avautuu tänään: ' + opens
-  //   );
-  // } else {
-  // Aukioloajat ei toimi, pitää myös siistä ja kääntää
-  if (convertedClosing - hours < 0) {
+  if (convertedOpen > hours) {
+    return `${context.t('closed')}. ${context.t('opensAt')}: ${opens}`;
+  } else if (convertedClosing - hours < 0) {
     return context.t('closed');
   } else if (convertedClosing - hours > 3) {
     return `${context.t('closesToday')} ${closes}`;
