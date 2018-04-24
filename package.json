@@ -8,6 +8,7 @@
     "postinstall": "del .\\node_modules\\react-native\\local-cli\\core\\__fixtures__\\files\\package.json && rd .\\node_modules\\react-native-vector-icons\\lib /s /q && md .\\node_modules\\react-native-vector-icons\\lib && xcopy .\\customizedComponents\\react-native-vector-icons\\lib\\* .\\node_modules\\react-native-vector-icons\\lib\\ /s /e /i && del .\\node_modules\\react-native-looped-carousel-improved\\index.js && copy customizedComponents\\react-native-looped-carousel-improved\\index.js node_modules\\react-native-looped-carousel-improved\\ && del .\\node_modules\\react-native-MultiSlider\\MultiSlider.js && copy customizedComponents\\react-native-MultiSlider\\MultiSlider.js node_modules\\react-native-MultiSlider\\"
   },
   "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "0.0.13",
     "geolib": "^2.0.24",
     "npm": "^5.7.1",
     "react": "16.2.0",
