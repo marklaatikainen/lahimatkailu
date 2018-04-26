@@ -20,6 +20,8 @@ export class TargetMap extends Component {
         zoomEnabled={false}
         pitchEnabled={false}
         rotateEnabled={false}
+        loadingEnabled={true}
+        cacheEnabled={true}
         initialRegion={{
           latitude: rightTarget.location.latitude,
           longitude: rightTarget.location.longitude,

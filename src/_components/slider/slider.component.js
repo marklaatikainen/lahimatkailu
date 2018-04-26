@@ -1,59 +1,71 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { View, Text } from 'react-native';
-import MultiSlider from 'react-native-MultiSlider';
-
-import { mapped, mapValues } from '../../_helpers';
 import { filterActions } from '../../_actions';
 import { styles } from '../slider';
 
+import MultiSlider from '@ptomasroos/react-native-multi-slider';
+
 export class SliderComponent extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      sliderValues: [0, 100]
+    };
+  }
+
   /*
     @param: value = new slider value
     @param: slider = 'left|right'
   */
-  changeSliderValue(value, slider) {
+  changeSliderValue = () => {
+    const { sliderValues } = this.state;
     const { dispatch } = this.props;
     const { filters } = this.props.filter;
-    const { filterSlider } = this.props.filter.filters;
 
     dispatch(
       filterActions.updateFilter({
         ...filters,
         filterSlider:
-          slider === 'right'
-            ? [filterSlider[0], mapped(value)]
-            : [mapped(value), filterSlider[1]]
+            [sliderValues[0], sliderValues[1]]
       })
     );
   }
 
+  multiSliderValuesChange = values => {
+    this.setState({
+      sliderValues: values
+    });
+  }
+
   render() {
-    const { filterSlider } = this.props.filter.filters;
-    const { dimensions } = this.props;
+    const { windowWidth } = this.props.dimensions;
 
     return (
       <View style={styles.container}>
         <MultiSlider
-          trackWidth={dimensions.windowWidth}
+          containerStyle={styles.sliderContainerStyle}
+          markerStyle={styles.markerStyle}
+          pressedMarkerStyle={styles.pressedMarkerStyle}
+          markerOffsetY={2}
+          // style={styles.slider}
           trackStyle={styles.track}
-          rangeStyle={styles.track}
-          defaultTrackColor={'#999999'}
-          leftThumbColor={'#f0f0f0'}
-          rightThumbColor={'#f0f0f0'}
-          rangeColor={'#74A335'}
-          leftValue={mapValues(filterSlider[0], 0, 100, 0, 1)}
-          rightValue={mapValues(filterSlider[1], 0, 100, 0, 1)}
-          onLeftValueChange={leftValue =>
-            this.changeSliderValue(leftValue, 'left')
-          }
-          onRightValueChange={rightValue =>
-            this.changeSliderValue(rightValue, 'right')
-          }
+          selectedStyle={styles.selectedStyle}
+          unselectedStyle={styles.unselectedStyle}
+          values={[
+            this.state.sliderValues[0],
+            this.state.sliderValues[1]
+          ]}
+          sliderLength={windowWidth - 0.2 * windowWidth}
+          onValuesChange={this.multiSliderValuesChange}
+          onValuesChangeFinish={this.changeSliderValue}
+          min={0}
+          max={100}
+          step={1}
         />
-
         <Text style={styles.text}>
-          {this.context.t('distance')}: {filterSlider[0]} - {filterSlider[1]}km
+          {this.context.t('distance')}: {this.state.sliderValues[0]} - {this.state.sliderValues[1]}km
         </Text>
       </View>
     );
@@ -69,3 +81,4 @@ SliderComponent.propTypes = {
   dispatch: PropTypes.func.isRequired,
   dimensions: PropTypes.object.isRequired
 };
+

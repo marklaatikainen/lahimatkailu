@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { View, TouchableHighlight, Image } from 'react-native';
+import { View, TouchableOpacity, Image } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 
 import { styles, buttonWidth } from '../searchbar';
@@ -29,7 +29,7 @@ export class Search extends Component {
           }
           placeholder={this.context.t('search')}
         />
-        <TouchableHighlight
+        <TouchableOpacity
           style={styles.button}
           onPress={() => {
             dispatch(
@@ -41,7 +41,7 @@ export class Search extends Component {
           underlayColor="#f1f1f1"
         >
           <Image source={icon} width={30} height={25} />
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
   }

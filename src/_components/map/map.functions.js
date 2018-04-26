@@ -1,4 +1,4 @@
-import { foodIcon, serviceIcon, sightIcon } from '../../_helpers';
+import { foodIcon, serviceIcon, sightIcon, isOpen24h } from '../../_helpers';
 
 export function markerImgUrl(icon) {
   if (icon === 'Ruoka') {
@@ -16,9 +16,49 @@ function selectDay(today, opHo) {
   return days[today];
 }
 
+function is24h(closes, opens) {
+  return closes === 24 && opens === 0;
+}
+
+function isClosing(convertedClosing, hours) {
+  return convertedClosing - hours < 3;
+}
+
+function isClosingSoon(convertedClosing, hours) {
+  return convertedClosing - hours >= 1;
+}
+
+function isClosingToday(convertedClosing, hours) {
+  return convertedClosing > hours || convertedClosing < hours;
+}
+
+function isOpeningSoon(convertedOpen, hours) {
+  return convertedOpen > hours;
+}
+
+function areOpHoursEmpty(openingHours) {
+  let areOpeningHoursEmpty = true;
+
+  for (let day in openingHours) {
+    if (openingHours[day].start) {
+      areOpeningHoursEmpty = false;
+      break;
+    }
+  }
+  return areOpeningHoursEmpty;
+}
+
 export function opHours(data, context) {
-  const compare = new Date();
   const { openingHours } = data;
+
+  if (isOpen24h(data)) {
+    return context.t('clock-o');
+  }
+  if (areOpHoursEmpty(openingHours)) {
+    return context.t('opHoursUnknown');
+  }
+
+  const compare = new Date();
   const today = compare.getDay();
   const hours = compare.getHours();
 
@@ -28,22 +68,35 @@ export function opHours(data, context) {
   let convertedClosing = closes.split(':');
   let convertedOpen = opens.split(':');
 
-  convertedClosing = parseFloat(`${parseInt(convertedClosing[0], 10)}.${parseInt(convertedClosing[1] / 6 * 10, 10)}`);
-  convertedOpen = parseFloat(`${parseInt(convertedOpen[0], 10)}.${parseInt(convertedOpen[1] / 6 * 10, 10)}`);
+  convertedClosing = parseFloat(
+    `${parseInt(convertedClosing[0], 10)}.${parseInt(
+      convertedClosing[1] / 6 * 10,
+      10
+    )}`
+  );
+  convertedOpen = parseFloat(
+    `${parseInt(convertedOpen[0], 10)}.${parseInt(
+      convertedOpen[1] / 6 * 10,
+      10
+    )}`
+  );
 
-  if (convertedOpen > hours) {
+  if (isOpeningSoon(convertedOpen, hours)) {
     return `${context.t('closed')}. ${context.t('opensAt')}: ${opens}`;
-  } else if (convertedClosing - hours < 0) {
-    return context.t('closed');
-  } else if (convertedClosing - hours > 3) {
-    return `${context.t('closesToday')} ${closes}`;
-  } else if (convertedClosing - hours < 3) {
-    if (convertedClosing - hours >= 1) {
-      return `${context.t('closesToday')} ${closes} \n${context.t('closesSoon')}`;
+  } else if (isClosingToday(convertedClosing, hours)) {
+    if (convertedOpen < hours) {
+      return `${context.t('closesToday')} ${closes}`;
     }
-    return `${context.t('closesToday')} ${closes} '\n(Sulkeutuu <1h päästä)`;
+  } else if (is24h(convertedClosing, convertedOpen)) {
+    return context.t('clock-o');
+  } else if (isClosing(convertedClosing, hours)) {
+    if (isClosingSoon(convertedClosing, hours)) {
+      return `${context.t('closesToday')} ${closes} \n${context.t('closesSoon')}`;
+    } else if (convertedClosing - hours > convertedClosing) {
+      return `${context.t('closesToday')} ${closes} \n(Sulkeutuu <1h päästä)`;
+    }
   }
-  return context.t('clock-o');
+  return context.t('closed');
 }
 
 export function filter(data, checkbox) {

@@ -158,7 +158,7 @@ module.exports = {
     quotes: [2, 'single'],
     'quote-props': [2, 'as-needed'],
     semi: [2, 'always'],
-    'sort-vars': [2, { ignoreCase: true }],
+    'sort-vars': [2, { ignoreCase: false }],
     'keyword-spacing': 2,
     'space-before-blocks': 2,
     'array-bracket-spacing': [2, 'never'],
@@ -184,8 +184,6 @@ module.exports = {
     'no-prototype-builtins': 2,
     'prefer-template': 2,
     'template-curly-spacing': [2, 'never'],
-    // globals
-    globals: { fetch: false, require: false },
     // react-native
     'react-native/no-unused-styles': 2,
     'react-native/split-platform-components': 2,
