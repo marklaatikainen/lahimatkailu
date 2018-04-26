@@ -18,13 +18,14 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'center',
-    paddingTop: 2,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    height: '45%'
   },
   list: {
     paddingTop: 10
   },
   filterContainer: {
-    backgroundColor: white
+    backgroundColor: white,
+    marginBottom: 5
   }
 });
