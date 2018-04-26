@@ -20,10 +20,6 @@ function is24h(closes, opens) {
   return closes === 24 && opens === 0;
 }
 
-// function isClosed(convertedClosing, hours, convertedOpen) {
-//   return convertedClosing < hours && convertedOpen > hours;
-// }
-
 function isClosing(convertedClosing, hours) {
   return convertedClosing - hours < 3;
 }
@@ -33,7 +29,7 @@ function isClosingSoon(convertedClosing, hours) {
 }
 
 function isClosingToday(convertedClosing, hours) {
-  return convertedClosing < hours && convertedClosing === 0 || convertedClosing - hours > 3;
+  return convertedClosing > hours || convertedClosing < hours;
 }
 
 function isOpeningSoon(convertedOpen, hours) {
@@ -88,7 +84,9 @@ export function opHours(data, context) {
   if (isOpeningSoon(convertedOpen, hours)) {
     return `${context.t('closed')}. ${context.t('opensAt')}: ${opens}`;
   } else if (isClosingToday(convertedClosing, hours)) {
-    return `${context.t('closesToday')} ${closes}`;
+    if (convertedOpen < hours) {
+      return `${context.t('closesToday')} ${closes}`;
+    }
   } else if (is24h(convertedClosing, convertedOpen)) {
     return context.t('clock-o');
   } else if (isClosing(convertedClosing, hours)) {
