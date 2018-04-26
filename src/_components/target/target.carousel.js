@@ -5,7 +5,7 @@ import Carousel from 'react-native-looped-carousel-improved';
 import ImageLoad from 'react-native-image-placeholder';
 
 import { styles } from '../target';
-import notFoundImage from '../../../images/kohteesta_ei_kuvia.png';
+import notFoundImage from '../../../node_modules/react-native-image-placeholder/Images/empty-image.png';
 
 export class CustomCarousel extends Component {
   render() {
