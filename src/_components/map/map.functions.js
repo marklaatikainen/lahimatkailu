@@ -1,4 +1,4 @@
-import { foodIcon, serviceIcon, sightIcon } from '../../_helpers';
+import { foodIcon, serviceIcon, sightIcon, isOpen24h } from '../../_helpers';
 
 export function markerImgUrl(icon) {
   if (icon === 'Ruoka') {
@@ -40,9 +40,29 @@ function isOpeningSoon(convertedOpen, hours) {
   return convertedOpen > hours;
 }
 
+function areOpHoursEmpty(openingHours) {
+  let areOpeningHoursEmpty = true;
+
+  for (let day in openingHours) {
+    if (openingHours[day].start) {
+      areOpeningHoursEmpty = false;
+      break;
+    }
+  }
+  return areOpeningHoursEmpty;
+}
+
 export function opHours(data, context) {
-  const compare = new Date();
   const { openingHours } = data;
+
+  if (isOpen24h(data)) {
+    return context.t('clock-o');
+  }
+  if (areOpHoursEmpty(openingHours)) {
+    return context.t('opHoursUnknown');
+  }
+
+  const compare = new Date();
   const today = compare.getDay();
   const hours = compare.getHours();
 

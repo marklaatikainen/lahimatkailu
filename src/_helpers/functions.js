@@ -22,3 +22,12 @@ export function translate(t) {
   }
   return type;
 }
+
+export function isOpen24h(data) {
+  if(data.hasOwnProperty('symbols')) {
+    if (data.symbols.includes('clock-o')) {
+      return true;
+    }  
+  }
+  return false;
+}
