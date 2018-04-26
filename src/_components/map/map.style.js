@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
   },
   callout: {
     width: 200,
-    height: 100,
+    height: 115,
     borderRadius: 32,
     backgroundColor: white06
   },
