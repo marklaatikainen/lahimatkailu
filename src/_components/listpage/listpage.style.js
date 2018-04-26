@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'center',
-    paddingTop: 10,
-    paddingBottom: 10
+    paddingTop: 2,
+    flexWrap: 'wrap'
   },
   list: {
     paddingTop: 10

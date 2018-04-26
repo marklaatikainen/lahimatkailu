@@ -14,7 +14,8 @@ export const styles = StyleSheet.create({
   name: {
     fontSize: 20,
     marginTop: 10,
-    marginLeft: 25,
+    marginLeft: 26,
+    flexWrap: 'wrap',
     fontWeight: 'bold'
   },
   subtitle: {
@@ -88,12 +89,11 @@ export const styles = StyleSheet.create({
     backgroundColor: appgreen
   },
   topBarText: {
-    position: 'absolute',
-    top: 5,
     fontWeight: 'bold',
-    left: '38%',
+    bottom: 15,
     fontSize: 14,
-    color: white
+    color: white,
+    textAlign: 'center'
   },
   loading: {
     color: green
