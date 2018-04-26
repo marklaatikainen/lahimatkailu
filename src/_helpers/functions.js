@@ -31,3 +31,15 @@ export function isOpen24h(data) {
   }
   return false;
 }
+
+export function areOpHoursEmpty(openingHours) {
+  let areOpeningHoursEmpty = true;
+
+  for (let day in openingHours) {
+    if (openingHours[day].start) {
+      areOpeningHoursEmpty = false;
+      break;
+    }
+  }
+  return areOpeningHoursEmpty;
+}

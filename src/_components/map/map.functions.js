@@ -1,4 +1,4 @@
-import { foodIcon, serviceIcon, sightIcon, isOpen24h } from '../../_helpers';
+import { foodIcon, serviceIcon, sightIcon, isOpen24h, areOpHoursEmpty } from '../../_helpers';
 
 export function markerImgUrl(icon) {
   if (icon === 'Ruoka') {
@@ -20,10 +20,6 @@ function is24h(closes, opens) {
   return closes === 24 && opens === 0;
 }
 
-// function isClosed(convertedClosing, hours, convertedOpen) {
-//   return convertedClosing < hours && convertedOpen > hours;
-// }
-
 function isClosing(convertedClosing, hours) {
   return convertedClosing - hours < 3;
 }
@@ -38,18 +34,6 @@ function isClosingToday(convertedClosing, hours) {
 
 function isOpeningSoon(convertedOpen, hours) {
   return convertedOpen > hours;
-}
-
-function areOpHoursEmpty(openingHours) {
-  let areOpeningHoursEmpty = true;
-
-  for (let day in openingHours) {
-    if (openingHours[day].start) {
-      areOpeningHoursEmpty = false;
-      break;
-    }
-  }
-  return areOpeningHoursEmpty;
 }
 
 export function opHours(data, context) {
