@@ -28,8 +28,14 @@ function isClosingSoon(convertedClosing, hours) {
   return convertedClosing - hours >= 1;
 }
 
-function isClosingToday(convertedClosing, hours) {
-  return convertedClosing > hours || convertedClosing < hours;
+function isClosingToday(convertedClosing, convertedOpen, hours) {
+  if (convertedClosing < convertedOpen) {
+    if ((24 > hours && hours > convertedOpen) || (0 < hours && hours < convertedClosing)) {
+      
+      return true;
+    }
+  }
+  return convertedClosing > hours;
 }
 
 function isOpeningSoon(convertedOpen, hours) {
@@ -71,8 +77,8 @@ export function opHours(data, context) {
 
   if (isOpeningSoon(convertedOpen, hours)) {
     return `${context.t('closed')}. ${context.t('opensAt')}: ${opens}`;
-  } else if (isClosingToday(convertedClosing, hours)) {
-    if (convertedOpen < hours) {
+  } else if (isClosingToday(convertedClosing, convertedOpen, hours)) {
+    if (convertedOpen <= hours) {
       return `${context.t('closesToday')} ${closes}`;
     }
   } else if (is24h(convertedClosing, convertedOpen)) {
