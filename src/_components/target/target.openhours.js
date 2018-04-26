@@ -4,27 +4,9 @@ import { View, Text } from 'react-native';
 import { Table, Rows } from 'react-native-table-component';
 
 import { styles } from '../target';
+import { areOpHoursEmpty, isOpen24h } from '../../_helpers';
 
 export class TableOpenHours extends Component {
-  empty(hours) {
-    const { mon, tue, wed, thu, fri, sat, sun } = hours;
-    return (
-      mon.start === '' &&
-      mon.end === '' &&
-      tue.start === '' &&
-      tue.end === '' &&
-      wed.start === '' &&
-      wed.end === '' &&
-      thu.start === '' &&
-      thu.end === '' &&
-      fri.start === '' &&
-      fri.end === '' &&
-      sat.start === '' &&
-      sat.end === '' &&
-      sun.start === '' &&
-      sun.end === ''
-    );
-  }
 
   render() {
     const { mapPageTarget, listPageTarget } = this.props.target;
@@ -75,7 +57,9 @@ export class TableOpenHours extends Component {
     return (
       /* eslint-disable react-native/no-inline-styles */
       <View>
-        {this.empty(openingHours) ? (
+        {areOpHoursEmpty(openingHours) ? (
+          <Text style={styles.opening}>{this.context.t('opHoursUnknown')}</Text>
+        ) : isOpen24h(rightTarget) ? (
           <Text style={styles.opening}>{this.context.t('clock-o')}</Text>
         ) : (
           <View>
