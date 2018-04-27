@@ -27,5 +27,9 @@ export const styles = StyleSheet.create({
   filterContainer: {
     backgroundColor: white,
     marginBottom: 5
+  },
+  listItemImg: {
+    width: 30,
+    height: 32
   }
 });

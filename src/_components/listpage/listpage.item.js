@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ListItem } from 'react-native-elements';
 
 import { targetActions } from '../../_actions';
-import { targetIcon } from '../listpage';
+import { targetIcon, styles } from '../listpage';
 
 export default class Item extends Component {
   render() {
@@ -21,10 +21,7 @@ export default class Item extends Component {
             avatar={
               <Image
                 source={{ uri: targetIcon(data.type) }}
-                style={{
-                  width: 30,
-                  height: 32
-                }}
+                style={styles.listItemImg}
               />
             }
             title={data.name}

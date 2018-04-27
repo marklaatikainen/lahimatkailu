@@ -10,6 +10,13 @@ import up from '../../../images/up-arrow.png';
 import down from '../../../images/ic_filter_list_black_24dp.png';
 
 export class Search extends Component {
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.navigation.index === 2) {
+      return true;
+    }
+    return false;
+  }
+
   render() {
     const { dispatch, dropdown, dimensions } = this.props;
     const { filters } = this.props.filter;
@@ -20,7 +27,10 @@ export class Search extends Component {
         <SearchBar
           lightTheme
           round
-          containerStyle={[styles.searchContainer, { width: dimensions.windowWidth - buttonWidth }]}
+          containerStyle={[
+            styles.searchContainer,
+            { width: dimensions.windowWidth - buttonWidth }
+          ]}
           inputStyle={styles.searchBar}
           onChangeText={text =>
             dispatch(
@@ -55,5 +65,6 @@ Search.propTypes = {
   dropdown: PropTypes.object.isRequired,
   filter: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
-  dimensions: PropTypes.object.isRequired
+  dimensions: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired
 };
