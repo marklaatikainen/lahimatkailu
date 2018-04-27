@@ -15,7 +15,7 @@ export class ListFilters extends Component {
 
     /* eslint-disable react-native/no-inline-styles */
     return (
-      <View style={[styles.filterContainer, { height: state ? 120 : 0 }]}>
+      <View style={[styles.filterContainer, { height: state ? 150 : 0 }]}>
         <CheckBoxesContainer style={styles.listpageCheckboxes} />
         <SliderContainer />
       </View>

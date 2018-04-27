@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
   },
   backIcon: {
     marginLeft: 5,
-    marginTop: 3
+    marginTop: 6
   },
   scrollContainer: {
     height: 200
@@ -90,7 +90,7 @@ export const styles = StyleSheet.create({
   },
   topBarText: {
     fontWeight: 'bold',
-    bottom: 15,
+    bottom: 18,
     fontSize: 14,
     color: white,
     textAlign: 'center'

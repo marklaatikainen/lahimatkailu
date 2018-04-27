@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     marginTop: 70
   },
   listpageCheckboxes: {
+    paddingTop: 10,
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'center',

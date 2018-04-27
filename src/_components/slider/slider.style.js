@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   sliderContainerStyle: {
     height: 30,
     marginLeft: '10%',
-    marginTop: 10
+    marginTop: 15
   },
   text: {
     fontSize: 20,
