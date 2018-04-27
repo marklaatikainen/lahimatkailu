@@ -57,10 +57,10 @@ export class TableOpenHours extends Component {
     return (
       /* eslint-disable react-native/no-inline-styles */
       <View>
-        {areOpHoursEmpty(openingHours) ? (
-          <Text style={styles.opening}>{this.context.t('opHoursUnknown')}</Text>
-        ) : isOpen24h(rightTarget) ? (
+        { isOpen24h(rightTarget) ? (
           <Text style={styles.opening}>{this.context.t('clock-o')}</Text>
+        ) : areOpHoursEmpty(openingHours) ? (
+          <Text style={styles.opening}>{this.context.t('opHoursUnknown')}</Text>
         ) : (
           <View>
             <Text style={styles.openingTitle}>{this.context.t('opening')}</Text>
