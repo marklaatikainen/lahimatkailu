@@ -28,7 +28,7 @@ export default class Item extends Component {
               />
             }
             title={data.name}
-            subtitle={`${data.address.street} , ${data.address.city}`}
+            subtitle={`${data.address.street}, ${data.address.city}`}
           />
         </TouchableOpacity>
       </View>
