@@ -28,11 +28,23 @@ export const styles = StyleSheet.create({
     fontSize: 16
   },
   iconInfoView: {
-    marginLeft: 17,
-    justifyContent: 'flex-end'
+    marginLeft: 17
+  },
+  iconInfoRow: {
+    flexDirection: 'row',
+    marginBottom: 16
+  },
+  iconContainer: {
+    marginRight: 16
   },
   icon: {
-    width: 60,
-    height: 60
+    width: 32,
+    height: 32
+  },
+  textContainer: {
+    justifyContent: 'center'
+  },
+  iconText: {
+    fontSize: 18
   }
 });

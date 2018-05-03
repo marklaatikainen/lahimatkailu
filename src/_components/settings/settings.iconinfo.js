@@ -8,18 +8,29 @@ export class IconInfo extends Component {
   render() {
     return (
       <View style={styles.iconInfoView}>
-        <View>
-          <Image style={styles.icon} source={{ uri: foodIcon }} />
-          {this.context.t('food')}
+        <View style={styles.iconInfoRow}>
+          <View style={styles.iconContainer}>
+            <Image style={styles.icon} source={{ uri: foodIcon }} />
+          </View>
+          <View style={styles.textContainer}>
+            <Text style={styles.iconText}>{this.context.t('food')}</Text>
+          </View>
         </View>
-
-        <View>
-          <Image style={styles.icon} source={{ uri: sightIcon }} />
-          {this.context.t('sight')}
+        <View style={styles.iconInfoRow}>
+          <View style={styles.iconContainer}>
+            <Image style={styles.icon} source={{ uri: sightIcon }} />
+          </View>
+          <View style={styles.textContainer}>
+            <Text style={styles.iconText}>{this.context.t('sight')}</Text>
+          </View>
         </View>
-        <View>
-          <Image style={styles.icon} source={{ uri: serviceIcon }} />
-          {this.context.t('service')}
+        <View style={styles.iconInfoRow}>
+          <View style={styles.iconContainer}>
+            <Image style={styles.icon} source={{ uri: serviceIcon }} />
+          </View>
+          <View style={styles.textContainer}>
+            <Text style={styles.iconText}>{this.context.t('service')}</Text>
+          </View>
         </View>
       </View>
     );
