@@ -27,7 +27,7 @@ export class Target extends Component {
           <TargetTextArea data={rightTarget} />
           <TargetMapContainer />
         </ScrollView>
-        <ActionButtonContainer location={rightTarget.location} />
+        <ActionButtonContainer data={rightTarget} location={rightTarget.location} />
       </View>
     );
   }
