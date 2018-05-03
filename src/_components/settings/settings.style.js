@@ -26,5 +26,13 @@ export const styles = StyleSheet.create({
     marginTop: 7,
     marginLeft: 17,
     fontSize: 16
+  },
+  iconInfoView: {
+    marginLeft: 17,
+    justifyContent: 'flex-end'
+  },
+  icon: {
+    width: 60,
+    height: 60
   }
 });

@@ -8,8 +8,7 @@ import {
   SettingsSwitch,
   SettingsPicker
 } from 'react-native-settings-components';
-
-import { styles } from '../settings';
+import { styles, IconInfo } from '../settings';
 
 export class Settings extends Component {
   constructor(props) {
@@ -65,6 +64,7 @@ export class Settings extends Component {
         />
         <SettingsDividerShort />
         <Text style={styles.version}>{this.context.t('version')} {VersionNumber.appVersion}</Text>
+        <IconInfo />
       </ScrollView>
     );
   }
