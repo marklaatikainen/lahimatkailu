@@ -7,7 +7,6 @@ import { styles } from '../target';
 import { areOpHoursEmpty, isOpen24h } from '../../_helpers';
 
 export class TableOpenHours extends Component {
-
   render() {
     const { mapPageTarget, listPageTarget } = this.props.target;
     const { navigation } = this.props;
@@ -55,9 +54,10 @@ export class TableOpenHours extends Component {
     ];
 
     return (
+      /* eslint-disable no-nested-ternary */
       /* eslint-disable react-native/no-inline-styles */
       <View>
-        { isOpen24h(rightTarget) ? (
+        {isOpen24h(rightTarget) ? (
           <Text style={styles.opening}>{this.context.t('clock-o')}</Text>
         ) : areOpHoursEmpty(openingHours) ? (
           <Text style={styles.opening}>{this.context.t('opHoursUnknown')}</Text>

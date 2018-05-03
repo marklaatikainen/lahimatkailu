@@ -4,6 +4,8 @@ import { AsyncStorage, BackHandler } from 'react-native';
 import { connect } from 'react-redux';
 import { DeviceEventEmitter } from 'react-native';
 import { setLanguage } from 'redux-i18n';
+import Permissions from 'react-native-permissions';
+
 import { Navigator } from './_components/navigator';
 import { Dimensions } from 'react-native';
 import {
@@ -12,8 +14,22 @@ import {
   userlocationActions
 } from './_actions';
 
+/* eslint-disable no-unused-expressions */
+
 class ConnectedApp extends Component {
+  state = {
+    locationPermission: 'undetermined'
+  };
+
   componentDidMount() {
+    Permissions.check('location').then(response => {
+      this.setState({ locationPermission: response }, () => {
+        this.state.locationPermission !== 'authorized'
+          ? this._requestPermission
+          : null;
+      });
+    });
+
     const { dispatch } = this.props;
     // backhandler listener
     BackHandler.addEventListener('hardwareBackPress', this.androidBackHandler);
@@ -41,6 +57,17 @@ class ConnectedApp extends Component {
     );
   }
 
+  _requestPermission = () => {
+    Permissions.request('location', {
+      rationale: {
+        title: 'Lähimatkailu paikannuslupa',
+        message: 'Sovellus tarvitsee luvan paikannustietojen käyttämiseen'
+      }
+    }).then(response => {
+      this.setState({ locationPermission: response });
+    });
+  };
+
   androidBackHandler = () => {
     const { dispatch, navigation } = this.props;
     const { mapPageTarget, listPageTarget } = this.props.target;
@@ -63,7 +90,9 @@ class ConnectedApp extends Component {
   };
 
   render() {
-    return <Navigator {...this.props} />;
+    return this.state.locationPermission === 'authorized' ? (
+      <Navigator {...this.props} />
+    ) : null;
   }
 }
 
