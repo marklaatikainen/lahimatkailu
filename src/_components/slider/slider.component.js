@@ -15,6 +15,11 @@ export class SliderComponent extends Component {
     };
   }
 
+  componentDidMount() {
+    const { filterSlider } = this.props.filter.filters;
+    this.setState({sliderValues: filterSlider});
+  }
+
   /*
     @param: value = new slider value
     @param: slider = 'left|right'
@@ -48,7 +53,6 @@ export class SliderComponent extends Component {
           markerStyle={styles.markerStyle}
           pressedMarkerStyle={styles.pressedMarkerStyle}
           markerOffsetY={2}
-          // style={styles.slider}
           trackStyle={styles.track}
           selectedStyle={styles.selectedStyle}
           unselectedStyle={styles.unselectedStyle}
