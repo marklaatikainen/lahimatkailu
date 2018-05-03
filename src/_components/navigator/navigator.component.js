@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
+import {
+  TabViewAnimated,
+  TabViewPagerPan,
+  TabBar,
+  SceneMap
+} from 'react-native-tab-view';
 import Icon from 'react-native-vector-icons/FontAwesome';
 // components
 import MainPage from '../mainpage/main.component';
@@ -36,7 +41,9 @@ export class Navigator extends Component {
         renderScene={this._renderScene}
         renderFooter={this._renderFooter}
         onIndexChange={this._handleIndexChange}
+        swipeEnabled={false}
         initialLayout={initialLayout}
+        renderPager={props => <TabViewPagerPan {...props} />}
       />
     );
   }

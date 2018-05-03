@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@ptomasroos/react-native-multi-slider": "0.0.13",
+    "babel-plugin-transform-remove-console": "^6.9.1",
     "geolib": "^2.0.24",
     "npm": "^5.7.1",
     "react": "16.2.0",

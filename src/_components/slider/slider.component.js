@@ -15,6 +15,11 @@ export class SliderComponent extends Component {
     };
   }
 
+  componentDidMount() {
+    const { filterSlider } = this.props.filter.filters;
+    this.setState({sliderValues: filterSlider});
+  }
+
   /*
     @param: value = new slider value
     @param: slider = 'left|right'
@@ -27,17 +32,16 @@ export class SliderComponent extends Component {
     dispatch(
       filterActions.updateFilter({
         ...filters,
-        filterSlider:
-            [sliderValues[0], sliderValues[1]]
+        filterSlider: [sliderValues[0], sliderValues[1]]
       })
     );
-  }
+  };
 
   multiSliderValuesChange = values => {
     this.setState({
       sliderValues: values
     });
-  }
+  };
 
   render() {
     const { windowWidth } = this.props.dimensions;
@@ -49,14 +53,10 @@ export class SliderComponent extends Component {
           markerStyle={styles.markerStyle}
           pressedMarkerStyle={styles.pressedMarkerStyle}
           markerOffsetY={2}
-          // style={styles.slider}
           trackStyle={styles.track}
           selectedStyle={styles.selectedStyle}
           unselectedStyle={styles.unselectedStyle}
-          values={[
-            this.state.sliderValues[0],
-            this.state.sliderValues[1]
-          ]}
+          values={[this.state.sliderValues[0], this.state.sliderValues[1]]}
           sliderLength={windowWidth - 0.2 * windowWidth}
           onValuesChange={this.multiSliderValuesChange}
           onValuesChangeFinish={this.changeSliderValue}
@@ -65,7 +65,8 @@ export class SliderComponent extends Component {
           step={1}
         />
         <Text style={styles.text}>
-          {this.context.t('distance')}: {this.state.sliderValues[0]} - {this.state.sliderValues[1]}km
+          {this.context.t('distance')}: {this.state.sliderValues[0]} -{' '}
+          {this.state.sliderValues[1]}km
         </Text>
       </View>
     );
@@ -81,4 +82,3 @@ SliderComponent.propTypes = {
   dispatch: PropTypes.func.isRequired,
   dimensions: PropTypes.object.isRequired
 };
-

@@ -4,6 +4,7 @@ import { AsyncStorage, BackHandler } from 'react-native';
 import { connect } from 'react-redux';
 import { DeviceEventEmitter } from 'react-native';
 import { setLanguage } from 'redux-i18n';
+
 import { Navigator } from './_components/navigator';
 import { Dimensions } from 'react-native';
 import {

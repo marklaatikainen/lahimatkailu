@@ -75,8 +75,10 @@ export const styles = StyleSheet.create({
     backgroundColor: white
   },
   backIcon: {
-    marginLeft: 5,
-    marginTop: 6
+    marginLeft: 7,
+    marginTop: 6,
+    zIndex: 999,
+    width: 20
   },
   scrollContainer: {
     height: 200

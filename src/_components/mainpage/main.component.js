@@ -13,23 +13,20 @@ class MainPage extends Component {
     return props.navigation.index === 1 ? true : false;
   }
 
-  /* eslint-disable no-else-return */
-
   render() {
     const { mapPageTarget } = this.props.target;
 
     if (mapPageTarget && mapPageTarget._id) {
       return <TargetContainer />;
-    } else {
-      return (
-        <View>
-          <MapContainer />
-          <Panel>
-            <CheckBoxesContainer />
-          </Panel>
-        </View>
-      );
     }
+    return (
+      <View>
+        <MapContainer />
+        <Panel>
+          <CheckBoxesContainer />
+        </Panel>
+      </View>
+    );
   }
 }
 
