@@ -37,7 +37,8 @@ export const translations = {
     notifications: 'Allow Push Notifications',
     settings: 'settings',
     search: 'Search',
-    version: 'Version'
+    version: 'Version',
+    closeApp: 'Press back again to exit the app'
   },
   fi: {
     sight: 'Nähtävyys',
@@ -77,7 +78,8 @@ export const translations = {
     notifications: 'Salli push-ilmoitukset',
     settings: 'asetukset',
     search: 'Etsi',
-    version: 'Versio'
+    version: 'Versio',
+    closeApp: 'Poistu sovelluksesta painamalla uudelleen'
   },
   se: {
     sight: 'Sevärdhet',
@@ -117,7 +119,8 @@ export const translations = {
     notifications: 'Tillåt push-notifikationer',
     settings: 'Inställningar',
     search: 'Sök',
-    version: 'Version'
+    version: 'Version',
+    closeApp: 'Tryck tillbaka igen för att lämna appen'
   },
   ru: {
     sight: 'Достопримечательность',
@@ -156,6 +159,7 @@ export const translations = {
     notifications: 'Разрешить push-уведомления',
     settings: 'настройки',
     search: 'Поиск',
-    version: 'Версия'
+    version: 'Версия',
+    closeApp: 'Нажмите еще раз, чтобы выйти из приложения'
   }
 };

@@ -68,7 +68,7 @@ class MapContainer extends Component {
 
     this._backPress += 1;
     if (this._backPress <= 1) {
-      ToastAndroid.show('Press back again to exit the app', ToastAndroid.SHORT);
+      ToastAndroid.show(this.context.t('closeApp'), ToastAndroid.SHORT);
       return true;
     }
     return false;
@@ -86,6 +86,10 @@ const mapStateToProps = state => ({
   userlocation: state.userlocation,
   checkbox: state.checkbox
 });
+
+MapContainer.contextTypes = {
+  t: PropTypes.func.isRequired
+};
 
 MapContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
