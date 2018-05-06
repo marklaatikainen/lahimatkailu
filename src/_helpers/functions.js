@@ -3,8 +3,8 @@ export function precisionRound(number, precision) {
   return Math.round(number * factor) / factor;
 }
 
-export function mapValues(num, in_min, in_max, out_min, out_max) {
-  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+export function mapValues(num, inMin, inMax, outMin, outMax) {
+  return (num - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
 export function mapped(slider) {
@@ -24,10 +24,10 @@ export function translate(t) {
 }
 
 export function isOpen24h(data) {
-  if(data.hasOwnProperty('symbols')) {
+  if (data.hasOwnProperty('symbols')) {
     if (data.symbols.includes('clock-o')) {
       return true;
-    }  
+    }
   }
   return false;
 }
@@ -35,7 +35,7 @@ export function isOpen24h(data) {
 export function areOpHoursEmpty(openingHours) {
   let areOpeningHoursEmpty = true;
 
-  for (let day in openingHours) {
+  for (const day in openingHours) {
     if (openingHours[day].start) {
       areOpeningHoursEmpty = false;
       break;

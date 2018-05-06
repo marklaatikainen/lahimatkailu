@@ -8,10 +8,6 @@ import SearchContainer from '../searchbar/search.container';
 import Item from '../listpage/listpage.item';
 
 export class SearchPage extends Component {
-  shouldComponentUpdate(props) {
-    return props.navigation.index === 2 ? true : false;
-  }
-
   render() {
     const { data, filter } = this.props;
     const { listPageTarget } = this.props.target;

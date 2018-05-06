@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { white, white06, appgreen } from '../../_helpers';
+import { white, appgreen } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,10 +12,9 @@ export const styles = StyleSheet.create({
     paddingTop: 0
   },
   callout: {
+    flex: 1,
     width: 200,
-    height: 115,
-    borderRadius: 32,
-    backgroundColor: white06
+    backgroundColor: white
   },
   image: {
     width: 32,

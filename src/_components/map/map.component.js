@@ -5,6 +5,10 @@ import { View } from 'react-native';
 import { styles, ClusteredMap } from '../map';
 
 export class MapComponent extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const { region } = this.props.region;
     const { data } = this.props;

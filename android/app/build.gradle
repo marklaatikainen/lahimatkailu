@@ -101,8 +101,8 @@ android {
         applicationId "com.lahimatkailu"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 6
-        versionName "5.1"
+        versionCode 7
+        versionName "6.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -156,8 +156,8 @@ dependencies {
     compile project(':react-native-maps')
     compile project(':RNAlocation')
     compile project(':react-native-orientation')
-    compile project(':react-native-snackbar')
     compile project(':react-native-version-number')
+    compile project(':react-native-navigation')
 }
 
 // Run this once to be able to run the application with BUCK
