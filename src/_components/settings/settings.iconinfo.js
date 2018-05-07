@@ -8,6 +8,7 @@ export class IconInfo extends Component {
   render() {
     return (
       <View style={styles.iconInfoView}>
+        <Text style={styles.iconInfoHeading}>{this.context.t('iconLegend')}</Text>
         <View style={styles.iconInfoRow}>
           <View style={styles.iconContainer}>
             <Image style={styles.icon} source={{ uri: foodIcon }} />

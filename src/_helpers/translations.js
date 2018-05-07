@@ -37,7 +37,8 @@ export const translations = {
     notifications: 'Allow Push Notifications',
     settings: 'settings',
     search: 'Search',
-    version: 'Version'
+    version: 'Version',
+    iconLegend: 'Icon Legend'
   },
   fi: {
     sight: 'Nähtävyys',
@@ -77,7 +78,8 @@ export const translations = {
     notifications: 'Salli push-ilmoitukset',
     settings: 'asetukset',
     search: 'Etsi',
-    version: 'Versio'
+    version: 'Versio',
+    iconLegend: 'Ikonien selitteet'
   },
   se: {
     sight: 'Sevärdhet',
@@ -117,7 +119,8 @@ export const translations = {
     notifications: 'Tillåt push-notifikationer',
     settings: 'Inställningar',
     search: 'Sök',
-    version: 'Version'
+    version: 'Version',
+    iconLegend: '(Käännös puuttuu)'
   },
   ru: {
     sight: 'Достопримечательность',
@@ -156,6 +159,7 @@ export const translations = {
     notifications: 'Разрешить push-уведомления',
     settings: 'настройки',
     search: 'Поиск',
-    version: 'Версия'
+    version: 'Версия',
+    iconLegend: '(Käännös puuttuu)'
   }
 };

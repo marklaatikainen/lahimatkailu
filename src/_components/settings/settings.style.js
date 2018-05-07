@@ -30,6 +30,11 @@ export const styles = StyleSheet.create({
   iconInfoView: {
     marginLeft: 17
   },
+  iconInfoHeading: {
+    fontSize: 18,
+    marginBottom: 16,
+    fontWeight: 'bold'
+  },
   iconInfoRow: {
     flexDirection: 'row',
     marginBottom: 16
