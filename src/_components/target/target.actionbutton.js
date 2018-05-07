@@ -14,7 +14,7 @@ export class ActionButtonContainer extends Component {
         {data.homepage ? (
           <ActionButton.Item
             buttonColor="purple"
-            title={this.context.t('home')}
+            title={this.context.t('homepage')}
             onPress={() => Linking.openURL(data.homepage)}
           >
             <Icon name="home" style={styles.icon} />

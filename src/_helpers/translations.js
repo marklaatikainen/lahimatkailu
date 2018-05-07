@@ -39,7 +39,6 @@ export const translations = {
     search: 'Search',
     version: 'Version',
     closeApp: 'Press back again to exit the app',
-    home: 'Homepage',
     iconLegend: 'Icon Legend'
   },
   fi: {
@@ -82,7 +81,6 @@ export const translations = {
     search: 'Etsi',
     version: 'Versio',
     closeApp: 'Poistu sovelluksesta painamalla uudelleen',
-    home: 'Kotisivu',
     iconLegend: 'Ikonien selitteet'
   },
   se: {
@@ -125,7 +123,6 @@ export const translations = {
     search: 'Sök',
     version: 'Version',
     closeApp: 'Tryck tillbaka igen för att lämna appen', // @TODO: onko oikein?
-    home: 'Hemsida', // @TODO: onko oikein?
     iconLegend: '' // @TODO
   },
   ru: {
@@ -135,6 +132,7 @@ export const translations = {
     opening: 'Режим работы',
     target: 'Подробная информация',
     bookmark: 'Добавить в закладки',
+    homepage: 'Домашняя страница',
     navigate: 'Как добраться',
     wheelchair: 'Для инвалидов',
     'clock-o': '24 часа',
@@ -167,7 +165,6 @@ export const translations = {
     search: 'Поиск',
     version: 'Версия',
     closeApp: 'Нажмите еще раз, чтобы выйти из приложения',
-    home: 'Домашняя страница',
     iconLegend: '' // @TODO
   }
 };
