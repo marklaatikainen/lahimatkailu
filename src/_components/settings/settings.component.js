@@ -15,8 +15,7 @@ export class Settings extends Component {
     super(props);
 
     this.state = {
-      allowPushNotifications: false,
-      language: ''
+      allowPushNotifications: false
     };
   }
 
@@ -43,7 +42,7 @@ export class Settings extends Component {
             onSaveValue={value => {
               this.props.changeLanguage(value);
             }}
-            value={this.state.language}
+            value={this.context.t(this.props.language)}
             styleModalButtonsText={styles.text}
           />
           <SettingsDividerShort />
@@ -78,5 +77,6 @@ Settings.contextTypes = {
 
 Settings.propTypes = {
   changeLanguage: PropTypes.func.isRequired,
+  language: PropTypes.string.isRequired,
   navigation: PropTypes.object.isRequired
 };

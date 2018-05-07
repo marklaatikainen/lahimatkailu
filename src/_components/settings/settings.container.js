@@ -7,14 +7,31 @@ import { setLanguage } from 'redux-i18n';
 import { Settings } from '../settings';
 
 class SettingsContainer extends Component {
+  state = {
+    language: 'fi'
+  };
+
+  componentDidMount() {
+    this.getLanguage();
+  }
+
+  getLanguage() {
+    AsyncStorage.getItem('lang', (err, result) => {
+      this.setState({
+        language: result !== null ? result : 'fi'
+      });
+    });
+  }
+
   render() {
     return (
       <Settings
         {...this.props}
+        language={this.state.language}
         changeLanguage={newLang => {
-          this.props.dispatch(setLanguage(newLang), () => {
-            AsyncStorage.setItem('lang', newLang);
-          });
+          this.props.dispatch(setLanguage(newLang));
+          AsyncStorage.setItem('lang', newLang);
+          this.getLanguage();
         }}
       />
     );
