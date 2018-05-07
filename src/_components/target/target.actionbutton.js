@@ -8,26 +8,20 @@ import { styles, openMap } from '../target';
 
 export class ActionButtonContainer extends Component {
   render() {
-    const { location } = this.props;
-    const { data } = this.props;
+    const { location, data } = this.props;
     return (
       <ActionButton offsetX={15} offsetY={15} buttonColor="rgba(116,163,53,1)">
-        {data.homepage && (
+        {data.homepage ? (
           <ActionButton.Item
             buttonColor="purple"
-            title={'Kotisivu'}
+            title={this.context.t('home')}
             onPress={() => Linking.openURL(data.homepage)}
           >
             <Icon name="home" style={styles.icon} />
           </ActionButton.Item>
+        ) : (
+          {}
         )}
-        {/* <ActionButton.Item
-          buttonColor="blue"
-          title={this.context.t('bookmark')}
-          onPress={() => null }
-        >
-          <Icon name="save" style={styles.icon} />
-        </ActionButton.Item> */}
         <ActionButton.Item
           buttonColor="green"
           title={this.context.t('navigate')}

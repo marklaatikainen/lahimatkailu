@@ -38,7 +38,8 @@ export const translations = {
     settings: 'settings',
     search: 'Search',
     version: 'Version',
-    closeApp: 'Press back again to exit the app'
+    closeApp: 'Press back again to exit the app',
+    home: 'Homepage'
   },
   fi: {
     sight: 'Nähtävyys',
@@ -79,7 +80,8 @@ export const translations = {
     settings: 'asetukset',
     search: 'Etsi',
     version: 'Versio',
-    closeApp: 'Poistu sovelluksesta painamalla uudelleen'
+    closeApp: 'Poistu sovelluksesta painamalla uudelleen',
+    home: 'Kotisivu'
   },
   se: {
     sight: 'Sevärdhet',
@@ -120,7 +122,8 @@ export const translations = {
     settings: 'Inställningar',
     search: 'Sök',
     version: 'Version',
-    closeApp: 'Tryck tillbaka igen för att lämna appen'
+    closeApp: 'Tryck tillbaka igen för att lämna appen', // @TODO: onko oikein?
+    home: 'Hemsida' // @TODO: onko oikein?
   },
   ru: {
     sight: 'Достопримечательность',
@@ -160,6 +163,7 @@ export const translations = {
     settings: 'настройки',
     search: 'Поиск',
     version: 'Версия',
-    closeApp: 'Нажмите еще раз, чтобы выйти из приложения'
+    closeApp: 'Нажмите еще раз, чтобы выйти из приложения',
+    home: 'Домашняя страница'
   }
 };
