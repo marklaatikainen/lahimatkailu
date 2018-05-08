@@ -2,6 +2,18 @@
 
 Source repository of Lähimatkailu project. License is MIT.
 
+### About the App
+
+Latest release on Google Play https://play.google.com/store/apps/details?id=com.lahimatkailu.
+
+The app is a tool for planning day tours to Finnish nature sites and outdoor attractions.
+
+The app has been developed for Android using React Native with Redux and Redux Thunk. 
+
+#### Structure of the App
+
+...
+
 ### Build and install project:
 
 To install you need to have Node installed (https://nodejs.org). This project was built with 8.9.4. LTS. In addition, installation will not succeed with npm version 5.X.X Instead, you need to have version 4.X.X installed. If you need to downgrade the version, use the following command:

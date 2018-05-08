@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     height: '45%'
   },
   list: {
-    paddingTop: 10
+    marginBottom: 60
   },
   filterContainer: {
     backgroundColor: white,
