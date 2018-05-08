@@ -122,8 +122,8 @@ export const translations = {
     settings: 'Inställningar',
     search: 'Sök',
     version: 'Version',
-    closeApp: 'Tryck tillbaka igen för att lämna appen', // @TODO: onko oikein?
-    iconLegend: '' // @TODO
+    closeApp: 'Tryck tillbaka igen för att stänga appen',
+    iconLegend: 'Teckenförklaring'
   },
   ru: {
     sight: 'Достопримечательность',
