@@ -101,8 +101,8 @@ android {
         applicationId "com.lahimatkailu"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 9
-        versionName "6.0.2"
+        versionCode 10
+        versionName "6.1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
