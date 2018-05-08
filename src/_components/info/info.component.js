@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { TouchableOpacity, View, ScrollView, StatusBar } from 'react-native';
+import { TouchableOpacity, View, ScrollView, StatusBar, Text } from 'react-native';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -30,6 +30,7 @@ export class Info extends Component {
                 color="black"
               />
             </TouchableOpacity>
+            <Text style={styles.iconLegend}>{this.context.t('iconLegend')}</Text>
             <ScrollView style={styles.iconsContainer}>
               {list.map(icon => (
                 <IconInfo key={icon} text={this.context.t(icon)} item={icon} />

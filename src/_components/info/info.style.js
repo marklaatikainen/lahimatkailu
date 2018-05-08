@@ -43,5 +43,10 @@ export const styles = StyleSheet.create({
   iconsContainer: {
     marginTop: 30,
     marginLeft: 10
+  },
+  iconLegend: {
+    fontSize: 20,
+    marginTop: 5,
+    marginLeft: 30
   }
 });

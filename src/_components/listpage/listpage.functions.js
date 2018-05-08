@@ -22,7 +22,7 @@ export function filter(data, location, filters, checkboxes) {
   let filteredData = []; // eslint-disable-line
   for (const _id in data) {
     if (
-      //sliderFilter(data[_id], location.location, filterSlider) &&
+      sliderFilter(data[_id], location.location, filterSlider) &&
       checkboxFilter(data[_id], checkboxes) &&
       textFilter(data[_id], filterText)
     ) {
@@ -41,18 +41,18 @@ function checkboxFilter(item, checkboxes) {
   );
 }
 
-// function sliderFilter(item, location, slider) {
-//   // user's location
-//   const { Latitude, Longitude } = location;
-//   const range = precisionRound(
-//     getDistance(
-//       { latitude: Latitude, longitude: Longitude },
-//       { latitude: item.location.latitude, longitude: item.location.longitude }
-//     ) / 1000,
-//     1
-//   );
-//   return range >= slider[0] && range <= slider[1];
-// }
+function sliderFilter(item, location, slider) {
+  // user's location
+  const { Latitude, Longitude } = location;
+  const range = precisionRound(
+    getDistance(
+      { latitude: Latitude, longitude: Longitude },
+      { latitude: item.location.latitude, longitude: item.location.longitude }
+    ) / 1000,
+    1
+  );
+  return range >= slider[0] && range <= slider[1];
+}
 
 function textFilter(item, text) {
   if (text !== '') {
