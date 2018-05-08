@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { TouchableOpacity, View, StatusBar } from 'react-native';
+import { TouchableOpacity, View, ScrollView, StatusBar } from 'react-native';
 import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -19,7 +19,7 @@ export class Info extends Component {
         <Modal
           onRequestClose={this.props.toggle}
           transparent={true}
-          isVisible={true}
+          isVisible={this.props.show}
         >
           <View style={styles.modal}>
             <TouchableOpacity onPress={this.props.toggle}>
@@ -30,11 +30,11 @@ export class Info extends Component {
                 color="black"
               />
             </TouchableOpacity>
-            <View style={styles.iconsContainer}>
+            <ScrollView style={styles.iconsContainer}>
               {list.map(icon => (
                 <IconInfo key={icon} text={this.context.t(icon)} item={icon} />
               ))}
-            </View>
+            </ScrollView>
           </View>
         </Modal>
       </View>
@@ -48,5 +48,6 @@ Info.contextTypes = {
 
 Info.propTypes = {
   toggle: PropTypes.func.isRequired,
-  icon: PropTypes.object.isRequired
+  icon: PropTypes.object.isRequired,
+  show: PropTypes.bool.isRequired
 };

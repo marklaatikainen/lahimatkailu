@@ -11,8 +11,7 @@ export class IconBar extends Component {
     super(props);
 
     this.state = {
-      show: false,
-      visible: true
+      show: false
     };
   }
 
@@ -30,10 +29,7 @@ export class IconBar extends Component {
       <View style={styles.icons}>
         {symbols &&
           symbols.map(symbol => (
-            <TouchableOpacity
-              key={symbol}
-              onPress={this.toggle}
-            >
+            <TouchableOpacity key={symbol} onPress={this.toggle}>
               <AccessibilityIcon name={symbol} />
             </TouchableOpacity>
           ))}
