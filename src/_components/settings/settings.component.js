@@ -5,25 +5,17 @@ import VersionNumber from 'react-native-version-number';
 import {
   SettingsDividerShort,
   SettingsCategoryHeader,
-  SettingsSwitch,
   SettingsPicker
 } from 'react-native-settings-components';
 import { styles, IconInfo } from '../settings';
 
 export class Settings extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      allowPushNotifications: false
-    };
-  }
-
   shouldComponentUpdate(props) {
     return props.navigation.index === 0 ? true : false;
   }
 
   render() {
+    const { lang } = this.props;
     return (
       <View style={styles.container}>
         <ScrollView style={styles.container}>
@@ -42,23 +34,8 @@ export class Settings extends Component {
             onSaveValue={value => {
               this.props.changeLanguage(value);
             }}
-            value={this.context.t(this.props.language)}
+            value={this.context.t(lang)}
             styleModalButtonsText={styles.text}
-          />
-          <SettingsDividerShort />
-          <SettingsSwitch
-            title={this.context.t('notifications')}
-            onSaveValue={value => {
-              this.setState({
-                allowPushNotifications: value
-              });
-            }}
-            value={this.state.allowPushNotifications}
-            thumbTintColor={
-              this.state.allowPushNotifications
-                ? styles.switchEnabled
-                : styles.switchDisabled
-            }
           />
           <SettingsDividerShort />
           <Text style={styles.version}>
@@ -77,6 +54,6 @@ Settings.contextTypes = {
 
 Settings.propTypes = {
   changeLanguage: PropTypes.func.isRequired,
-  language: PropTypes.string.isRequired,
-  navigation: PropTypes.object.isRequired
+  navigation: PropTypes.object.isRequired,
+  lang: PropTypes.string.isRequired
 };

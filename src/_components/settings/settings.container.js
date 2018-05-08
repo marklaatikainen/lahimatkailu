@@ -10,21 +10,8 @@ import { setLanguage } from 'redux-i18n';
 import { Settings } from '../settings';
 
 class SettingsContainer extends Component {
-  state = {
-    language: 'fi'
-  };
-
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', this.androidBackHandler);
-    this.getLanguage();
-  }
-
-  getLanguage() {
-    AsyncStorage.getItem('lang', (err, result) => {
-      this.setState({
-        language: result !== null ? result : 'fi'
-      });
-    });
   }
 
   componentWillUnmount() {
@@ -34,15 +21,15 @@ class SettingsContainer extends Component {
     );
   }
 
-  _backPress = 0;
+  backPress = 0;
 
   androidBackHandler = () => {
     setTimeout(() => {
-      this._backPress = 0;
+      this.backPress = 0;
     }, 1000);
 
-    this._backPress += 1;
-    if (this._backPress <= 1) {
+    this.backPress += 1;
+    if (this.backPress <= 1) {
       ToastAndroid.show(this.context.t('closeApp'), ToastAndroid.SHORT);
       return true;
     }
@@ -50,14 +37,13 @@ class SettingsContainer extends Component {
   };
 
   render() {
+    const { dispatch } = this.props;
     return (
       <Settings
         {...this.props}
-        language={this.state.language}
         changeLanguage={newLang => {
-          this.props.dispatch(setLanguage(newLang));
+          dispatch(setLanguage(newLang));
           AsyncStorage.setItem('lang', newLang);
-          this.getLanguage();
         }}
       />
     );

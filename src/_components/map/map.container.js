@@ -21,9 +21,6 @@ import {
 } from '../../_actions';
 
 class MapContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
   componentDidMount() {
     const { dispatch } = this.props;
     const { region } = this.props.region;
