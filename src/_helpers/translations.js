@@ -165,6 +165,6 @@ export const translations = {
     search: 'Поиск',
     version: 'Версия',
     closeApp: 'Нажмите еще раз, чтобы выйти из приложения',
-    iconLegend: '' // @TODO
+    iconLegend: 'Значение иконок' // @TODO Syytä vielä tarkistaa
   }
 };
