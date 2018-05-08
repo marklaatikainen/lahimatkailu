@@ -11,9 +11,18 @@ class TargetContainer extends Component {
     BackHandler.addEventListener('hardwareBackPress', this.androidBackHandler);
   }
   androidBackHandler = () => {
-    const { dispatch, navigation } = this.props;
+    const { dispatch, navigation, target } = this.props;
+    const { index } = navigation;
+
+    if (
+      (index === 1 && !target.mapPageTarget) ||
+      (index === 2 && !target.listPageTarget)
+    ) {
+      return false;
+    }
+
     dispatch(
-      navigation.index === 1
+      index === 1
         ? targetActions.closeMapTarget()
         : targetActions.closeListTarget()
     );
@@ -41,7 +50,8 @@ const mapStateToProps = state => ({
 
 TargetContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  navigation: PropTypes.object.isRequired
+  navigation: PropTypes.object.isRequired,
+  target: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps)(TargetContainer);
