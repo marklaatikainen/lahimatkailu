@@ -15,8 +15,8 @@ class TargetContainer extends Component {
     const { index } = navigation;
 
     if (
-      (index === 1 && !target.mapPageTarget) ||
-      (index === 2 && !target.listPageTarget)
+      (index !== 1 && target.mapPageTarget) ||
+      (index !== 2 && target.listPageTarget)
     ) {
       return false;
     }
