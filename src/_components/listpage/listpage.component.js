@@ -24,6 +24,7 @@ export class SearchPage extends Component {
               <Text style={styles.notfound}>Ei hakutuloksia..</Text>
             ) : (
               <FlatList
+                style={styles.list}
                 data={data}
                 keyExtractor={item => item._id}
                 renderItem={({ item, index }) => (

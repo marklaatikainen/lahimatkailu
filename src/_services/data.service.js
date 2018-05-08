@@ -20,7 +20,14 @@ async function fetchDataByLocation(region) {
     .then(responseJson => responseJson.kohteet);
 }
 
+async function getIconList() {
+  return fetch('http://topiniskala.com:3000/v1/iconList.json')
+    .then(response => response.json())
+    .then(responseJson => responseJson.symbols);
+}
+
 export const dataService = {
   fetchData,
-  fetchDataByLocation
+  fetchDataByLocation,
+  getIconList
 };

@@ -17,7 +17,8 @@ import { MapComponent, filter } from '../map';
 import {
   dataActions,
   dimensionsActions,
-  userlocationActions
+  userlocationActions,
+  iconActions
 } from '../../_actions';
 
 class MapContainer extends Component {
@@ -44,6 +45,7 @@ class MapContainer extends Component {
 
     RNALocation.getLocation();
     dispatch(dataActions.fetchData());
+    dispatch(iconActions.fetchIcons());
     dispatch(dataActions.fetchDataByLocation(region));
   }
 

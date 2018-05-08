@@ -10,6 +10,7 @@ import { userlocation } from './userlocation.reducer';
 import { filter } from './filter.reducer';
 import { dropdown } from './dropdown.reducer';
 import { navigation } from './navigation.reducer';
+import { icon } from './icon.reducer';
 
 const AppReducer = combineReducers({
   alldata,
@@ -22,7 +23,8 @@ const AppReducer = combineReducers({
   filter,
   i18nState,
   dropdown,
-  navigation
+  navigation,
+  icon
 });
 
 export default AppReducer;
