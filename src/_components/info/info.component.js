@@ -1,47 +1,52 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { TouchableHighlight, View, Text, Modal  } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { TouchableOpacity, View, StatusBar } from 'react-native';
 import Modal from 'react-native-modal';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-import { styles } from '../info';
+import { styles, IconInfo } from '../info';
 
-export default class Info extends Component {
-    constructor(props) {
-        super(props);
+export class Info extends Component {
+  componentDidMount() {
+    StatusBar.setHidden(true);
+  }
 
-        this.state = {
-            icons: []
-        };
-    };
+  render() {
+    const { list } = this.props.icon;
 
-    // componentDidMount() {
-    //     this.fetchData();
-    // }
-
-    // async fetchData() {
-    //     const res = await fetch('http://topiniskala.com:3000/v1/iconList.json');
-    //     this.setState({
-    //         icons: res
-    //     });
-    // }
-
-    
-
-    render() {
-//const { symbols } = this.state.icons;
-
-        return ( 
-            <View>
-                <Modal onRequestClose={this.props.toggle} transparent={true}>
-                    <View style={styles.modal}>
-                        <TouchableHighlight onPress={this.props.toggle}>
-                            <Icon style={styles.cancel} name="times-circle" size={30} color="black" />
-                        </TouchableHighlight>
-                    </View>
-                </Modal>
+    return (
+      <View>
+        <Modal
+          onRequestClose={this.props.toggle}
+          transparent={true}
+          isVisible={true}
+        >
+          <View style={styles.modal}>
+            <TouchableOpacity onPress={this.props.toggle}>
+              <Icon
+                style={styles.cancel}
+                name="times-circle"
+                size={30}
+                color="black"
+              />
+            </TouchableOpacity>
+            <View style={styles.iconsContainer}>
+              {list.map(icon => (
+                <IconInfo key={icon} text={this.context.t(icon)} item={icon} />
+              ))}
             </View>
-        );
-        
-    }
+          </View>
+        </Modal>
+      </View>
+    );
+  }
 }
+
+Info.contextTypes = {
+  t: PropTypes.func.isRequired
+};
+
+Info.propTypes = {
+  toggle: PropTypes.func.isRequired,
+  icon: PropTypes.object.isRequired
+};
