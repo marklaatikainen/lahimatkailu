@@ -99,10 +99,10 @@ android {
 
     defaultConfig {
         applicationId "com.lahimatkailu"
-        minSdkVersion 16
-        targetSdkVersion 22
-        versionCode 12
-        versionName "6.3.0"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 13
+        versionName "7.0.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
