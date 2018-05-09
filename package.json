@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "postinstall": "del .\\node_modules\\react-native\\local-cli\\core\\__fixtures__\\files\\package.json && rd .\\node_modules\\react-native-vector-icons\\lib /s /q && md .\\node_modules\\react-native-vector-icons\\lib && xcopy .\\customizedComponents\\react-native-vector-icons\\lib\\* .\\node_modules\\react-native-vector-icons\\lib\\ /s /e /i && del .\\node_modules\\react-native-looped-carousel-improved\\index.js && copy customizedComponents\\react-native-looped-carousel-improved\\index.js node_modules\\react-native-looped-carousel-improved\\"
+    "postinstall": "del .\\node_modules\\react-native\\local-cli\\core\\__fixtures__\\files\\package.json && rd .\\node_modules\\react-native-vector-icons\\lib /s /q && md .\\node_modules\\react-native-vector-icons\\lib && xcopy .\\customizedComponents\\react-native-vector-icons\\lib\\* .\\node_modules\\react-native-vector-icons\\lib\\ /s /e /i && del .\\node_modules\\react-native-looped-carousel-improved\\index.js && copy customizedComponents\\react-native-looped-carousel-improved\\index.js node_modules\\react-native-looped-carousel-improved\\ && del .\\node_modules\\react-native-navigation\\android\\app\\src\\main\\java\\com\\reactnativenavigation\\controllers\\NavigationActivity.java && copy customizedComponents\\react-native-navigation\\NavigationActivity.java node_modules\\react-native-navigation\\android\\app\\src\\main\\java\\com\\reactnativenavigation\\controllers\\"
   },
   "dependencies": {
     "@ptomasroos/react-native-multi-slider": "0.0.13",
