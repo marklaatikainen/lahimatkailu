@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { green, appgreen, grey, white } from '../../_helpers';
+import { green, appgreen, grey, white, black } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
@@ -99,5 +99,14 @@ export const styles = StyleSheet.create({
   },
   loading: {
     color: green
+  },
+  blur: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width,
+    backgroundColor: black,
+    opacity: 0.6
   }
 });

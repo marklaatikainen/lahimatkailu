@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {appgreen, white} from '../../_helpers';
+import { StyleSheet } from 'react-native';
+import { appgreen, white } from '../../_helpers';
 
 export const styles = StyleSheet.create({
   container: {
@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
     color: appgreen,
     width: 50,
     marginTop: 3,
-    marginLeft: 5
+    marginLeft: 0
   },
   iconInfoRow: {
     flexDirection: 'row',
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
   iconLegend: {
     fontSize: 20,
     textWrap: 'wrap',
-    marginTop: 5,
+    marginTop: 6,
     marginLeft: 5
   },
   topBar: {

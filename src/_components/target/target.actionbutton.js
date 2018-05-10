@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
-import { Linking } from 'react-native';
+import { Linking, View } from 'react-native';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ActionButton from 'react-native-action-button';
 
-import {
-  styles,
-  openMap,
-  isFacebook,
-  isInsta,
-  facebookUrl,
-  instaUrl
-} from '../target';
+import { styles, openMap, isFacebook, isInsta, facebookUrl, instaUrl } from '../target';
 
 export class ActionButtonContainer extends Component {
   render() {
@@ -22,6 +15,7 @@ export class ActionButtonContainer extends Component {
         offsetX={15}
         size={45}
         offsetY={15}
+        backdrop={<View style={styles.blur} />}
         buttonColor="rgba(116,163,53,1)"
       >
         {isInsta(some) ? (
