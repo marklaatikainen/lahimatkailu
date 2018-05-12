@@ -27,26 +27,15 @@ export class Search extends Component {
         <SearchBar
           lightTheme
           round
-          containerStyle={[
-            styles.searchContainer,
-            { width: dimensions.windowWidth - buttonWidth }
-          ]}
+          containerStyle={[styles.searchContainer, { width: dimensions.windowWidth - buttonWidth }]}
           inputStyle={styles.searchBar}
-          onChangeText={text =>
-            dispatch(
-              filterActions.updateFilter({ ...filters, filterText: text })
-            )
-          }
+          onChangeText={text => dispatch(filterActions.updateFilter({ ...filters, filterText: text }))}
           placeholder={this.context.t('search')}
         />
         <TouchableOpacity
           style={styles.button}
           onPress={() => {
-            dispatch(
-              dropdown.state
-                ? dropdownActions.closeDropdown()
-                : dropdownActions.openDropdown()
-            );
+            dispatch(dropdown.state ? dropdownActions.closeDropdown() : dropdownActions.openDropdown());
           }}
           underlayColor="#f1f1f1"
         >

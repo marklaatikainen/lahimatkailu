@@ -12,18 +12,9 @@ export default class Item extends Component {
 
     return (
       <View>
-        <TouchableOpacity
-          onPress={() =>
-            this.props.dispatch(targetActions.openListTarget(data))
-          }
-        >
+        <TouchableOpacity onPress={() => this.props.dispatch(targetActions.openListTarget(data))}>
           <ListItem
-            avatar={
-              <Image
-                source={{ uri: targetIcon(data.type) }}
-                style={styles.listItemImg}
-              />
-            }
+            avatar={<Image source={{ uri: targetIcon(data.type) }} style={styles.listItemImg} />}
             title={data.name}
             subtitle={`${data.address.street}, ${data.address.city}`}
           />

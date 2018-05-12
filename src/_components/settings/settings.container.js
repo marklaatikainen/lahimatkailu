@@ -3,9 +3,8 @@
 
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import { AsyncStorage, BackHandler, ToastAndroid } from 'react-native';
+import { BackHandler, ToastAndroid } from 'react-native';
 import { connect } from 'react-redux';
-import { setLanguage } from 'redux-i18n';
 
 import { Settings } from '../settings';
 
@@ -15,10 +14,7 @@ class SettingsContainer extends Component {
   }
 
   componentWillUnmount() {
-    BackHandler.removeEventListener(
-      'hardwareBackPress',
-      this.androidBackHandler
-    );
+    BackHandler.removeEventListener('hardwareBackPress', this.androidBackHandler);
   }
 
   backPress = 0;
@@ -37,16 +33,7 @@ class SettingsContainer extends Component {
   };
 
   render() {
-    const { dispatch } = this.props;
-    return (
-      <Settings
-        {...this.props}
-        changeLanguage={newLang => {
-          dispatch(setLanguage(newLang));
-          AsyncStorage.setItem('lang', newLang);
-        }}
-      />
-    );
+    return <Settings {...this.props} />;
   }
 }
 

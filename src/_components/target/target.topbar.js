@@ -15,11 +15,7 @@ export class TargetTopbar extends Component {
         <TouchableOpacity
           style={styles.backIcon}
           onPress={() =>
-            dispatch(
-              navigation.index === 1
-                ? targetActions.closeMapTarget()
-                : targetActions.closeListTarget()
-            )
+            dispatch(navigation.index === 1 ? targetActions.closeMapTarget() : targetActions.closeListTarget())
           }
         >
           <Icon name="arrow-left" size={20} color="white" />

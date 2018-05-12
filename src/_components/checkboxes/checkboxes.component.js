@@ -29,22 +29,14 @@ export class CheckBoxes extends Component {
           labelBefore
           label={this.context.t('food')}
           checked={checkbox.values.food}
-          onChange={val =>
-            dispatch(
-              checkboxActions.updateValues({ ...checkbox.values, food: !val })
-            )
-          }
+          onChange={val => dispatch(checkboxActions.updateValues({ ...checkbox.values, food: !val }))}
         />
         <CheckBox
           labelStyle={styles.label}
           labelBefore
           label={this.context.t('sight')}
           checked={checkbox.values.sight}
-          onChange={val =>
-            dispatch(
-              checkboxActions.updateValues({ ...checkbox.values, sight: !val })
-            )
-          }
+          onChange={val => dispatch(checkboxActions.updateValues({ ...checkbox.values, sight: !val }))}
         />
         <CheckBox
           labelStyle={styles.label}

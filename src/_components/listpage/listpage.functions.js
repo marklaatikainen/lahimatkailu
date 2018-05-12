@@ -1,10 +1,5 @@
 import { getDistance } from 'geolib';
-import {
-  foodIcon,
-  serviceIcon,
-  sightIcon,
-  precisionRound
-} from '../../_helpers';
+import { foodIcon, serviceIcon, sightIcon, precisionRound } from '../../_helpers';
 
 export function targetIcon(type) {
   if (type === 'Ruoka') {
@@ -35,9 +30,7 @@ export function filter(data, userlocation, filters, checkboxes) {
 function checkboxFilter(item, checkboxes) {
   const { food, service, sight } = checkboxes.values;
   return (
-    (food && item.type === 'Ruoka') ||
-    (sight && item.type === 'Nähtävyys') ||
-    (service && item.type === 'Palvelu')
+    (food && item.type === 'Ruoka') || (sight && item.type === 'Nähtävyys') || (service && item.type === 'Palvelu')
   );
 }
 

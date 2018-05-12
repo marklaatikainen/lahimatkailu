@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import { View, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import TargetMapContainer from './target.map.container';
-import {
-  styles,
-  TargetTextArea,
-  CustomCarousel,
-  ActionButtonContainer,
-  TargetTopbar
-} from '../target';
+import { styles, TargetTextArea, CustomCarousel, ActionButtonContainer, TargetTopbar } from '../target';
 
 export class Target extends Component {
   render() {

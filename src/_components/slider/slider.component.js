@@ -17,7 +17,7 @@ export class SliderComponent extends Component {
 
   componentDidMount() {
     const { filterSlider } = this.props.filter.filters;
-    this.setState({sliderValues: filterSlider});
+    this.setState({ sliderValues: filterSlider });
   }
 
   /*
@@ -65,8 +65,7 @@ export class SliderComponent extends Component {
           step={1}
         />
         <Text style={styles.text}>
-          {this.context.t('distance')}: {this.state.sliderValues[0]} -{' '}
-          {this.state.sliderValues[1]}km
+          {this.context.t('distance')}: {this.state.sliderValues[0]} - {this.state.sliderValues[1]}km
         </Text>
       </View>
     );

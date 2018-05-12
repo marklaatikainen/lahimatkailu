@@ -14,9 +14,7 @@ export class TargetTextArea extends Component {
       <View style={styles.textarea}>
         <IconBar target={data} />
         <Text style={styles.name}>{data.name}</Text>
-        <Text style={styles.subtitle}>
-          {this.context.t(translate(data.type))}
-        </Text>
+        <Text style={styles.subtitle}>{this.context.t(translate(data.type))}</Text>
         <Text style={styles.description}>{data.info}</Text>
         <TableOpenHoursContainer />
       </View>

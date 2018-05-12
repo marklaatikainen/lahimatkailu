@@ -20,36 +20,9 @@ export class TableOpenHours extends Component {
     const { mon, tue, wed, thu, fri, sat, sun } = openingHours;
 
     const tableRows2 = [
-      [
-        this.context.t('mon'),
-        mon.start,
-        '-',
-        mon.end,
-        this.context.t('fri'),
-        fri.start,
-        '-',
-        fri.end
-      ],
-      [
-        this.context.t('tue'),
-        tue.start,
-        '-',
-        tue.end,
-        this.context.t('sat'),
-        sat.start,
-        '-',
-        sat.end
-      ],
-      [
-        this.context.t('wed'),
-        wed.start,
-        '-',
-        wed.end,
-        this.context.t('sun'),
-        sun.start,
-        '-',
-        sun.end
-      ],
+      [this.context.t('mon'), mon.start, '-', mon.end, this.context.t('fri'), fri.start, '-', fri.end],
+      [this.context.t('tue'), tue.start, '-', tue.end, this.context.t('sat'), sat.start, '-', sat.end],
+      [this.context.t('wed'), wed.start, '-', wed.end, this.context.t('sun'), sun.start, '-', sun.end],
       [this.context.t('thu'), thu.start, '-', thu.end, '', '', '', '']
     ];
 
@@ -65,11 +38,7 @@ export class TableOpenHours extends Component {
           <View>
             <Text style={styles.openingTitle}>{this.context.t('opening')}</Text>
             <Table style={styles.opening} borderStyle={{ borderWidth: 0 }}>
-              <Rows
-                flexArr={[1.5, 1.5, 0.5, 3, 1.5, 1.5, 0.5, 3]}
-                heightArr={[22, 22, 22, 22]}
-                data={tableRows2}
-              />
+              <Rows flexArr={[1.5, 1.5, 0.5, 3, 1.5, 1.5, 0.5, 3]} heightArr={[22, 22, 22, 22]} data={tableRows2} />
             </Table>
           </View>
         )}

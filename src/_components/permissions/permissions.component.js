@@ -11,10 +11,7 @@ import startNavigation from '../navigator/navigator.register';
 
 export default class PermissionsComponent extends Component {
   componentDidMount() {
-    const title = this.context.t('permTitle');
-    const message = this.context.t('permMessage');
-
-    requestLocationPermission(title, message).then(res => {
+    requestLocationPermission(this.context).then(res => {
       if (res) {
         startNavigation();
       } else {

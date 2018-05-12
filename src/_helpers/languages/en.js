@@ -41,7 +41,7 @@ export const en = {
   iconLegend: 'Icon Legend',
   positiveButton: 'Save',
   negativeButton: 'Cancel',
-  withoutPerm: "App won't work without location permissions", /* @TODO */ // eslint-disable-line 
+  withoutPerm: 'App won\'t work without location permissions', /* @TODO */ // eslint-disable-line 
   permTitle: 'Location permissions', // @TODO
   permMessage: 'Lähimatkailu app uses location information to calculate destination distances' // @TODO
 };

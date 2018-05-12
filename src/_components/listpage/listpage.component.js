@@ -27,9 +27,7 @@ export class SearchPage extends Component {
                 style={styles.list}
                 data={data}
                 keyExtractor={item => item._id}
-                renderItem={({ item, index }) => (
-                  <Item {...this.props} data={item} index={index} />
-                )}
+                renderItem={({ item, index }) => <Item {...this.props} data={item} index={index} />}
               />
             )}
           </View>

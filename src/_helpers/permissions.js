@@ -2,11 +2,11 @@
 
 import { PermissionsAndroid, ToastAndroid } from 'react-native';
 
-export async function requestLocationPermission(title, message) {
+export async function requestLocationPermission(context) {
   try {
     const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, {
-      title: title,
-      message: message
+      title: context.t('permTitle'),
+      message: context.t('permMessage')
     });
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
       return true;

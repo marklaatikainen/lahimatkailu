@@ -50,24 +50,10 @@ export default class Panel extends Component {
     }
 
     return (
-      <Animated.View
-        style={[styles.container, { height: this.state.animation }]}
-      >
-        <View
-          style={styles.iconContainer}
-          onLayout={this._setMinHeight.bind(this)}
-        >
-          <TouchableHighlight
-            style={styles.button}
-            onPress={this.toggle.bind(this)}
-            underlayColor="#f1f1f1"
-          >
-            <Image
-              style={styles.buttonImage}
-              source={icon}
-              width={30}
-              height={25}
-            />
+      <Animated.View style={[styles.container, { height: this.state.animation }]}>
+        <View style={styles.iconContainer} onLayout={this._setMinHeight.bind(this)}>
+          <TouchableHighlight style={styles.button} onPress={this.toggle.bind(this)} underlayColor="#f1f1f1">
+            <Image style={styles.buttonImage} source={icon} width={30} height={25} />
           </TouchableHighlight>
         </View>
         <View style={styles.body} onLayout={this._setMaxHeight.bind(this)}>

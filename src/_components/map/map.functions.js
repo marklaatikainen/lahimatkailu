@@ -31,7 +31,7 @@ function isClosingToday(convertedClosing, convertedOpen, timeNow) {
 
 function isClosingSoon(convertedClosing, convertedOpen, timeNow) {
   if (timeNow > convertedClosing) {
-    return (convertedClosing + 24) - timeNow <= 1;
+    return convertedClosing + 24 - timeNow <= 1;
   }
   return convertedClosing - timeNow <= 1;
 }
@@ -41,12 +41,7 @@ function opensToday(convertedOpen, timeNow) {
 }
 
 function convertTimeStrArrToFloat(timeStrArr) {
-  return parseFloat(
-    `${parseInt(timeStrArr[0], 10)}.${parseInt(
-      timeStrArr[1] / 6 * 10,
-      10
-    )}`
-  );
+  return parseFloat(`${parseInt(timeStrArr[0], 10)}.${parseInt(timeStrArr[1] / 6 * 10, 10)}`);
 }
 
 export function opHours(data, context) {

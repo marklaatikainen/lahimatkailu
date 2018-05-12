@@ -8,9 +8,7 @@ import { styles, customMapStyle, MapMarker } from '../map';
 import { regionActions, dataActions } from '../../_actions';
 
 export class ClusteredMap extends Component {
-  renderMarker = data => (
-    <MapMarker {...this.props} key={data._id} data={data} />
-  );
+  renderMarker = data => <MapMarker {...this.props} key={data._id} data={data} />;
 
   /* eslint-disable sort-vars */
 

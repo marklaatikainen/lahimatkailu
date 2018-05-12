@@ -14,26 +14,16 @@ class TargetContainer extends Component {
     const { dispatch, navigation, target } = this.props;
     const { index } = navigation;
 
-    if (
-      (index !== 1 && target.mapPageTarget) ||
-      (index !== 2 && target.listPageTarget)
-    ) {
+    if ((index !== 1 && target.mapPageTarget) || (index !== 2 && target.listPageTarget)) {
       return false;
     }
 
-    dispatch(
-      index === 1
-        ? targetActions.closeMapTarget()
-        : targetActions.closeListTarget()
-    );
+    dispatch(index === 1 ? targetActions.closeMapTarget() : targetActions.closeListTarget());
     return true;
   };
 
   componentWillUnmount() {
-    BackHandler.removeEventListener(
-      'hardwareBackPress',
-      this.androidBackHandler
-    );
+    BackHandler.removeEventListener('hardwareBackPress', this.androidBackHandler);
   }
 
   render() {
