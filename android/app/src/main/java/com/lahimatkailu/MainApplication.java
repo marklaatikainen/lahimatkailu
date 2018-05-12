@@ -11,8 +11,6 @@ import com.facebook.soloader.SoLoader;
 // custom
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
-import com.syarul.rnalocation.RNALocation;
-import com.github.yamill.orientation.OrientationPackage;
 import com.apsl.versionnumber.RNVersionNumberPackage;
 // Navigator
 import com.reactnativenavigation.NavigationApplication;
@@ -34,8 +32,6 @@ public class MainApplication extends NavigationApplication {
         new MainReactPackage(),
         new VectorIconsPackage(),
         new MapsPackage(),
-        new RNALocation(),
-        new OrientationPackage(),
         new RNVersionNumberPackage()
       );
     }
@@ -64,8 +60,6 @@ public class MainApplication extends NavigationApplication {
         new MainReactPackage(),
         new VectorIconsPackage(),
         new MapsPackage(),
-        new RNALocation(),
-        new OrientationPackage(),
         new RNVersionNumberPackage()
       );
     }

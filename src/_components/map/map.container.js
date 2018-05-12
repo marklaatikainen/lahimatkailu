@@ -1,25 +1,12 @@
-/* eslint-disable react-native/split-platform-components */
-/* eslint-disable no-undef */
+/* eslint-disable  */
 import React, { Component } from 'react';
-import {
-  BackHandler,
-  ToastAndroid,
-  Dimensions,
-  AsyncStorage,
-  DeviceEventEmitter
-} from 'react-native';
+import { BackHandler, ToastAndroid, Dimensions, AsyncStorage, DeviceEventEmitter } from 'react-native';
 import { PropTypes } from 'prop-types';
-import RNALocation from 'react-native-android-location';
 import { connect } from 'react-redux';
 import { setLanguage } from 'redux-i18n';
 
 import { MapComponent, filter } from '../map';
-import {
-  dataActions,
-  dimensionsActions,
-  userlocationActions,
-  iconActions
-} from '../../_actions';
+import { dataActions, dimensionsActions, userlocationActions, iconActions } from '../../_actions';
 
 class MapContainer extends Component {
   componentDidMount() {
@@ -27,13 +14,7 @@ class MapContainer extends Component {
     const { region } = this.props.region;
 
     BackHandler.addEventListener('hardwareBackPress', this.androidBackHandler);
-    Dimensions.addEventListener('change', () =>
-      dispatch(dimensionsActions.getDimensions())
-    );
-
-    DeviceEventEmitter.addListener('updateLocation', e =>
-      dispatch(userlocationActions.updateLocation(e))
-    );
+    Dimensions.addEventListener('change', () => dispatch(dimensionsActions.getDimensions()));
 
     AsyncStorage.getItem('lang', (err, result) => {
       if (result !== null) {
@@ -43,19 +24,26 @@ class MapContainer extends Component {
       }
     });
 
-    RNALocation.getLocation();
+    navigator.geolocation.getCurrentPosition(e =>
+      dispatch(userlocationActions.updateLocation(e.coords), error => alert(error.message), {
+        enableHighAccuracy: true,
+        timeout: 20000,
+        maximumAge: 1000
+      })
+    );
+    this.watchID = navigator.geolocation.watchPosition(position => {
+      dispatch(userlocationActions.updateLocation(position.coords));
+    });
+
     dispatch(dataActions.fetchData());
     dispatch(iconActions.fetchIcons());
     dispatch(dataActions.fetchDataByLocation(region));
   }
 
   componentWillUnmount() {
-    BackHandler.removeEventListener(
-      'hardwareBackPress',
-      this.androidBackHandler
-    );
+    navigator.geolocation.clearWatch(this.watchID);
+    BackHandler.removeEventListener('hardwareBackPress', this.androidBackHandler);
     Dimensions.removeEventListener('change');
-    // DeviceEventEmitter.removeEventListener('updateLocation');
   }
 
   _backPress = 0;

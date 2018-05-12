@@ -1,15 +1,19 @@
 import { userlocationConstants } from '../_constants';
 
-const INIT_REGION = {
-  Latitude: 60.169856,
-  Longitude: 24.938379
+const coords = {
+  accuracy: 0,
+  altitude: 0,
+  heading: 0,
+  latitude: 60.169856,
+  longitude: 24.938379,
+  speed: 0
 };
 
-export function userlocation(state = { location: INIT_REGION }, action) {
+export function userlocation(state = { coords }, action) {
   switch (action.type) {
     case userlocationConstants.SET_USER_LOCATION:
       return {
-        location: action.location
+        coords: action.location
       };
     default:
       return state;

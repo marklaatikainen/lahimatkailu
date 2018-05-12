@@ -47,7 +47,6 @@ export const styles = StyleSheet.create({
   },
   iconLegend: {
     fontSize: 20,
-    textWrap: 'wrap',
     marginTop: 6,
     marginLeft: 5
   },

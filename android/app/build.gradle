@@ -101,8 +101,8 @@ android {
         applicationId "com.lahimatkailu"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 13
-        versionName "7.0.0"
+        versionCode 14
+        versionName "7.1.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -154,8 +154,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:+'
 	compile project(':react-native-vector-icons')
     compile project(':react-native-maps')
-    compile project(':RNAlocation')
-    compile project(':react-native-orientation')
     compile project(':react-native-version-number')
     compile project(':react-native-navigation')
 }

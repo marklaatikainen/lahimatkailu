@@ -13,14 +13,10 @@ export class MapMarker extends Component {
 
   render() {
     const { data } = this.props;
-    const { location } = this.props.userlocation;
     return (
-      <Marker
-        coordinate={data.location}
-        onCalloutPress={() => this.handleCalloutPress(data)}
-      >
+      <Marker coordinate={data.location} onCalloutPress={() => this.handleCalloutPress(data)}>
         <Image style={styles.image} source={{ uri: markerImgUrl(data.type) }} />
-        <MapMarkerCallout {...this.props} location={location} />
+        <MapMarkerCallout {...this.props} />
       </Marker>
     );
   }

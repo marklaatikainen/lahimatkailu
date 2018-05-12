@@ -17,12 +17,12 @@ export function targetIcon(type) {
   return null;
 }
 
-export function filter(data, location, filters, checkboxes) {
+export function filter(data, userlocation, filters, checkboxes) {
   const { filterSlider, filterText } = filters;
-  let filteredData = []; // eslint-disable-line
+  const filteredData = [];
   for (const _id in data) {
     if (
-      sliderFilter(data[_id], location.location, filterSlider) &&
+      sliderFilter(data[_id], userlocation, filterSlider) &&
       checkboxFilter(data[_id], checkboxes) &&
       textFilter(data[_id], filterText)
     ) {
@@ -41,12 +41,12 @@ function checkboxFilter(item, checkboxes) {
   );
 }
 
-function sliderFilter(item, location, slider) {
+function sliderFilter(item, userlocation, slider) {
   // user's location
-  const { Latitude, Longitude } = location;
+  const { coords } = userlocation;
   const range = precisionRound(
     getDistance(
-      { latitude: Latitude, longitude: Longitude },
+      { latitude: coords.latitude, longitude: coords.longitude },
       { latitude: item.location.latitude, longitude: item.location.longitude }
     ) / 1000,
     1

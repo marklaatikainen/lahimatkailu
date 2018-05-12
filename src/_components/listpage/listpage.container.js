@@ -10,15 +10,9 @@ class ListPageContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  data: filter(
-    state.alldata.data,
-    state.userlocation,
-    state.filter.filters,
-    state.checkbox
-  ),
+  data: filter(state.alldata.data, state.userlocation, state.filter.filters, state.checkbox),
   dimensions: state.dimensions,
   region: state.region,
-  userlocation: state.userlocation,
   filter: state.filter,
   dropdown: state.dropdown,
   navigation: state.navigation,

@@ -9,7 +9,7 @@ import { translate, precisionRound } from '../../_helpers';
 export class CalloutContent extends Component {
   render() {
     const { data } = this.props;
-    const { location } = this.props.userlocation;
+    const { coords } = this.props.userlocation;
     return (
       <View>
         <Text>{data.name}</Text>
@@ -19,8 +19,8 @@ export class CalloutContent extends Component {
           {precisionRound(
             getDistance(
               {
-                latitude: location.Latitude,
-                longitude: location.Longitude
+                latitude: coords.latitude,
+                longitude: coords.longitude
               },
               {
                 latitude: data.location.latitude,
@@ -43,6 +43,5 @@ CalloutContent.contextTypes = {
 
 CalloutContent.propTypes = {
   data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
   userlocation: PropTypes.object.isRequired
 };

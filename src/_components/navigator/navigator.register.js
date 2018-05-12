@@ -2,32 +2,31 @@ import { Navigation, ScreenVisibilityListener } from 'react-native-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { store } from '../../_helpers';
 
-import { SettingsI18n, MapI18n, ListI18n } from '../navigator';
+import { SettingsI18n, MapI18n, ListI18n, PermissionsI18n } from '../navigator';
 import { navigationActions } from '../../_actions';
 
 export function registerScreens(st, provider) {
-  Navigation.registerComponent(
-    'lahimatkailu.SettingsNavi',
-    () => SettingsI18n,
-    st,
-    provider
-  );
-  Navigation.registerComponent(
-    'lahimatkailu.MainNavi',
-    () => MapI18n,
-    st,
-    provider
-  );
-  Navigation.registerComponent(
-    'lahimatkailu.ListNavi',
-    () => ListI18n,
-    st,
-    provider
-  );
+  Navigation.registerComponent('lahimatkailu.PermissionsNavi', () => PermissionsI18n, st, provider);
+  Navigation.registerComponent('lahimatkailu.SettingsNavi', () => SettingsI18n, st, provider);
+  Navigation.registerComponent('lahimatkailu.MainNavi', () => MapI18n, st, provider);
+  Navigation.registerComponent('lahimatkailu.ListNavi', () => ListI18n, st, provider);
 }
 
 // disable Promise warning
 /* eslint-disable no-undef */
+
+export function singlePageApp() {
+  Navigation.startSingleScreenApp({
+    screen: {
+      screen: 'lahimatkailu.PermissionsNavi',
+      navigatorStyle: {
+        navBarHidden: true,
+        statusBarHidden: true,
+        overrideBackPress: true
+      }
+    }
+  });
+}
 
 export default (startNavigation = () => {
   Promise.all([
@@ -76,13 +75,8 @@ export default (startNavigation = () => {
 });
 
 export function registerScreenVisibilityListener() {
-  const pages = [
-    'lahimatkailu.SettingsNavi',
-    'lahimatkailu.MainNavi',
-    'lahimatkailu.ListNavi'
-  ];
+  const pages = ['lahimatkailu.SettingsNavi', 'lahimatkailu.MainNavi', 'lahimatkailu.ListNavi'];
   new ScreenVisibilityListener({
-    willAppear: ({ screen }) =>
-      store.dispatch(navigationActions.changeIndex(pages.indexOf(screen)))
+    willAppear: ({ screen }) => store.dispatch(navigationActions.changeIndex(pages.indexOf(screen)))
   }).register();
 }
