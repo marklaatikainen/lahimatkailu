@@ -5,19 +5,13 @@ import VersionNumber from 'react-native-version-number';
 import { SettingsDividerShort, SettingsCategoryHeader, SettingsPicker } from 'react-native-settings-components';
 import { setLanguage } from 'redux-i18n';
 
-import { styles, IconInfo } from '../settings';
+import { styles, IconInfo, convertValue } from '../settings';
 
 export class Settings extends Component {
   shouldComponentUpdate(props) {
     return props.navigation.index === 0 ? true : false;
   }
 
-  convertValue(value) {
-    const langs = [this.context.t('fi'), this.context.t('en'), this.context.t('se'), this.context.t('ru')];
-    const ret = ['fi', 'en', 'se', 'ru'];
-
-    return ret[langs.indexOf(value)];
-  }
 
   render() {
     const { lang, dispatch } = this.props;
@@ -41,8 +35,8 @@ export class Settings extends Component {
             positiveButtonTitle={t('positiveButton')}
             negativeButtonTitle={t('negativeButton')}
             onSaveValue={val => {
-              dispatch(setLanguage(this.convertValue(val)));
-              AsyncStorage.setItem('lang', this.convertValue(val));
+              dispatch(setLanguage(convertValue(this.context, val)));
+              AsyncStorage.setItem('lang', convertValue(this.context, val));
             }}
             styleModalButtonsText={styles.text}
           />
