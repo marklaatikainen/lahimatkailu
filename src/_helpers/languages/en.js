@@ -38,5 +38,10 @@ export const en = {
   search: 'Search',
   version: 'Version',
   closeApp: 'Press back again to exit the app',
-  iconLegend: 'Icon Legend'
+  iconLegend: 'Icon Legend',
+  positiveButton: 'Save',
+  negativeButton: 'Cancel',
+  withoutPerm: "App won't work without location permissions", /* @TODO */ // eslint-disable-line 
+  permTitle: 'Location permissions', // @TODO
+  permMessage: 'Lähimatkailu app uses location information to calculate destination distances' // @TODO
 };

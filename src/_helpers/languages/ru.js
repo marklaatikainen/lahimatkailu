@@ -38,5 +38,10 @@ export const ru = {
   search: 'Поиск',
   version: 'Версия',
   closeApp: 'Нажмите еще раз, чтобы выйти из приложения',
-  iconLegend: 'Обозначения'
+  iconLegend: 'Обозначения',
+  positiveButton: 'Сохранить',
+  negativeButton: 'Отмена',
+  withoutPerm: 'Приложение не будет работать без геолокации',
+  permTitle: 'Lähimatkailu геолокация',
+  permMessage: 'Приложение использует информацию о местоположении для расчета расстояний назначения'
 };

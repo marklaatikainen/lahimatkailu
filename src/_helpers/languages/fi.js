@@ -38,5 +38,10 @@ export const fi = {
   search: 'Etsi',
   version: 'Versio',
   closeApp: 'Poistu sovelluksesta painamalla uudelleen',
-  iconLegend: 'Ikonien selitteet'
+  iconLegend: 'Ikonien selitteet',
+  positiveButton: 'Tallenna',
+  negativeButton: 'Peruuta',
+  withoutPerm: 'Sovellus ei toimi ilman paikannustietoja',
+  permTitle: 'Lähimatkailu Sijaintitiedot',
+  permMessage: 'Lähimatkailusovellus käyttää paikannustietoja kohteiden etäisyyksien laskemiseen'
 };

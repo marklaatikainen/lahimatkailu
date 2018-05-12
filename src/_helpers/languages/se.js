@@ -38,5 +38,10 @@ export const se = {
   search: 'Sök',
   version: 'Version',
   closeApp: 'Tryck tillbaka igen för att stänga appen',
-  iconLegend: 'Teckenförklaring'
+  iconLegend: 'Teckenförklaring',
+  positiveButton: '', // @TODO
+  negativeButton: '', // @TODO
+  withoutPerm: '', // @TODO
+  permTitle: '', // @TODO
+  permMessage: '' // @TODO
 };

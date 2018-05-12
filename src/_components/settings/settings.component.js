@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { ScrollView, Text, View } from 'react-native';
 import VersionNumber from 'react-native-version-number';
-import {
-  SettingsDividerShort,
-  SettingsCategoryHeader,
-  SettingsPicker
-} from 'react-native-settings-components';
+import { SettingsDividerShort, SettingsCategoryHeader, SettingsPicker } from 'react-native-settings-components';
 import { styles, IconInfo } from '../settings';
 
 export class Settings extends Component {
@@ -18,6 +14,7 @@ export class Settings extends Component {
     const { lang } = this.props;
     return (
       <View style={styles.container}>
+        console.warn(lang)
         <ScrollView style={styles.container}>
           <SettingsCategoryHeader title={this.context.t('settings')} />
           <SettingsPicker
@@ -29,12 +26,12 @@ export class Settings extends Component {
               { label: this.context.t('se'), value: 'se' },
               { label: this.context.t('ru'), value: 'ru' }
             ]}
-            positiveButtonTitle={'Ok'}
-            negativeButtonTitle={'Cancel'}
+            positiveButtonTitle={this.context.t('positiveButton')}
+            negativeButtonTitle={this.context.t('negativeButton')}
+            value={this.context.t(lang)}
             onSaveValue={value => {
               this.props.changeLanguage(value);
             }}
-            value={this.context.t(lang)}
             styleModalButtonsText={styles.text}
           />
           <SettingsDividerShort />

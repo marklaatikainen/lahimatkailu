@@ -1,17 +1,19 @@
-import { PermissionsAndroid } from 'react-native'; // eslint-disable-line
+/* eslint-disable react-native/split-platform-components */
 
-export async function requestLocationPermission() {
+import { PermissionsAndroid, ToastAndroid } from 'react-native';
+
+export async function requestLocationPermission(title, message) {
   try {
     const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, {
-      title: 'Lähimatkailu Sijaintitiedot',
-      message: 'Lähimatkailusovellus käyttää paikannustietoja kohteiden etäisyyksien laskemiseen.'
+      title: title,
+      message: message
     });
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
       return true;
     }
     return false;
   } catch (err) {
-    console.warn(err); // eslint-disable-line
+    ToastAndroid.show(err.message, ToastAndroid.LONG);
   }
   return false;
 }
