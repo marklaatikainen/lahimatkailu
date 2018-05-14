@@ -25,16 +25,16 @@ export class Settings extends Component {
           value={t(lang)}
           valuePlaceholder="..."
           possibleValues={[
-            { label: t('fi'), value: t('fi') },
-            { label: t('en'), value: t('en') },
-            { label: t('se'), value: t('se') },
-            { label: t('ru'), value: t('ru') }
+            { label: 'Suomi', value: 'Suomi' },
+            { label: 'English', value: 'English' },
+            { label: 'Svenska', value: 'Svenska' },
+            { label: 'Русский', value: 'Русский' }
           ]}
           positiveButtonTitle={t('positiveButton')}
           negativeButtonTitle={t('negativeButton')}
           onSaveValue={val => {
-            dispatch(setLanguage(convertValue(this.context, val)));
-            AsyncStorage.setItem('lang', convertValue(this.context, val));
+            dispatch(setLanguage(convertValue(val)));
+            AsyncStorage.setItem('lang', convertValue(val));
           }}
           styleModalButtonsText={styles.text}
         />

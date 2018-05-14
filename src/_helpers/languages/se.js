@@ -39,9 +39,9 @@ export const se = {
   version: 'Version',
   closeApp: 'Tryck tillbaka igen för att stänga appen',
   iconLegend: 'Teckenförklaring',
-  positiveButton: '', // @TODO
-  negativeButton: '', // @TODO
-  withoutPerm: '', // @TODO
-  permTitle: '', // @TODO
-  permMessage: '' // @TODO
+  positiveButton: 'Spara',
+  negativeButton: 'Avbryt',
+  withoutPerm: 'Applikationen fungerar inte utan tillgång till platsinformation',
+  permTitle: 'Applikationen behöver tillgång till platsinformation',
+  permMessage: 'Lähimatkailu behöver tillgång till platsinformation för att kunna beräkna avstånd till destinationer.'
 };

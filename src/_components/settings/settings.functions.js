@@ -1,7 +1,5 @@
-export function convertValue(context, value) {
-  const { t } = context;
-
-  const langs = [t('fi'), t('en'), t('se'), t('ru')];
+export function convertValue(value) {
+  const langs = ['Suomi', 'English', 'Svenska', 'Русский'];
   const ret = ['fi', 'en', 'se', 'ru'];
 
   return ret[langs.indexOf(value)];

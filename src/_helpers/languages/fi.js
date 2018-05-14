@@ -42,6 +42,6 @@ export const fi = {
   positiveButton: 'Tallenna',
   negativeButton: 'Peruuta',
   withoutPerm: 'Sovellus ei toimi ilman paikannustietoja',
-  permTitle: 'Lähimatkailu Sijaintitiedot',
-  permMessage: 'Lähimatkailusovellus käyttää paikannustietoja kohteiden etäisyyksien laskemiseen'
+  permTitle: 'Sovellus tarvitsee luvan käyttää paikannustietoja',
+  permMessage: 'Lähimatkailu-sovellus tarvitsee pääsyn paikannustietoihin laskeakseen etäisyyksiä kohteisiin.'
 };
