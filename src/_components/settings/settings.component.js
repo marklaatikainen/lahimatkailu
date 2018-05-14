@@ -5,7 +5,7 @@ import VersionNumber from 'react-native-version-number';
 import { SettingsDividerShort, SettingsCategoryHeader, SettingsPicker } from 'react-native-settings-components';
 import { setLanguage } from 'redux-i18n';
 
-import { styles, IconInfo, convertValue } from '../settings';
+import { styles, SettingsIconInfo, convertValue } from '../settings';
 
 export class Settings extends Component {
   shouldComponentUpdate(props) {
@@ -14,7 +14,7 @@ export class Settings extends Component {
 
 
   render() {
-    const { lang, dispatch } = this.props;
+    const { lang, dispatch, icons } = this.props;
     const { t } = this.context;
 
     return (
@@ -44,8 +44,9 @@ export class Settings extends Component {
           <Text style={styles.version}>
             {t('version')} {VersionNumber.appVersion}
           </Text>
+          <SettingsDividerShort />
+          <SettingsIconInfo icons={icons}/>
         </ScrollView>
-        <IconInfo />
       </View>
     );
   }
@@ -58,5 +59,6 @@ Settings.contextTypes = {
 Settings.propTypes = {
   navigation: PropTypes.object.isRequired,
   lang: PropTypes.string.isRequired,
+  icons: PropTypes.array.isRequired,
   dispatch: PropTypes.func.isRequired
 };

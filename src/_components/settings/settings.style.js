@@ -25,10 +25,13 @@ export const styles = StyleSheet.create({
     color: disabled,
     marginTop: 7,
     marginLeft: 17,
+    marginBottom: 7,
     fontSize: 16
   },
   iconInfoView: {
-    marginLeft: 17
+    marginTop: 7,
+    marginLeft: 17,
+    flex: 1
   },
   iconInfoHeading: {
     fontSize: 18,

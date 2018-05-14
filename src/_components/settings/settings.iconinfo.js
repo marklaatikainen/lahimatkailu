@@ -3,9 +3,14 @@ import { PropTypes } from 'prop-types';
 import { Text, Image, View } from 'react-native';
 import { styles } from '../settings';
 import { foodIcon, serviceIcon, sightIcon } from '../../_helpers';
+import { IconSymbol } from '../settings';
 
-export class IconInfo extends Component {
+export class SettingsIconInfo extends Component {
+  renderIconSymbols = icons => icons.map(icon => <IconSymbol key={icon} name={icon} translation={this.context.t(`${icon}`)}/>);
+
   render() {
+    const { icons } = this.props;
+
     return (
       <View style={styles.iconInfoView}>
         <Text style={styles.iconInfoHeading}>{this.context.t('iconLegend')}</Text>
@@ -33,11 +38,16 @@ export class IconInfo extends Component {
             <Text style={styles.iconText}>{this.context.t('service')}</Text>
           </View>
         </View>
+        {this.renderIconSymbols(icons)}
       </View>
     );
   }
 }
 
-IconInfo.contextTypes = {
+SettingsIconInfo.propTypes = {
+  icons: PropTypes.array.isRequired
+};
+
+SettingsIconInfo.contextTypes = {
   t: PropTypes.func.isRequired
 };

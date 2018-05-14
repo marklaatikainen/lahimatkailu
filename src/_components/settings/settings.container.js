@@ -39,7 +39,8 @@ class SettingsContainer extends Component {
 
 const mapStateToProps = state => ({
   lang: state.i18nState.lang,
-  navigation: state.navigation
+  navigation: state.navigation,
+  icons: state.icon.list
 });
 
 SettingsContainer.contextTypes = {
