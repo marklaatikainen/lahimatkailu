@@ -1,6 +1,7 @@
 import { dataConstants } from '../_constants';
 
 /* eslint-disable no-nested-ternary */
+/* eslint-disable func-names */
 /* eslint-disable prefer-arrow-callback */
 
 export function alldata(state = {}, action) {

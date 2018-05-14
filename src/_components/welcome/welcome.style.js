@@ -9,6 +9,7 @@ export const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '70%',
+    marginTop: '20%',
     alignContent: 'center',
     justifyContent: 'center'
   }

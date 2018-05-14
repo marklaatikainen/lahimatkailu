@@ -29,14 +29,13 @@ export const styles = StyleSheet.create({
     fontSize: 16
   },
   iconInfoView: {
-    marginTop: 7,
+    marginTop: 17,
     marginLeft: 17,
     flex: 1
   },
   iconInfoHeading: {
-    fontSize: 18,
-    marginBottom: 16,
-    fontWeight: 'bold'
+    fontSize: 16,
+    marginBottom: 16
   },
   iconInfoRow: {
     flexDirection: 'row',
@@ -53,6 +52,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   iconText: {
-    fontSize: 18
+    fontSize: 14
   }
 });

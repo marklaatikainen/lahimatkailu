@@ -1,12 +1,13 @@
-/* eslint-disable  */
+/* eslint-disable react-native/split-platform-components  */
+/* eslint-disable no-undef  */
 import React, { Component } from 'react';
-import { BackHandler, ToastAndroid, Dimensions, AsyncStorage, DeviceEventEmitter } from 'react-native';
+import { BackHandler, ToastAndroid, Dimensions, AsyncStorage } from 'react-native';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { setLanguage } from 'redux-i18n';
 
 import { MapComponent, filter } from '../map';
-import { dataActions, dimensionsActions, userlocationActions, iconActions } from '../../_actions';
+import { dataActions, dimensionsActions, userlocationActions, iconActions, targetActions } from '../../_actions';
 
 class MapContainer extends Component {
   componentDidMount() {
@@ -25,11 +26,17 @@ class MapContainer extends Component {
     });
 
     navigator.geolocation.getCurrentPosition(e =>
-      dispatch(userlocationActions.updateLocation(e.coords), error => alert(error.message), {
-        enableHighAccuracy: true,
-        timeout: 20000,
-        maximumAge: 1000
-      })
+      dispatch(
+        userlocationActions.updateLocation(e.coords),
+        error => { // eslint-disable-line
+          // ToastAndroid.show(error.message, ToastAndroid.LONG);
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 20000,
+          maximumAge: 1000
+        }
+      )
     );
     this.watchID = navigator.geolocation.watchPosition(position => {
       dispatch(userlocationActions.updateLocation(position.coords));
@@ -49,6 +56,14 @@ class MapContainer extends Component {
   _backPress = 0;
 
   androidBackHandler = () => {
+    const { dispatch, navigation, target } = this.props;
+    const { index } = navigation;
+
+    if ((index === 1 && target.mapPageTarget) || (index === 2 && target.listPageTarget)) {
+      dispatch(index === 1 ? targetActions.closeMapTarget() : targetActions.closeListTarget());
+      return true;
+    }
+
     setTimeout(() => {
       this._backPress = 0;
     }, 1000);
@@ -71,7 +86,9 @@ const mapStateToProps = state => ({
   dimensions: state.dimensions,
   region: state.region,
   userlocation: state.userlocation,
-  checkbox: state.checkbox
+  checkbox: state.checkbox,
+  navigation: state.navigation,
+  target: state.target
 });
 
 MapContainer.contextTypes = {
@@ -80,7 +97,9 @@ MapContainer.contextTypes = {
 
 MapContainer.propTypes = {
   dispatch: PropTypes.func.isRequired,
-  region: PropTypes.object.isRequired
+  region: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
+  target: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps)(MapContainer);

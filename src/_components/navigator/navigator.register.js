@@ -2,11 +2,11 @@ import { Navigation, ScreenVisibilityListener } from 'react-native-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { store } from '../../_helpers';
 
-import { SettingsI18n, MapI18n, ListI18n, PermissionsI18n } from '../navigator';
+import { SettingsI18n, MapI18n, ListI18n, WelcomeI18n } from '../navigator';
 import { navigationActions } from '../../_actions';
 
 export function registerScreens(st, provider) {
-  Navigation.registerComponent('lahimatkailu.PermissionsNavi', () => PermissionsI18n, st, provider);
+  Navigation.registerComponent('lahimatkailu.WelcomeNavi', () => WelcomeI18n, st, provider);
   Navigation.registerComponent('lahimatkailu.SettingsNavi', () => SettingsI18n, st, provider);
   Navigation.registerComponent('lahimatkailu.MainNavi', () => MapI18n, st, provider);
   Navigation.registerComponent('lahimatkailu.ListNavi', () => ListI18n, st, provider);
@@ -18,7 +18,7 @@ export function registerScreens(st, provider) {
 export function singlePageApp() {
   Navigation.startSingleScreenApp({
     screen: {
-      screen: 'lahimatkailu.PermissionsNavi',
+      screen: 'lahimatkailu.WelcomeNavi',
       navigatorStyle: {
         navBarHidden: true,
         statusBarHidden: true,

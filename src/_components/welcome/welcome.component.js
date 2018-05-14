@@ -4,18 +4,18 @@ import { PropTypes } from 'prop-types';
 import { View, Image, ToastAndroid } from 'react-native';
 
 import logo from '../../../images/feature_graphic.jpg';
-import { styles } from '../permissions';
+import { styles } from '../welcome';
 import { requestLocationPermission } from '../../_helpers';
 
 import startNavigation from '../navigator/navigator.register';
 
-export default class PermissionsComponent extends Component {
+export default class WelcomeScreen extends Component {
   componentDidMount() {
     requestLocationPermission(this.context).then(res => {
       if (res) {
         startNavigation();
       } else {
-        ToastAndroid.show(this.context.t('whithoutPerm'), ToastAndroid.LONG);
+        ToastAndroid.show(this.context.t('withoutPerm'), ToastAndroid.LONG);
       }
     });
   }
@@ -28,6 +28,6 @@ export default class PermissionsComponent extends Component {
   }
 }
 
-PermissionsComponent.contextTypes = {
+WelcomeScreen.contextTypes = {
   t: PropTypes.func.isRequired
 };
