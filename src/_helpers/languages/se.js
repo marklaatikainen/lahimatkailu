@@ -41,7 +41,8 @@ export const se = {
   iconLegend: 'Teckenförklaring',
   positiveButton: 'Spara',
   negativeButton: 'Avbryt',
-  withoutPerm: 'Applikationen fungerar inte utan tillgång till platsinformation',
-  permTitle: 'Applikationen behöver tillgång till platsinformation',
-  permMessage: 'Lähimatkailu behöver tillgång till platsinformation för att kunna beräkna avstånd till destinationer.'
+  withoutPerm: 'Applikationen fungerar inte utan tillgång till lokaliseringsuppgifter',
+  permTitle: 'Applikationen behöver tillgång till lokaliseringsuppgifter',
+  permMessage:
+    'Lähimatkailu behöver tillgång till lokaliseringsuppgifter för att kunna beräkna avstånd till destinationer.'
 };
