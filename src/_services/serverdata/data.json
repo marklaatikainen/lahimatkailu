@@ -1,0 +1,2049 @@
+{
+  "kohteet": [
+    {
+      "_id": "2",
+      "address": { "city": "Helsinki", "postalCode": "00250", "street": "Mechelininkatu", "phoneNumber": "000000000" },
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/fi/thumb/1/12/SibeliusMonumenthelsinki2011.JPG/730px-SibeliusMonumenthelsinki2011.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Sibelius-monumentin-paljastus.jpg/250px-Sibelius-monumentin-paljastus.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jean_Sibelius_Park.jpg/1024px-Jean_Sibelius_Park.jpg"
+      ],
+      "location": { "latitude": 60.182155, "longitude": 24.913421 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info":
+        "Sibelius-monumentti on Eila Hiltusen tekemä haponkestävästä teräksestä valmistettu veistos Helsingin Töölössä Sibeliuksen puistossa. Veistos painaa 24 tonnia, ja siinä on yli 600 putkea. Monumentti on 8,5 metriä korkea, 10,5 metriä pitkä ja 6,5 metriä syvä. Se on Helsingin suosituimpia veistoksia ja tunnetuimpia matkailunähtävyyksiä.",
+      "name": "Sibelius-monumentti",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "paw", "clock-o", "subway"],
+      "some": [""],
+      "homepage": "http://www.eilahiltunen.net/monument.html"
+    },
+    {
+      "_id": "1",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00100",
+        "street": "Hiekkarannantie 11",
+        "phoneNumber": "000000000"
+      },
+      "picture": [
+        "http://www.hagerlund.net/sites/default/files/images/uimarannat/hietaranta/hietarannan_uimaranta_eli_hietsu_-_helsinki_10.jpg",
+        "http://www.hagerlund.net/sites/default/files/images/uimarannat/hietaranta/hietarannan_uimaranta_eli_hietsu_-_helsinki_13.jpg",
+        "http://www.hagerlund.net/sites/default/files/images/uimarannat/hietaranta/hietarannan_uimaranta_eli_hietsu_-_helsinki_15.jpg",
+        "http://www.hagerlund.net/sites/default/files/images/uimarannat/hietaranta/hietarannan_uimaranta_eli_hietsu_-_helsinki_2.jpg",
+        "http://www.hagerlund.net/sites/default/files/images/uimarannat/hietaranta/hietarannan_uimaranta_eli_hietsu_-_helsinki_6.jpg"
+      ],
+      "location": { "latitude": 60.17393169999999, "longitude": 24.9061067 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info":
+        "Hietarannan uimaranta on käytännössä Helsingin kantakaupungista. Kyseessä on Helsingin suosituin ja parhaiten varusteltu uimaranta. Ranta tunnetaan myös nimillä Hietsu ja Hietaniemen uimaranta.",
+      "name": "Hietaniemen uimaranta",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "clock-o", "subway"],
+      "some": [""],
+      "homepage":
+        "https://www.hel.fi/helsinki/fi/kulttuuri-ja-vapaa-aika/liikunta/ulkoliikuntapaikat/maauimalat-ja-uimarannat/hietarannan-uimaranta"
+    },
+    {
+      "_id": "3",
+      "address": { "city": "Helsinki", "postalCode": "00330", "street": "Gert Skytten puisto", "phoneNumber": "" },
+      "picture": [
+        "http://mw2.google.com/mw-panoramio/photos/medium/3201799.jpg",
+        "http://mw2.google.com/mw-panoramio/photos/medium/34359429.jpg",
+        "http://mw2.google.com/mw-panoramio/photos/medium/617897.jpg",
+        "http://mw2.google.com/mw-panoramio/photos/medium/28488700.jpg"
+      ],
+      "location": { "latitude": 60.189934, "longitude": 24.874775 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info": "Vanhan Munkkiniemen eteläosassa sijaitsevasta Sigurd Steniuksen puistosta löytyvät tenniskentät.",
+      "name": "Sigurd Steniuksen puisto",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "paw", "clock-o", "subway"]
+    },
+    {
+      "_id": "4",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "01510",
+        "street": "Kirkkotie 45, Vantaa",
+        "phoneNumber": "5278875664"
+      },
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Vantaa_church_bell_tower.jpg/400px-Vantaa_church_bell_tower.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/St._Lawrence_Church_in_Vantaa_-_gable.JPG/800px-St._Lawrence_Church_in_Vantaa_-_gable.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pyhan_Laurin._kirkko.JPG/800px-Pyhan_Laurin._kirkko.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Vantaa_church.jpg/250px-Vantaa_church.jpg"
+      ],
+      "location": { "latitude": 60.2830214, "longitude": 24.9840506 },
+      "openingHours": {
+        "mon": { "start": "12:00", "end": "16:00" },
+        "tue": { "start": "12:00", "end": "16:00" },
+        "wed": { "start": "12:00", "end": "16:00" },
+        "thu": { "start": "12:00", "end": "16:00" },
+        "fri": { "start": "12:00", "end": "16:00" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info":
+        "Vantaan Pyhän Laurin kirkko (ruots. Helsinge kyrka S:t Lars) on keskiaikainen harmaakivikirkko Vantaalla. Se on pääkaupunkiseudun vanhin rakennus sekä Tikkurilan seurakunnan ja Vantaan ruotsinkielisen seurakunnan pääkirkko. Kirkko ympäristöineen on osa Helsingin pitäjän kirkonkylää, Etelä-Suomen parhaiten säilynyttä historiallista kirkonkylämiljöötä.",
+      "name": "Pyhän Laurin kirkko",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "subway"],
+      "some": [""],
+      "homepage": "http://www.vantaanseurakunnat.fi/kirkot-ja-tilat/kirkot-ja-kappelit/pyhan-laurin-kirkko"
+    },
+    {
+      "_id": "5",
+      "address": { "city": "Helsinki", "postalCode": "00330", "street": "Gert Skytten puisto", "phoneNumber": "" },
+      "picture": [
+        "http://kaupunginosat.net/munkinseutu/images/stories/Munkiniemen_puistot_20.10.2017_013.JPG",
+        "http://www.novision.fi/viapori/ptri03.jpg",
+        "http://openlightspots.com/spotsol/sites/default/files/spots/%20IGP3224.jpg",
+        "http://www.munkka.fi/wp-content/uploads/2017/11/Kuva5.jpg"
+      ],
+      "location": { "latitude": 60.1924815, "longitude": 24.8775138 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info":
+        "Munkkiniemessä on Gert Skytten puisto, jossa on sankarihautoja sekä Wäinö Aaltosen patsas ”Maaemo suojelee poikaansa” ",
+      "name": "Gert Skytten puisto",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "clock-o", "subway"]
+    },
+    {
+      "_id": "7",
+      "address": { "city": "Helsinki", "postalCode": "00200", "street": "Ruukinlahdenpuisto", "phoneNumber": "" },
+      "picture": [
+        "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Matti_Heleniuksen_puisto_Matti_Helenius_park_Helsinki_Helsingfors_2016_05_09.png/400px-Matti_Heleniuksen_puisto_Matti_Helenius_park_Helsinki_Helsingfors_2016_05_09.png"
+      ],
+      "location": { "latitude": 60.16201189999999, "longitude": 24.8712542 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info": "Lauttasaaressa, Länsiväylän vieressä ja lähellä metroasemaa.\r\n",
+      "name": "Ruukinlahden puisto",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "clock-o", "subway"]
+    },
+    {
+      "_id": "12",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Tamminiementie 3",
+        "phoneNumber": " +358 500 6033 78"
+      },
+      "picture": [
+        "https://www.freudenthal.biz/fileadmin/_processed_/a/1/csm_119-cafe-villa-angelica-helsinki_3a6f864f92.jpg",
+        "http://www.villaangelica.fi/wp-content/uploads/2010/06/vanha_angelica.jpg"
+      ],
+      "location": { "latitude": 60.1900808, "longitude": 24.8846085 },
+      "openingHours": {
+        "mon": { "start": "12:00", "end": "22:00" },
+        "tue": { "start": "12:00", "end": "22:00" },
+        "wed": { "start": "12:00", "end": "22:00" },
+        "thu": { "start": "12:00", "end": "22:00" },
+        "fri": { "start": "12:00", "end": "22:00" },
+        "sat": { "start": "12:00", "end": "22:00" },
+        "sun": { "start": "12:00", "end": "22:00" }
+      },
+      "info":
+        "Tervetuloa nauttimaan kulttuurihistoriallisesta miljööstä viehättävässä, vuonna 1901 valmistuneessa huvilassa, aivan Seurasaaren sillan kupeessa. Vanha romanttinen huvilatyyli houkuttelee rauhoittumaan ja hiljentymään kahvi- tai teekupin ja herkullisten leivonnaisten äärelle.  Kahvilassamme on tarjolla mm. harvinaisia teelaatuja ja itse tehtyjä kakkuja sekä piiraita.\r\n",
+      "name": "Villa Angelica",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "car"],
+      "some": ["https://www.facebook.com/kahvilavillaangelica"],
+      "homepage": "http://www.villaangelica.fi/"
+    },
+    {
+      "_id": "8",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00180",
+        "street": "Itämerenkatu 14",
+        "phoneNumber": "8849760904"
+      },
+      "picture": [
+        "http://metroasemat.fi/wp-content/uploads/2013/10/Metroasemat_Helsinki_2013_012.jpg",
+        "https://farm4.static.flickr.com/3721/9733286338_e1ca6efbed_b.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Ruoholahti_metro_station_%28Nov_2017%2C_3%29.jpg/413px-Ruoholahti_metro_station_%28Nov_2017%2C_3%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ruoholahti_metro_station_%28Nov_2017%2C_2%29.jpg/420px-Ruoholahti_metro_station_%28Nov_2017%2C_2%29.jpg"
+      ],
+      "location": { "latitude": 60.163113, "longitude": 24.914211 },
+      "openingHours": {
+        "mon": { "start": "05:00", "end": "23:00" },
+        "tue": { "start": "05:00", "end": "23:00" },
+        "wed": { "start": "05:00", "end": "23:00" },
+        "thu": { "start": "05:00", "end": "23:00" },
+        "fri": { "start": "05:00", "end": "23:00" },
+        "sat": { "start": "05:15", "end": "23:00" },
+        "sun": { "start": "06:15", "end": "23:00" }
+      },
+      "info":
+        "Ruoholahden metroasema (ruots. Gräsvikens metrostation) on yksi Helsingin metron asemista. Se oli yli 24 vuoden ajan kaupungin metrolinjauksen läntinen päätepiste, kunnes länsimetron 1. vaihe valmistui ja metroliikenne Matinkylään alkoi 18. marraskuuta 2017.\r\n\r\nMetron liikennöinti\r\nEnsimmäiset lähdöt:\r\nMa-Pe    5:05\t\r\nLa\t        5:15\t\r\nSu\t        6:15\t\r\n\r\nViimeiset lähdöt: \r\nMa-Su      23:05",
+      "name": "Ruoholahden asema",
+      "type": "Palvelu",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "subway"],
+      "some": [""],
+      "homepage": "https://www.hel.fi/hkl/fi/metrolla/metroasemat/ruoholahti"
+    },
+    {
+      "_id": "13",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00100",
+        "street": "Hiekkarannantie 11",
+        "phoneNumber": "+358 20 7879720"
+      },
+      "picture": [
+        "https://image.citycdn.fi/01/47/16/89/d12a885cce336d7207d8e67f816c3c8e.png",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0f/58/a0/06/250-paikkainen-rantaterassi.jpg",
+        "https://image.citycdn.fi/01/47/16/90/c3bc5df9be850d70da68c9103d96e682.png"
+      ],
+      "location": { "latitude": 60.17393169999999, "longitude": 24.9061067 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "16:00" },
+        "tue": { "start": "11:00", "end": "16:00" },
+        "wed": { "start": "11:00", "end": "16:00" },
+        "thu": { "start": "11:00", "end": "16:00" },
+        "fri": { "start": "11:00", "end": "18:00" },
+        "sat": { "start": "11:00", "end": "18:00" },
+        "sun": { "start": "11:00", "end": "18:00" }
+      },
+      "info":
+        "Hietarannan Bistro Badenbaden sijaitsee legendaarisella uimarannalla. Rantaravintola palvelee kesäaikaan päivittäin aamusta iltamyöhään, herkullisesti! Palvelemme tilausravintolana 30.4.2018 asti.\r\n\r\nKoko konsepti on ihan sekaisin rannasta, kesästä ja nautinnosta. Ja koska kesä on mielentila, meiltä rantaloman voi tilata myös talvella. Jos etsinnässä on juhlapaikka tai hääpaikka meren rannalla, on osoite oikea.\r\n\r\nBistro Badenbaden toimii tilausravintola 30.4.2018 asti.\r\nTiedustelut puh. 0207878720. \r\n\r\nAukioloajat saattavat vaihdella sään tai tilaisuuden mukaan.",
+      "name": "Bistro Badenbaden",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway", "wifi"],
+      "some": ["https://www.instagram.com/theronbistro/", "https://www.facebook.com/bistrobadenbaden/"],
+      "homepage": "http://theronbistro.fi/badenbaden/"
+    },
+    {
+      "_id": "6",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00340",
+        "street": "Hiidenkiukaanpuisto, Lehtisaarentie",
+        "phoneNumber": "2955312352"
+      },
+      "picture": [
+        "http://kaupunginosat.net/munkinseutu/images/stories/IMG_6512_mnkstry.JPG",
+        "http://lh4.ggpht.com/6eVp3zEa0CbytEAVm0CYQaL12U02uGeMh9idMQ2Y6H3NlGYEeli7d949fK8UAheoa0FovffFR2JbeCX7Bx4c",
+        "https://igx.4sqi.net/img/general/600x600/522596_TIGfkWQ5DyUgNZY5UMiarJhSvAHefOQIiVOiUTI3L6A.jpg"
+      ],
+      "location": { "latitude": 60.177419, "longitude": 24.850298 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info": "Sijaitsee Lehtisaaressa. Sisältää leikkipaikan.",
+      "name": "Hiidenkiukaanpuisto",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "clock-o", "subway"]
+    },
+    {
+      "_id": "11",
+      "address": { "city": "Helsinki", "postalCode": "00250", "street": "Toivo Kuulan puisto", "phoneNumber": "" },
+      "picture": [
+        "http://taidemuseo.hel.fi/ximg/0img/kuula-1-vn0.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Sibelius_park_HKI.jpg/250px-Sibelius_park_HKI.jpg",
+        "https://igx.4sqi.net/img/general/200x200/6036083_thArYdzyLS-_yHiuq8gl7A57P-bnLAiFRWzrC9JX5b0.jpg",
+        "https://igx.4sqi.net/img/general/200x200/63240745_mh480P-JSX6wtUOF0Vhlr4N19am-wKbGoYprUtruWEE.jpg"
+      ],
+      "location": { "latitude": 60.1777977, "longitude": 24.9126894 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info": "Puistossa on Toivo Kuulan muistomerkki.",
+      "name": "Toivo Kuulan puisto",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "clock-o", "subway"]
+    },
+    {
+      "_id": "9",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Seurasaarentie 15",
+        "phoneNumber": "+358 50 599 4183"
+      },
+      "picture": [
+        "http://3.bp.blogspot.com/_QSwi10zQrF4/SocjhjWvoxI/AAAAAAAAARE/0ZZg-OR4bh4/w1200-h630-p-k-no-nu/paasali5.jpg",
+        "http://www.ravintolaseurasaari.fi/attachments/Logo/seurasaarilogo_1.png",
+        "http://www.sinunjuhlasi.fi/wp-content/uploads/2012/02/Seurasaari-11.jpg"
+      ],
+      "location": { "latitude": 60.181232, "longitude": 24.883325 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "18:00" },
+        "tue": { "start": "11:00", "end": "18:00" },
+        "wed": { "start": "11:00", "end": "18:00" },
+        "thu": { "start": "11:00", "end": "18:00" },
+        "fri": { "start": "11:00", "end": "18:00" },
+        "sat": { "start": "11:00", "end": "18:00" },
+        "sun": { "start": "11:00", "end": "18:00" }
+      },
+      "info":
+        "Ravintola Seurasaari on Helsingin Seurasaaressa sijaitseva ravintola, joka on perustettu vuonna 1873. Ravintolan rakennuksen on suunnitellut Frithiof Mieritz vuonna 1890 ja se oli kansanpuistoaikaisen Seurasaaren ensimmäinen rakennus. Nykyään ravintolan terassilla toimii myös kahvila.\r\n\r\nRavintola Seurasaari pääsali palvelee tilauksesta touko - syyskuussa päivittäin ja loka- huhtikuussa tilauksen mukaan.",
+      "name": "Ravintola Seurasaari",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "paw", "wifi"],
+      "some": [],
+      "homepage": "http://www.ravintolaseurasaari.fi/"
+    },
+    {
+      "_id": "14",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00100",
+        "street": "Mechelininkatu 13",
+        "phoneNumber": "+358 10 292 8090"
+      },
+      "picture": [
+        "http://favela.fi/wordpress/wp-content/uploads/sali21.jpg",
+        "http://favela.fi/wordpress/wp-content/uploads/favela_logo_transp.png",
+        "http://4.bp.blogspot.com/-RVZVaY6820g/VPLN2QppkaI/AAAAAAAAMrI/N2nPiN1uCng/s1600/favela.jpg",
+        "https://cdn2.gbot.me/photos/xg/9H/1447435587/-Postcard_of_Bar_Favela-20000000009299261-500x375.jpg"
+      ],
+      "location": { "latitude": 60.17206640000001, "longitude": 24.9203344 },
+      "openingHours": {
+        "mon": { "start": "16:00", "end": "24:00" },
+        "tue": { "start": "16:00", "end": "24:00" },
+        "wed": { "start": "16:00", "end": "24:00" },
+        "thu": { "start": "16:00", "end": "24:00" },
+        "fri": { "start": "16:00", "end": "24:00" },
+        "sat": { "start": "15:00", "end": "24:00" },
+        "sun": { "start": "16:00", "end": "24:00" }
+      },
+      "info":
+        "Ravintoloitsija Niko Peltomaan Töölön Coolein baari, Bar Favela.\r\n\r\nRavintoloita olohuoneinaan pitäville omien polkujen kulkijoille\r\nkaveriporukoille, mielenkiintoisia ilmiöitä bongaileville urbaaneille vaeltajille,\r\nhyvää hinta-laatusuhdetta arvostaville kaupunkiseikkailijoille.\r\nItse tehtyä Fun foodia, rentoa ja lämminhenkistä yhdessä oloa.\r\nJärjetön jano, pieni nälkä – Bar Favela\r\n\r\nThe coolest bar in Töölö district at Helsinki. Restaurant, living room for those bypassers or friends who take their own paths, a very peculiar phenomenon in town for urban hikers. Good price-quality ratio for the urban adventurers. Self-made Fun Food, relaxed and warm, with a feeling of togetherness. For a huge thirst and a small appetite – Bar Favela. Dogs are also welcome!",
+      "name": "Bar Favela",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "subway"],
+      "some": ["https://www.facebook.com/Favela.toolo/"],
+      "homepage": "http://favela.fi/"
+    },
+    {
+      "_id": "10",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Maila Talvion puisto, Mäntyniementie",
+        "phoneNumber": ""
+      },
+      "picture": [
+        "https://www.vastavalo.net/albums/userpics/12485/normal_20170611-_6116531mlv.jpg",
+        "https://www.vastavalo.net/albums/userpics/12485/normal_20170611-_6116521mlv.jpg"
+      ],
+      "location": { "latitude": 60.18635159999999, "longitude": 24.8955792 },
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info":
+        "Puistossa on veistos Itämeren tytär / Maila Talvion muistomerkki.\r\n\r\nTeoksessa Itämeren tytär on voimakas erilaisten pintojen muodostama jännite. Veistoksen kaarevan ulkopinnan sileys kohtaa kaartuessaan sisäänpäin arvaamattoman ja karkean poimutuksen. Veistoksen yläosa muistuttaa muinaisten egyptiläisten hallitsijoiden päähinettä, mutta muoto on tunnistettavissa vain sileän pinnan puolelta. Veistoksen kierteisen muodon sisäosa ei vastaa ulkokuoren tyyntä rauhaa vaan riehuu pärskien ja roiskuen kuin kiehuva magma tulivuoren purkautumisaukoissa. \r\n\r\nItämeren tytär on muistomerkki kirjailija ja kulttuurivaikuttaja Maila Talviolle (1871-1951). Veistos on nimetty Talvion Helsingin vaiheita kuvaavan historiallisen romaanin mukaan. Muistomerkki pystytettiin paikalle, jossa aikoinaan sijaitsi professori J.J.Mikkolan ja Maila Talvion yhteinen kulttuurikoti. \r\n\r\n",
+      "name": "Maila Talvion puisto",
+      "type": "Nähtävyys",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "clock-o", "subway"],
+      "some": [""],
+      "homepage":
+        "https://www.hel.fi/helsinki/fi/kaupunki-ja-hallinto/osallistu-ja-vaikuta/ota-yhteytta/hae-yhteystietoja/toimipistekuvaus?id=23045"
+    },
+    {
+      "_id": "15",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00100",
+        "street": "Runeberginkatu 26",
+        "phoneNumber": " +358 50 4117792"
+      },
+      "picture": [
+        "http://2.bp.blogspot.com/-yMGD2aAVBq8/U8KbezqGPPI/AAAAAAAAQpY/BlGIrMi_Oi8/s1600/kiiski1.jpg",
+        "https://s3-media4.fl.yelpcdn.com/bphoto/6LADonx7ewXY0g6sx0Mt0w/ls.jpg"
+      ],
+      "location": { "latitude": 60.174319, "longitude": 24.921939 },
+      "openingHours": {
+        "mon": { "start": "15:00", "end": "02:00" },
+        "tue": { "start": "15:00", "end": "02:00" },
+        "wed": { "start": "15:00", "end": "02:00" },
+        "thu": { "start": "15:00", "end": "02:00" },
+        "fri": { "start": "15:00", "end": "03:00" },
+        "sat": { "start": "15:00", "end": "03:00" },
+        "sun": { "start": "15:00", "end": "24:00" }
+      },
+      "info":
+        "Kalaravintolat ovat todellisia olutravintoloita - löydät olutmaailman erikoisuuksia sekä kausihanaoluen, joka vaihtuu Kuusi kertaa vuodessa. Jos olutmaailma ei ole sinulle tuttu, kalaravintoloiden henkilökunta opastaa ja neuvoo tarvittaessa - kysy rohkeasti!",
+      "name": "Vastarannan Kiiski",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.instagram.com/vastarannan.kiiski/", "https://www.facebook.com/vastarannankiiski/"],
+      "homepage": ""
+    },
+    {
+      "_id": "17",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00100",
+        "street": "Hesperiankatu 22",
+        "phoneNumber": "+358 9 6128 5200"
+      },
+      "picture": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/0f/aa/0f/b4/elite-s-bar-offers-a.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/04/32/50/ac/add-a-caption.jpg",
+        "https://www.royalravintolat.com/img/cms/restaurant_info/desktop/normal/elite_carousel_01.jpg"
+      ],
+      "location": { "latitude": 60.17664250000001, "longitude": 24.9231516 },
+      "openingHours": {
+        "mon": { "start": "11:30", "end": "23:00" },
+        "tue": { "start": "11:30", "end": "23:00" },
+        "wed": { "start": "11:30", "end": "23:00" },
+        "thu": { "start": "11:30", "end": "23:00" },
+        "fri": { "start": "11:30", "end": "24:00" },
+        "sat": { "start": "13:00", "end": "24:00" },
+        "sun": { "start": "13:00", "end": "23:00" }
+      },
+      "info":
+        "Elite on Suomen oloissa ainutlaatuinen kulttuuri- ja taiteilijaravintola – elämän estradi ja taiteilijoiden olohuone vuodesta 1932. Tässä oikean elämän teatterissa ovat viihtyneet niin näyttelijät kuin muusikot, kirjailijat ja tanssijat, ja myös kuvataiteilijat, joiden teokset nyt koristavat Eliten seiniä. Tunnelmallisessa ravintolasalissa ja perinteisessä baarissa on mukava viivähtää. Kesällä asiakkaita palvelee vehreä terassi.",
+      "name": "Elite",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/RavintolaElite/"],
+      "homepage": "http://www.elite.fi/fi/etusivu/"
+    },
+    {
+      "_id": "22",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Topeliuksenkatu 21",
+        "phoneNumber": "+358 20 771 6190"
+      },
+      "picture": [
+        "https://img.locallist.eu/uploads/places/180/180/1529543.jpg",
+        "http://mw2.google.com/mw-panoramio/photos/medium/42462932.jpg"
+      ],
+      "location": { "latitude": 60.1844576, "longitude": 24.9177077 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "21:00" },
+        "tue": { "start": "11:00", "end": "21:00" },
+        "wed": { "start": "11:00", "end": "21:00" },
+        "thu": { "start": "11:00", "end": "21:00" },
+        "fri": { "start": "11:00", "end": "22:00" },
+        "sat": { "start": "11:00", "end": "22:00" },
+        "sun": { "start": "11:00", "end": "22:00" }
+      },
+      "info":
+        "Maistuisiko herkullinen pizza? Tilaa Kotipizzan verkkokaupasta ja nauti! Kotiinkuljetus vaihtelee ravintoloittan. Kotipizza kehittää jatkuvasti uusia makuelämyksiä. Kotipizzan ruokalistaa voikin hyvällä syyllä pitää suomalaisen pizzan aapisena.",
+      "name": "Kotipizza, Topeliuksenkatu",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.instagram.com/kotipizza/", "https://www.facebook.com/kotipizzatopeliuksenkatu/"],
+      "homepage": "http://www.kotipizza.fi/fi/ravintolat"
+    },
+    {
+      "_id": "27",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00180",
+        "street": "Kellosaarenranta 2",
+        "phoneNumber": "+358 10 424 9830"
+      },
+      "picture": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/07/94/2b/04/faro-and-ruoholahti-canal.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0c/a3/2a/2b/faro-channelside-bar.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0a/16/d6/af/restaurant-view.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/08/8e/0a/28/faro-channelside-bar.jpg",
+        "https://qul.imgix.net/2adafae2-20a4-466e-9ace-e0fbbad64a1b/123189_sld.jpg"
+      ],
+      "location": { "latitude": 60.1616533, "longitude": 24.9119203 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "22:00" },
+        "tue": { "start": "11:00", "end": "22:00" },
+        "wed": { "start": "11:00", "end": "22:00" },
+        "thu": { "start": "11:00", "end": "22:00" },
+        "fri": { "start": "07:30", "end": "23:00" },
+        "sat": { "start": "11:00", "end": "23:00" },
+        "sun": { "start": "11:00", "end": "18:00" }
+      },
+      "info":
+        "Faro Ravintola sijaitsee huikealla paikalla meren äärellä keskellä urbaania asuinaluetta. Olemassa oleva tila antoi todella hyvät puitteet uudenlaiselle tilankäytölle. Alkuperäinen ravintolasali jaettiin neljään erilaiseen tilaan, joista jokaisesta on näkymä merelle. Halusimme paikasta rennon, lämmintunnelmaisen ja helposti lähestyttävän.",
+      "name": "Faro Channels Bar & Restaurant",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": [
+        "https://www.instagram.com/faroravintola/",
+        "https://plus.google.com/+FaroravintolaFi",
+        "https://www.facebook.com/faroravintola"
+      ],
+      "homepage": "http://www.faroravintola.fi/"
+    },
+    {
+      "_id": "32",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00290",
+        "street": "Haartmaninkatu 3",
+        "phoneNumber": "+358 50 310 7234"
+      },
+      "picture": ["https://hyy.s3.amazonaws.com/ravintolat/2014/04/Serpens_500px-414x414.jpg"],
+      "location": { "latitude": 60.190132, "longitude": 24.9094045 },
+      "openingHours": {
+        "mon": { "start": "08:00", "end": "15:00" },
+        "tue": { "start": "08:00", "end": "15:00" },
+        "wed": { "start": "08:00", "end": "15:00" },
+        "thu": { "start": "08:00", "end": "15:00" },
+        "fri": { "start": "08:00", "end": "14:30" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "info":
+        "Pääkaupunkiseudun suurin opiskelijaravintoloitsija, laadukas ja kokenut henkilöstöravintoloitsija. Tuemme asiakkaidemme työtä tarjoamalla maukkaita, terveellisiä ja vastuullisesti tuotettuja ravintolapalveluita.",
+      "name": "Unicafe Meilahti",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.instagram.com/unicafefi/", "https://www.facebook.com/UniCafe.opiskelijaravintolat"],
+      "homepage": "https://www.unicafe.fi/#/9/2"
+    },
+    {
+      "_id": "18",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00260",
+        "street": "Merikannontie 2",
+        "phoneNumber": "+358 9 733 5770"
+      },
+      "picture": [
+        "http://www.lily.fi/sites/lily/files/styles/wide/public/user/24946/2015/04/mestaritalli.jpg",
+        "https://meanwhileinlongfield.com/wp-content/uploads/2014/02/mestaritalli-2.jpg",
+        "https://tableonline.static.cm/restaurant/581-1494345269487.jpeg",
+        "http://www.ravintolamaailma.fi/sites/ravintolamaailma.fi/files/styles/ketju_fiiliskuva/public/media/Ketjusivujen%20suuret%20kuvat/rav_maailma_mestaritalli.jpg"
+      ],
+      "location": { "latitude": 60.17759210000001, "longitude": 24.9134286 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "21:00" },
+        "tue": { "start": "11:00", "end": "21:00" },
+        "wed": { "start": "11:00", "end": "21:00" },
+        "thu": { "start": "11:00", "end": "21:00" },
+        "fri": { "start": "11:00", "end": "22:00" },
+        "sat": { "start": "11:00", "end": "22:00" },
+        "sun": { "start": "11:00", "end": "21:00" }
+      },
+      "info":
+        "Perinteikäs ravintola Mestaritalli sijaitsee aivan meren rannalla, hyvien kulkuyhteyksien varrella Helsingin Töölössä, Toivo Kuulan puistossa. Kesäkaudella Mestaritallissa nautitaan maistuvasta lounas- ja salaattibuffetista, ja ravintola on oiva valinta myös illalliselle. Juuri remontoidun ravintolan tunnelmalliset puitteet kruunaavat tärkeimmänkin illan ja isolta terassilta voi ihailla kesäillan auringon viimeisiä säteitä. ",
+      "name": "Mestaritalli",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway", "wifi"],
+      "some": [""],
+      "homepage": "https://www.restel.fi/tilat/mestaritalli/"
+    },
+    {
+      "_id": "23",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00330",
+        "street": "Kalastajatorpantie 4",
+        "phoneNumber": "+358 9 458 12240"
+      },
+      "picture": [
+        "http://myy.haaga-helia.fi/~jusju/geopark/meritorppa.jpg",
+        "https://farm1.staticflickr.com/522/19530386393_dd2ace2fb3_h.jpg",
+        "https://tableonline.static.cm/restaurant/552-1432248424160.jpg"
+      ],
+      "location": { "latitude": 60.19265679999999, "longitude": 24.8723647 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "15:00" },
+        "tue": { "start": "11:00", "end": "15:00" },
+        "wed": { "start": "11:00", "end": "15:00" },
+        "thu": { "start": "11:00", "end": "15:00" },
+        "fri": { "start": "11:00", "end": "15:00" },
+        "sat": { "start": "11:00", "end": "15:00" },
+        "sun": { "start": "11:00", "end": "15:00" }
+      },
+      "info":
+        "Kalastajatorppa, stadin slangissa ”Fiskis”, on perinteikäs ravintola ja sen yhteydessä toimiva hotelli (viralliselta nimeltään Hilton Helsinki Kalastajatorppa) Helsingin Munkkiniemessä. Suurimmassa ravintolasalissa, Pyöreässä salissa, on 350 istumapaikkaa, mutta puitteet mahdollistavat jopa 1 200 hengen bankettien tai 1 800 hengen cocktailtilaisuuksien ja gaalojen järjestämisen.",
+      "name": "Ravintola Meritorppa",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "subway", "hotel", "wifi"],
+      "some": [""],
+      "homepage": "https://hravintolat.fi/kalastajatorppa/fi/ravintola/ravintola-meritorppa/"
+    },
+    {
+      "_id": "28",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00180",
+        "street": "Itämerenkatu 21",
+        "phoneNumber": "0207701812"
+      },
+      "picture": [
+        "http://bk-emea-prd.s3.amazonaws.com/sites/burgerking.fi/files/Thumb_0000_Burgers_1.jpg",
+        "https://pbs.twimg.com/media/C0WZzbdWIAADnzS.jpg"
+      ],
+      "location": { "latitude": 60.163639, "longitude": 24.912221 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info":
+        "BURGER KING®-ravintoloissa käy maailmanlaajuisesti yli 11 miljoona asiakasta päivässä. He tulevat, koska ravintolamme ovat tunnettuja siitä, että ne tarjoavat korkealaatuista, maukasta ja edullista ruokaa. Vuonna 1954 perustettu BURGER KING® on maailman toiseksi suurin hampurilaisravintolaketju. Se on alkuperäinen HOME OF THE WHOPPER®, jonka ensiluokkaiset raaka-aineet, itse kehittämämme reseptit ja perheystävällinen ruokailuympäristö ovat olleet tunnusmerkkimme jo yli 50 menestyksekästä vuotta.",
+      "name": "Burger King Ruoholahti",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway", "wifi"],
+      "some": ["https://www.instagram.com/burgerking_suomi/", "https://www.facebook.com/BurgerKingFI"],
+      "homepage": "http://www.burgerking.fi/"
+    },
+    {
+      "_id": "33",
+      "address": { "city": "Helsinki", "postalCode": "00250", "street": "Seurasaarentie 15", "phoneNumber": "" },
+      "picture": ["http://myy.haaga-helia.fi/~jusju/kuvat/tamminiemen-jaatelokauppa.jpg"],
+      "location": { "latitude": 60.188437, "longitude": 24.884674 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "17:00" },
+        "tue": { "start": "11:00", "end": "17:00" },
+        "wed": { "start": "11:00", "end": "17:00" },
+        "thu": { "start": "11:00", "end": "17:00" },
+        "fri": { "start": "11:00", "end": "17:00" },
+        "sat": { "start": "11:00", "end": "17:00" },
+        "sun": { "start": "11:00", "end": "17:00" }
+      },
+      "info": "Kesäinen jäätelökauppa.",
+      "name": "Tamminiemen jäätelökauppa",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "paw"],
+      "some": ["https://www.facebook.com/pg/Sinunjuhlasifi-378875405517863/photos/?tab=album&album_id=413422005396536"],
+      "homepage": ""
+    },
+    {
+      "_id": "16",
+      "address": { "city": "Helsinki", "postalCode": "00100", "street": "Museokatu 29", "phoneNumber": "094544303" },
+      "picture": [
+        "http://1.bp.blogspot.com/-goN-GW07WyM/VU-B2s_rt3I/AAAAAAAAOQ8/OfHuk4UpMZw/s1600/23.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0b/94/4e/19/inside.jpg"
+      ],
+      "location": { "latitude": 60.175616, "longitude": 24.920922 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info":
+        "Aito on pieni ja intiimi vuonna 2009 avattu mutkattoman palvelun kortteliravintola Helsingin Töölössä. Tarjoilemme vieraillemme puhtaista ja tuoreista raaka-aineista valmistettua konstailematonta ja rehtiä ruokaa sekä sydämellistä ja ystävällistä palvelua, unohtamatta rentoa ja välitöntä tunnelmaa.",
+      "name": "Ravintola Aito",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.instagram.com/ravintolaaito/", "https://fi-fi.facebook.com/RavintolaAito/"],
+      "homepage": ""
+    },
+    {
+      "_id": "21",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Linnankoskenkatu 12",
+        "phoneNumber": "+358 50 4001966 "
+      },
+      "picture": [
+        "https://s3-media4.fl.yelpcdn.com/bphoto/p_fNe7vI4of7HlYFU35PNA/348s.jpg",
+        "http://1.bp.blogspot.com/-fkkawkiGMOM/U8_jjavcttI/AAAAAAAABcY/cv_kxRW2Uvg/s1600/WP_20140712_18_28_37_Pro.jpg",
+        "http://photos.wikimapia.org/p/00/02/91/02/58_big.jpg"
+      ],
+      "location": { "latitude": 60.18518649999999, "longitude": 24.9172643 },
+      "openingHours": {
+        "mon": { "start": "14:00", "end": "02:00" },
+        "tue": { "start": "14:00", "end": "02:00" },
+        "wed": { "start": "14:00", "end": "02:00" },
+        "thu": { "start": "14:00", "end": "02:00" },
+        "fri": { "start": "12:00", "end": "03:00" },
+        "sat": { "start": "12:00", "end": "03:00" },
+        "sun": { "start": "12:00", "end": "24:00" }
+      },
+      "info":
+        "Janoinen Lohi on maineikas olutravintola Linnankoskenkadun ja Topeliuksenkadun kulmassa. Tunnelmallinen ja rauhallinen ilmapiiri luo mukavat puitteet myös erilaisille juhlille ja tapahtumille – joita täällä järjestetäänkin pienemmistäkin syistä!\r\n\r\nTarjolla on 14 eri hanaolutta, laaja valikoima pullo-oluita ja siidereitä sekä pientä naposteltavaa nälän yllättäessä. A-oikeudet. Ravintolaan mahtuu noin 100 hyvän oluen ja raikkaan siiderin janoista ystävää.",
+      "name": "Janoinen Lohi",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/janoinenlohi/"],
+      "homepage": "https://kalaravintolat.fi/ravintola/janoinen-lohi/"
+    },
+    {
+      "_id": "26",
+      "address": { "city": "Helsinki", "postalCode": "00200", "street": "Gyldenintie 2", "phoneNumber": "0503265955" },
+      "picture": [
+        "http://www.isomajakka.fi/lataukset/header-1-1280x944.jpg",
+        "http://www.isomajakka.fi/lataukset/IMG-20170620-WA0001-1280x960.jpg"
+      ],
+      "location": { "latitude": 60.158409, "longitude": 24.876566 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info":
+        "Bar Iso Majakka – Sporttia, bilistä ja rentoa meininkiä. Bar Iso Majakka on uusi sporttihenkinen baari Helsingin Lauttasaaressa. Meillä näet urheilutapahtumat isolta screeniltä ja väliajat kuluvat mukavasti bilistä pelatessa.",
+      "name": "Bar Iso Majakka",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/Bar-iso-Majakka-195762587524400/"],
+      "homepage": "http://www.isomajakka.fi/"
+    },
+    {
+      "_id": "31",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00290",
+        "street": "Haartmaninkatu 4, 00290 Helsinki",
+        "phoneNumber": "0947172551"
+      },
+      "picture": ["http://mb.cision.com/Public/MigratedWpy/81602/9207356/9adf1a726f3a8ac9_400x400ar.jpg"],
+      "location": { "latitude": 60.188392, "longitude": 24.905935 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info": "Meilahden kukkakioski sijaitsee Meilahden tornisairaalan kahvion yhteydessä. ",
+      "name": "Meilahden tornisairaalan kahvio ja kukkakioski",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "paw", "subway"],
+      "some": [""],
+      "homepage": "http://www.skty.fi/fi/kahviot/meilahden+tornisairaala"
+    },
+    {
+      "_id": "19",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00260",
+        "street": "Merikannontie 8",
+        "phoneNumber": "0400760049"
+      },
+      "picture": [],
+      "location": { "latitude": 60.18017, "longitude": 24.911744 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info":
+        "Punainen tupa ja perunamaa Helsingin Töölössä, Sibeliuspuiston ja soutustadionin välissä, meren rannalla. Uunituoretta korvapuustia ja maalaisromanttista tunnelmaa tarjolla ympäri vuoden, tervetuloa!. Myynnissä makkaraa ja pihalla avotuli! Huomaathan, että omien eväiden tuominen kahvilan alueelle on kielletty.",
+      "name": "Regatta",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "car", "paw", "subway"],
+      "some": ["https://www.instagram.com/caferegatta/", "https://www.facebook.com/caferegatta/"],
+      "homepage": "http://caferegatta.fi/"
+    },
+    {
+      "_id": "29",
+      "address": { "city": "Helsinki", "postalCode": "00250", "street": "Seurasaarentie", "phoneNumber": "0406493040" },
+      "picture": ["http://myy.haaga-helia.fi/~jusju/geopark/mieritz.jpg"],
+      "location": { "latitude": 60.185854, "longitude": 24.88451 },
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "16:00" },
+        "tue": { "start": "11:00", "end": "16:00" },
+        "wed": { "start": "11:00", "end": "20:00" },
+        "thu": { "start": "11:00", "end": "20:00" },
+        "fri": { "start": "11:00", "end": "20:00" },
+        "sat": { "start": "11:00", "end": "20:00" },
+        "sun": { "start": "11:00", "end": "20:00" }
+      },
+      "info":
+        "Kansanpuiston aikaisessa Frithiof Mieritzin suunnittelemassa Metsänvartijan talossa vuodelta 1890 voi nauttia Kahvihuone Mieritzin antimista. Tarjolla on mm. tuoreita korvapuusteja, Rönttösrouvan leipomon makeita ja suolaisia piirakoita. Kahvihuone Mieritziä voi myös vuokrata yksityistilaisuuksiin ja sieltä voi noutaa Seurasaari –esitteitä.",
+      "name": "Kahvihuone Mieritz",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["car", "subway"],
+      "some": [],
+      "homepage": "https://www.myhelsinki.fi/fi/sy%C3%B6-ja-juo/ravintolat/kahvihuone-mieritz"
+    },
+    {
+      "_id": "20",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Topeliuksenkatu 8",
+        "phoneNumber": "0207590302"
+      },
+      "picture": [],
+      "location": { "latitude": 60.183979, "longitude": 24.917791 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info": "Lounaskahvila",
+      "name": "Café Picnic Topeliuksenkatu",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway", "wifi"],
+      "some": ["https://www.instagram.com/picnic_suomi/", "https://www.facebook.com/picnicsuomi/"],
+      "homepage": "http://www.picnic.fi/helsinki-topeliuksenkatu-8"
+    },
+    {
+      "_id": "25",
+      "address": { "city": "Helsinki", "postalCode": "00200", "street": "Gyldenintie 6", "phoneNumber": "0207424260" },
+      "picture": ["http://www.ravintolacasamare.com/wp-content/uploads/photo-gallery/baari.jpg"],
+      "location": { "latitude": 60.160346, "longitude": 24.877188 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info":
+        "Ravintola Casa Maressa lämpimän kodikas ja tuttavallisen välitön tunnelma tervehtii sisääntulijaa jo ovelta. Kutsumme sinut istahtamaan hyvän ruoan, virkistävän juoman ja iloisen seuran pariin kaupunkia kotoisampaan miljööseen. Olemme Helsingin Lauttasaaressa sijaitseva, helposti lähestyttävä ravintola, joka huomioi myös perheen pienimmät - ota siis koko perheesi mukaan nauttimaan ikimuistoisesta ravintolakäynnistä!",
+      "name": "Casa Mare",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/ravintolacasamare/?ref=br_rs", "https://www.instagram.com/ravintolacasamare"],
+      "homepage": "http://www.ravintolacasamare.com/"
+    },
+    {
+      "_id": "30",
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Mäntyniementie 4",
+        "phoneNumber": "0407312321"
+      },
+      "picture": [""],
+      "location": { "latitude": 60.186, "longitude": 24.896984 },
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "20:00" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "12:00", "end": "20:00" },
+        "thu": { "start": "13:00", "end": "20:00" },
+        "fri": { "start": "14:00", "end": "20:00" },
+        "sat": { "start": "15:00", "end": "20:00" },
+        "sun": { "start": "16:00", "end": "20:00" }
+      },
+      "info": "ravintola",
+      "name": "Hannele Klingberg",
+      "type": "Ruoka",
+      "__v": 0,
+      "symbols": ["wheelchair", "subway"],
+      "some": [""],
+      "homepage": ""
+    },
+    {
+      "_id": "5a8586dd90dc555c36241e5a",
+      "__v": 0,
+      "info":
+        "Kun Pyhän Olavin linnaa vuonna 1475 alettiin rakentaa, päätti linnan perustaja, tanskalaissyntyinen ritari Erik Akselinpoika Tott rakennuttaa mahtavan linnoituksen strategisesti tärkeän Savon alueen turvaksi. Linnan tehtävänä oli torjua idästä tulevat venäläisten hyökkäykset ja täten varmistaa Savon seudun herruuden säilyminen Ruotsin kruunulla. Olavinlinnan historia onkin sekoitus keskiajan miekan kalsketta, tykin jylinää ja arkisia askareita linnan jykevien muurien suojissa.\r\n\r\nVallanvaihdokset ovat antaneet Olavinlinnalle oman leimansa, joka yhä on nähtävissä linnan moni-ilmeisessä arkkitehtuurissa. Tänä päivänä linnan juhlatilat ovat vuokrattavissa ja toimivat monien erilaisten tilaisuuksien pitopaikkana.",
+      "name": "Olavinlinna",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "16:00" },
+        "tue": { "start": "10:00", "end": "16:00" },
+        "wed": { "start": "10:00", "end": "16:00" },
+        "thu": { "start": "10:00", "end": "16:00" },
+        "fri": { "start": "10:00", "end": "16:00" },
+        "sat": { "start": "11:00", "end": "16:00" },
+        "sun": { "start": "11:00", "end": "16:00" }
+      },
+      "location": { "latitude": 61.8639817, "longitude": 28.9010811 },
+      "picture": ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Olavinlinna2.jpg/265px-Olavinlinna2.jpg"],
+      "address": { "city": "Savonlinna", "postalCode": "57130", "street": "-", "phoneNumber": "0295 33 6941" },
+      "symbols": ["car", "subway", "hotel"],
+      "some": ["https://www.facebook.com/olavinlinna/"],
+      "homepage": "https://www.kansallismuseo.fi/fi/olavinlinna"
+    },
+    {
+      "_id": "5a858a2990dc555c36241e5b",
+      "__v": 0,
+      "info":
+        "Turun linna on 1200-luvun lopussa Aurajoen suulle perustettu linna Turussa. Se perustettiin alun perin Ruotsin kruunun hallintolinnaksi, mutta myöhemmin siitä tuli muun muassa Juhana III:n herttua-ajan renessanssilinna, Suomen kenraalikuvernöörin virka-asunto ja vankila. 1800-luvun lopulta alkaen linna on toiminut museokäytössä, joskin se vaurioitui pahoin Neuvostoliiton ilmavoimien pommituksessa kesällä 1941. Tämän seurauksena linnassa jouduttiin tekemään toisen maailmansodan jälkeen laajoja korjaus- ja restaurointitöitä.",
+      "name": "Turun Linna",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "18:00" },
+        "tue": { "start": "10:00", "end": "18:00" },
+        "wed": { "start": "10:00", "end": "18:00" },
+        "thu": { "start": "10:00", "end": "18:00" },
+        "fri": { "start": "10:00", "end": "18:00" },
+        "sat": { "start": "10:00", "end": "18:00" },
+        "sun": { "start": "10:00", "end": "18:00" }
+      },
+      "location": { "latitude": 60.435332, "longitude": 22.227984 },
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Turkucastle_edit.jpg/240px-Turkucastle_edit.jpg"
+      ],
+      "address": { "city": "Turku", "postalCode": "20100", "street": "Linnankatu 80", "phoneNumber": " (02) 262 0300" },
+      "symbols": ["car", "subway"],
+      "some": ["https://www.facebook.com/turunlinnamuseo/"],
+      "homepage": "https://www.turku.fi/turunlinna"
+    },
+    {
+      "_id": "5a858c1190dc555c36241e5c",
+      "__v": 0,
+      "info":
+        "Suomenlinna (ruots. Sveaborg) on Helsingin edustalla sijaitseva merilinnoitus. Historiallisena muistomerkkinä ja nähtävyytenä sen kulttuurillinen arvo on merkittävä, ja se on vahva osa Helsingin identiteettiä. Suomenlinnan rakennustyöt aloitettiin vuonna 1748 ja se tunnettiin vuoteen 1918 asti ruotsinkielisen nimensä Sveaborg pohjalta suomeksi Viaporina. Suomenlinna liitettiin vuonna 1991 Unescon maailmanperintöluetteloon. ",
+      "name": "Suomenlinna",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "10:30", "end": "16:30" },
+        "tue": { "start": "10:30", "end": "16:30" },
+        "wed": { "start": "10:30", "end": "16:30" },
+        "thu": { "start": "10:30", "end": "16:30" },
+        "fri": { "start": "10:30", "end": "16:30" },
+        "sat": { "start": "10:30", "end": "16:30" },
+        "sun": { "start": "10:30", "end": "16:30" }
+      },
+      "location": { "latitude": 60.143611, "longitude": 24.984444 },
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Guns_of_Suomenlinna.jpg/220px-Guns_of_Suomenlinna.jpg"
+      ],
+      "address": { "city": "Helsinki", "postalCode": "00190", "street": "-", "phoneNumber": " (02) 262 0300" },
+      "symbols": ["paw", "subway", "hotel", "wifi"],
+      "some": ["https://www.facebook.com/Suomenlinna/"],
+      "homepage": "https://www.suomenlinna.fi/"
+    },
+    {
+      "_id": "5a96e6209f20d27b31aa4e25",
+      "__v": 0,
+      "info": "Uljaan tila on Askolan Vakkolassa sijaitseva mansikka- ja pensasmustikkatila.",
+      "name": "Uljaan tila",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "16:00" },
+        "tue": { "start": "10:00", "end": "16:00" },
+        "wed": { "start": "10:00", "end": "16:00" },
+        "thu": { "start": "10:00", "end": "16:00" },
+        "fri": { "start": "10:00", "end": "16:00" },
+        "sat": { "start": "10:00", "end": "16:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.523086, "longitude": 25.649085 },
+      "picture": ["https://uljaantila.fi/uploads/images/navetta.jpg", "https://uljaantila.fi/uploads/images/pelto.jpg"],
+      "address": { "city": "Askola", "postalCode": "07500", "street": "Yhdystie 276", "phoneNumber": "" },
+      "symbols": ["car", "paw"],
+      "some": ["https://www.facebook.com/Uljaan-tila-1682013088705022/"],
+      "homepage": "https://uljaantila.fi/"
+    },
+    {
+      "_id": "5a96e7669f20d27b31aa4e26",
+      "__v": 0,
+      "info":
+        "Taianomainen kartanomiljöö - Hyvää ruokaa suoraan tilalta, kotiovelle toimitettuna. Bosgårdista löydät luomunaudanlihaa, tilakaupan, kesäravintolan, herkullisia ruoka-annoksia ja virkistäviä elämyksiä. Charolais-lihakarjamme laiduntaa tilan arvokkailla perinnemaisemilla ja Pikkupernajalahden Natura-alueella. Olemme nykyaikanen, moderni ja monipuolinen tila. Sijaitsemme 10 minuutin ajomatkan päässä Porvoon keskustasta. Tervetuloa tutustumaan",
+      "name": "Bosgårdin tilakauppa ja ravintola",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "16:00" },
+        "tue": { "start": "10:00", "end": "16:00" },
+        "wed": { "start": "10:00", "end": "16:00" },
+        "thu": { "start": "10:00", "end": "16:00" },
+        "fri": { "start": "10:00", "end": "16:00" },
+        "sat": { "start": "10:00", "end": "16:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.405544, "longitude": 25.83506 },
+      "picture": [],
+      "address": { "city": "Porvoo", "postalCode": "06200", "street": "Bosgårdintie 68", "phoneNumber": "" },
+      "symbols": ["wheelchair", "car", "paw"],
+      "some": [],
+      "homepage": "https://bosgard.com/pages/tilakauppa-ja-grillikahvila"
+    },
+    {
+      "_id": "5abccd3811036f183baa8a5c",
+      "__v": 0,
+      "info": "",
+      "picture": ["https://upload.wikimedia.org/wikipedia/commons/e/eb/Rautatientori_Helsinki.jpg"],
+      "name": "Rautatientori",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.1710558, "longitude": 24.9426841 },
+      "address": { "city": "Helsinki", "postalCode": "00100", "street": "Rautatientori", "phoneNumber": "" },
+      "symbols": ["wheelchair", "car", "paw", "clock-o", "subway", "hotel", "wifi"],
+      "some": [""],
+      "homepage": ""
+    },
+    {
+      "_id": "5ac4acce60fc6942b1914b78",
+      "__v": 0,
+      "info": "",
+      "picture": [""],
+      "name": "Sushi-San",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "21:00" },
+        "tue": { "start": "11:00", "end": "21:00" },
+        "wed": { "start": "11:00", "end": "21:00" },
+        "thu": { "start": "11:00", "end": "21:00" },
+        "fri": { "start": "11:00", "end": "21:00" },
+        "sat": { "start": "11:00", "end": "19:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.205698, "longitude": 24.8788133 },
+      "address": { "city": "Helsinki", "postalCode": "00350", "street": "Raumantie 1", "phoneNumber": "0401561218" },
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://fi-fi.facebook.com/munkkiniemi.sushi.san/"],
+      "homepage": ""
+    },
+    {
+      "_id": "5ac4c3c760fc6942b1914b79",
+      "__v": 0,
+      "info": "Nykytaiteen museo",
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/21/Kiasma_6.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/5/58/Kiasma_2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fe/Le_Kiasma_%28Helsinki%29.jpg"
+      ],
+      "name": "Kiasma",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "10:00", "end": "17:00" },
+        "wed": { "start": "10:00", "end": "20:30" },
+        "thu": { "start": "10:00", "end": "20:30" },
+        "fri": { "start": "10:00", "end": "20:30" },
+        "sat": { "start": "10:00", "end": "18:00" },
+        "sun": { "start": "10:00", "end": "17:00" }
+      },
+      "location": { "latitude": 60.1714873, "longitude": 24.937111 },
+      "address": { "city": "Helsinki", "postalCode": "00100", "street": "Mannerheiminaukio 2", "phoneNumber": "" },
+      "symbols": ["wheelchair", "car", "subway", "wifi"],
+      "some": ["https://www.facebook.com/KiasmaMuseum"],
+      "homepage": "https://kiasma.fi/"
+    },
+    {
+      "_id": "5ac4dea360fc6942b1914b7a",
+      "__v": 0,
+      "info": "",
+      "picture": [],
+      "name": "Töölön raitiovaunuhalli",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.1838224, "longitude": 24.9229297 },
+      "address": { "city": "Helsinki", "postalCode": "0025", "street": "Eino leinonkatu 1", "phoneNumber": "" },
+      "symbols": ["wheelchair", "car", "subway"]
+    },
+    {
+      "_id": "5ac4f29060fc6942b1914b7b",
+      "__v": 0,
+      "info": "",
+      "picture": [""],
+      "name": "Pelago Bicycles store and service",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "12:00", "end": "18:00" },
+        "tue": { "start": "12:00", "end": "18:00" },
+        "wed": { "start": "12:00", "end": "18:00" },
+        "thu": { "start": "12:00", "end": "18:00" },
+        "fri": { "start": "12:00", "end": "18:00" },
+        "sat": { "start": "12:00", "end": "16:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.16533310000001, "longitude": 24.9327936 },
+      "address": { "city": "Helsinki", "postalCode": "00100", "street": "Kalevankatu 32", "phoneNumber": "" },
+      "symbols": ["subway"],
+      "some": ["https://www.facebook.com/PELAGOBICYCLES"],
+      "homepage": "https://www.pelagobicycles.com/kauppa?___store=default"
+    },
+    {
+      "_id": "5ac5f11860fc6942b1914b7c",
+      "__v": 0,
+      "info": "",
+      "picture": [""],
+      "name": "Mamma Rosa",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "23:00" },
+        "tue": { "start": "11:00", "end": "24:00" },
+        "wed": { "start": "11:00", "end": "24:00" },
+        "thu": { "start": "11:00", "end": "24:00" },
+        "fri": { "start": "11:00", "end": "00:30" },
+        "sat": { "start": "13:00", "end": "00:30" },
+        "sun": { "start": "13:00", "end": "20:30" }
+      },
+      "location": { "latitude": 60.1794835, "longitude": 24.9237959 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00260",
+        "street": "Runeberginkatu 55",
+        "phoneNumber": "(09) 434 72 60"
+      },
+      "symbols": ["wheelchair", "subway"],
+      "some": [""],
+      "homepage": "http://mammarosa.fi/"
+    },
+    {
+      "_id": "5ac6306760fc6942b1914b7d",
+      "__v": 0,
+      "info": "",
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Gallen-Kallela_Museum_in_winter.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Tarvasp%C3%A4%C3%A4_%28Gallen-Kallelan_museo._Gallen-Kallela_Museum%29_2017_01.jpg"
+      ],
+      "name": "Gallen-Kallelan Museo",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "11:00", "end": "16:00" },
+        "wed": { "start": "11:00", "end": "16:00" },
+        "thu": { "start": "11:00", "end": "16:00" },
+        "fri": { "start": "11:00", "end": "16:00" },
+        "sat": { "start": "11:00", "end": "16:00" },
+        "sun": { "start": "11:00", "end": "17:00" }
+      },
+      "location": { "latitude": 60.2065788, "longitude": 24.8393615 },
+      "address": {
+        "city": "Espoo",
+        "postalCode": "02600",
+        "street": "Gallen-Kallelan tie 27",
+        "phoneNumber": "098492340"
+      },
+      "symbols": ["wheelchair", "car"],
+      "some": ["https://www.facebook.com/gallenkallelanmuseo"],
+      "homepage": "http://www.gallen-kallela.fi/"
+    },
+    {
+      "_id": "5ac6697260fc6942b1914b7e",
+      "__v": 0,
+      "info": "Reception is open 24/7",
+      "picture": [],
+      "name": "Holiday Inn Helsinki West- Ruoholahti",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.16519090000001, "longitude": 24.9095027 },
+      "address": { "city": "Helsinki", "postalCode": "00180", "street": "Sulhasenkuja 3", "phoneNumber": "20048104" },
+      "symbols": ["wheelchair", "car", "clock-o", "subway", "hotel", "wifi"],
+      "some": [""],
+      "homepage": "http://www.finland.holidayinn.com/hotellit/holiday-inn-helsinki-west-ruoholahti"
+    },
+    {
+      "_id": "5ac71d2860fc6942b1914b7f",
+      "__v": 0,
+      "info":
+        "Patsaspuisto tarjoaa kuvataidetta ja musiikkia, kursseja ja tapahtumia, sekä toiminnallista ohjelmaa koululais- ja päiväkotiryhmille.",
+      "picture": ["https://upload.wikimedia.org/wikipedia/commons/5/51/Jaakola.jpg"],
+      "name": "Alpo Jaakolan patsaspuisto",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "11:00", "end": "18:00" },
+        "wed": { "start": "11:00", "end": "18:00" },
+        "thu": { "start": "11:00", "end": "18:00" },
+        "fri": { "start": "11:00", "end": "18:00" },
+        "sat": { "start": "11:00", "end": "18:00" },
+        "sun": { "start": "11:00", "end": "18:00" }
+      },
+      "location": { "latitude": 60.81321649999999, "longitude": 22.9437799 },
+      "address": {
+        "city": "Loimaa",
+        "postalCode": "32200",
+        "street": "Aura-Pirkkatie 84",
+        "phoneNumber": "02 761 1210"
+      },
+      "symbols": ["wheelchair", "car", "paw", "clock-o"],
+      "some": [],
+      "homepage": ""
+    },
+    {
+      "_id": "5ac73f4360fc6942b1914b80",
+      "__v": 0,
+      "info": "Kiinalainen ruokaravintola. Buffetlounas ja a la carte, A-oikeudet. Buffet ma-pe 10-19 ja la-su 12-19.",
+      "picture": [],
+      "name": "Osaka Sushi",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "21:00" },
+        "tue": { "start": "10:00", "end": "21:00" },
+        "wed": { "start": "10:00", "end": "21:00" },
+        "thu": { "start": "10:00", "end": "21:00" },
+        "fri": { "start": "10:00", "end": "21:00" },
+        "sat": { "start": "12:00", "end": "21:00" },
+        "sun": { "start": "12:00", "end": "21:00" }
+      },
+      "location": { "latitude": 60.28830489999999, "longitude": 24.9992737 },
+      "address": { "city": "Vantaa", "postalCode": "01300", "street": "Kuriiritie 23", "phoneNumber": "0951233530" },
+      "symbols": ["wheelchair", "subway"],
+      "some": [],
+      "homepage": "http://www.osakasushi.fi/"
+    },
+    {
+      "_id": "5ac758fe60fc6942b1914b81",
+      "__v": 0,
+      "info": "Ravintola Gaijin edustaa makumaailmaa Pohjois-Aasiasta.",
+      "picture": [],
+      "name": "Gaijin",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "17:00", "end": "00:30" },
+        "tue": { "start": "11:30", "end": "00:30" },
+        "wed": { "start": "11:30", "end": "00:30" },
+        "thu": { "start": "11:30", "end": "00:30" },
+        "fri": { "start": "11:30", "end": "00:30" },
+        "sat": { "start": "17:00", "end": "00:30" },
+        "sun": { "start": "17:00", "end": "24:00" }
+      },
+      "location": { "latitude": 60.16599540000001, "longitude": 24.9421748 },
+      "address": { "city": "Helsinki", "postalCode": "00120", "street": "Bulevardi 6", "phoneNumber": "010 322 9386 " },
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://fi-fi.facebook.com/ravintola.gaijin"],
+      "homepage": "http://www.gaijin.fi/fi/"
+    },
+    {
+      "_id": "5ac7598160fc6942b1914b82",
+      "__v": 0,
+      "info": "Farang on moderni ravintola, jonka ruoat ja juomat edustavat kaakkois-aasialaista ruokakulttuuria.",
+      "picture": [""],
+      "name": "Farang",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "09:00", "end": "17:00" },
+        "tue": { "start": "09:00", "end": "17:00" },
+        "wed": { "start": "09:00", "end": "17:00" },
+        "thu": { "start": "09:00", "end": "17:00" },
+        "fri": { "start": "09:00", "end": "17:00" },
+        "sat": { "start": "11:30", "end": "17:00" },
+        "sun": { "start": "10:00", "end": "17:00" }
+      },
+      "location": { "latitude": 60.17195030000001, "longitude": 24.9314449 },
+      "address": { "city": "Helsinki", "postalCode": "00100", "street": "Ainonkatu 3", "phoneNumber": "010 322 9385" },
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/ravintola.farang"],
+      "homepage": "http://farang.fi/"
+    },
+    {
+      "_id": "5ac7676d60fc6942b1914b83",
+      "__v": 0,
+      "info": "http://www.designmuseum.fi/en/",
+      "picture": ["https://upload.wikimedia.org/wikipedia/commons/9/9c/Designmuseo_I_Helsinki.jpg"],
+      "name": "Designmuseo Helsinki",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "11:00", "end": "18:00" },
+        "thu": { "start": "11:00", "end": "18:00" },
+        "fri": { "start": "11:00", "end": "18:00" },
+        "sat": { "start": "11:00", "end": "18:00" },
+        "sun": { "start": "11:00", "end": "18:00" }
+      },
+      "location": { "latitude": 60.1630317, "longitude": 24.9463911 },
+      "address": { "city": "Helsinki", "postalCode": "00130", "street": "Korkeavuorenkatu 23", "phoneNumber": "" },
+      "symbols": ["wheelchair", "car", "subway"],
+      "some": ["https://www.facebook.com/designmuseo"],
+      "homepage": "http://www.designmuseum.fi/fi/"
+    },
+    {
+      "_id": "5ac7a4a160fc6942b1914b84",
+      "__v": 0,
+      "info": "Italialainen ravintola",
+      "picture": [""],
+      "name": "Ristorante il Classico",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "21:00" },
+        "tue": { "start": "10:00", "end": "21:00" },
+        "wed": { "start": "10:00", "end": "21:00" },
+        "thu": { "start": "10:00", "end": "21:00" },
+        "fri": { "start": "10:00", "end": "22:00" },
+        "sat": { "start": "11:00", "end": "22:00" },
+        "sun": { "start": "11:00", "end": "21:00" }
+      },
+      "location": { "latitude": 60.3163267, "longitude": 24.8488894 },
+      "address": {
+        "city": "Vantaa",
+        "postalCode": "01700",
+        "street": "Keimolantie 11-13",
+        "phoneNumber": "09 42890299"
+      },
+      "symbols": ["subway"],
+      "some": [""],
+      "homepage": "http://ilclassico.fi/"
+    },
+    {
+      "_id": "5ac7ee4460fc6942b1914b85",
+      "__v": 0,
+      "info":
+        "Korkeasaari on Helsingin edustalla sijaitseva saari ja samalla myös saarella ylläpidetyn eläintarhan nimi. Vuonna 1889 perustettu eläintarha on yksi maailman vanhimmista. Se on Helsingin suosituimpia nähtävyyksiä. Eläinmaantieteellistä aluejakoa noudattava jaottelu muodostaa kokonaisuudet Amazonia, Africasia ja Borealia. Eläinlajeja Korkeasaaressa on noin 150 ja kasvilajeja yli tuhat.",
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/42/Panthera_pardus_orientalis_%28lying%2C_inquisitive%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/61/Siperiantiikeri_Korkeasaari.jpg"
+      ],
+      "name": "Korkeasaari Zoo",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "18:00" },
+        "tue": { "start": "10:00", "end": "18:00" },
+        "wed": { "start": "10:00", "end": "18:00" },
+        "thu": { "start": "10:00", "end": "18:00" },
+        "fri": { "start": "10:00", "end": "18:00" },
+        "sat": { "start": "10:00", "end": "18:00" },
+        "sun": { "start": "10:00", "end": "18:00" }
+      },
+      "location": { "latitude": 60.17969189999999, "longitude": 24.9826418 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00570",
+        "street": "Mustikkamaanpolku 12",
+        "phoneNumber": "+358 50 352 5989 "
+      },
+      "symbols": ["wheelchair", "car", "subway", "wifi"],
+      "some": ["https://www.instagram.com/korkeasaari/", "https://fi-fi.facebook.com/korkeasaarenelaintarha/"],
+      "homepage": "https://www.korkeasaari.fi/"
+    },
+    {
+      "_id": "5ac8925560fc6942b1914b86",
+      "__v": 0,
+      "info":
+        "Aito napolilainen pizza on Capperin hienoin luomus, joka esittelee alkuperäisiä, Suomessa ainoastaan Capperista saatavia raaka-aineita. Taikinamme tehdään hienoimmasta italialaisesta, kylmäjauhetusta täysjyvävehnästä, jonka huomaa myös ravintoarvoista: Huippukorkea valkuaisaine- ja kuitupitoisuus tekevät pizzan pohjasta aidon napolilaisen pizzan arvoista.",
+      "picture": [""],
+      "name": "Capperi",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "11:00", "end": "20:00" },
+        "wed": { "start": "11:00", "end": "20:00" },
+        "thu": { "start": "11:00", "end": "20:00" },
+        "fri": { "start": "11:00", "end": "21:00" },
+        "sat": { "start": "12:00", "end": "21:00" },
+        "sun": { "start": "12:00", "end": "20:00" }
+      },
+      "location": { "latitude": 60.2312508, "longitude": 24.9680777 },
+      "address": { "city": "Helsinki", "postalCode": "00640", "street": "Siltavoudintie 9", "phoneNumber": "" },
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/capperi.finland/"],
+      "homepage": "http://www.capperi.fi/"
+    },
+    {
+      "_id": "5ac89aa160fc6942b1914b87",
+      "__v": 0,
+      "info": "",
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a9/Senaatintori%2CHelsinki%2C18.1.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/Aleksanteri_II%2C_Senaatintori%2C_Kruununhaka_-_RalfR-2.jpg",
+        "https://c1.staticflickr.com/7/6008/5993722636_04c9fca35d_b.jpg"
+      ],
+      "name": "Senaatintori",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "00:00", "end": "24:00" },
+        "tue": { "start": "00:00", "end": "24:00" },
+        "wed": { "start": "00:00", "end": "24:00" },
+        "thu": { "start": "00:00", "end": "24:00" },
+        "fri": { "start": "00:00", "end": "24:00" },
+        "sat": { "start": "00:00", "end": "24:00" },
+        "sun": { "start": "00:00", "end": "24:00" }
+      },
+      "location": { "latitude": 60.1694794, "longitude": 24.9522867 },
+      "address": { "city": "Helsinki", "postalCode": "00170", "street": "Senaatintori", "phoneNumber": "" },
+      "symbols": ["wheelchair", "car", "paw", "clock-o", "subway"],
+      "some": [""],
+      "homepage": ""
+    },
+    {
+      "_id": "5ac8b80260fc6942b1914b88",
+      "__v": 0,
+      "info": "Open-air museum with beautiful old finnish houses from different areas in Finland.",
+      "picture": [
+        "https://upload.wikimedia.org/wikipedia/commons/e/e7/Seurasaaren_silta_p%C3%A4%C3%A4lt%C3%A4_101008.jpg",
+        "https://cdn.pixabay.com/photo/2015/10/16/18/15/seurasaari-991583_960_720.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/1/14/Karuna_museum_church_Seurasaari-Helsinki1.jpg"
+      ],
+      "name": "Seurasaaren ulkomuseo",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.18149210000001, "longitude": 24.8840972 },
+      "address": { "city": "Helsinki", "postalCode": "00250", "street": "Seurasaari", "phoneNumber": "+358295336912" },
+      "symbols": ["wheelchair", "paw", "clock-o", "subway"],
+      "some": ["https://www.facebook.com/seurasaarenulkomuseo/"],
+      "homepage": "https://www.seurasaarisaatio.fi/"
+    },
+    {
+      "_id": "5ac8bc8a60fc6942b1914b89",
+      "__v": 0,
+      "info": "",
+      "picture": ["https://igx.4sqi.net/img/general/600x600/2514931_K9s6vAHOyfcATNmIgQGPRyE6wpnhs0QfPaKLRHIYcDI.jpg"],
+      "name": "African Pots",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "16:00" },
+        "tue": { "start": "11:00", "end": "16:00" },
+        "wed": { "start": "11:00", "end": "16:00" },
+        "thu": { "start": "11:00", "end": "16:00" },
+        "fri": { "start": "11:00", "end": "16:00" },
+        "sat": { "start": "13:00", "end": "18:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.1975273, "longitude": 24.9504146 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00550",
+        "street": "Mäkelänkatu 45",
+        "phoneNumber": "044 9742088"
+      },
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/africanpots/"],
+      "homepage": "http://www.africanpots.fi/"
+    },
+    {
+      "_id": "5ac8bdeb60fc6942b1914b8a",
+      "__v": 0,
+      "info":
+        "Intialainen ruoka ja monipuolinen A la carte menu – Herkkuja läheltä ja kaukaa.\r\nLaadukas a la carte menu on Ravintola Mustan Härän ylpeys. Tarjoilemme keittiöstämme monipuolisen kattauksen herkullisia intialaisia ruokia. Lisäksi tarjolla on laadukkaat liha- kana- ja kala-annokset perinteisempään makuun. Ruokalistaltamme löytyy myös laaja kasvisruokavalikoima. Tutustu tarjontaamme ja tule maistamaan!",
+      "picture": [
+        "https://igx.4sqi.net/img/general/600x600/14841062_0iALHoHUhf2sIpbEju1noE1oiaEgB_6uxTT1WIZTBgo.jpg",
+        "http://www.mustaharka.fi/userData/ravintola-musta-harka-1n1n/logo/logo.png"
+      ],
+      "name": "Musta Härkä",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "09:00", "end": "05:00" },
+        "tue": { "start": "09:00", "end": "05:00" },
+        "wed": { "start": "09:00", "end": "05:00" },
+        "thu": { "start": "09:00", "end": "05:00" },
+        "fri": { "start": "09:00", "end": "05:00" },
+        "sat": { "start": "09:00", "end": "05:00" },
+        "sun": { "start": "09:00", "end": "05:00" }
+      },
+      "location": { "latitude": 60.1966171, "longitude": 24.9513001 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00510",
+        "street": "Mäkelänkatu 52",
+        "phoneNumber": "045 1770950"
+      },
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/musta.harka"],
+      "homepage": "http://www.mustaharka.fi/"
+    },
+    {
+      "_id": "5ac8be4960fc6942b1914b8b",
+      "__v": 0,
+      "info": "",
+      "picture": ["https://www.kauppakamarilehti.fi/wp-content/uploads/2017/03/940_400_lansisatama_.jpg"],
+      "name": "Länsiterminaali matkustajaterminaali",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "06:30", "end": "22:00" },
+        "tue": { "start": "06:30", "end": "22:00" },
+        "wed": { "start": "06:30", "end": "22:00" },
+        "thu": { "start": "06:30", "end": "22:00" },
+        "fri": { "start": "06:30", "end": "22:00" },
+        "sat": { "start": "06:30", "end": "22:00" },
+        "sun": { "start": "06:30", "end": "22:00" }
+      },
+      "location": { "latitude": 60.1545087, "longitude": 24.9212167 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00220",
+        "street": "Hietasaarenkuja",
+        "phoneNumber": "+358 9 310 33820 / +358 500 813 024"
+      },
+      "symbols": ["wheelchair", "car", "paw", "subway", "wifi"],
+      "some": [
+        "https://www.instagram.com/portofhelsinki/",
+        "https://www.facebook.com/pages/L%C3%A4nsiterminaali/107287799345953"
+      ],
+      "homepage": "http://www.portofhelsinki.fi/matkustajille/lansiterminaali-1"
+    },
+    {
+      "_id": "5ac8e25560fc6942b1914b8c",
+      "__v": 0,
+      "info":
+        "Haltialan kotieläintila on Helsingin kaupungin omistama kaupunkilaisten virkistys- ja opetuskäyttöön tarkoitettu maatila. Tila sijaitsee Tuomarinkylän Haltialassa, Vantaan Kartanonkoskesta katsoen toisella puolella Vantaanjokea. Wikipedia",
+      "picture": ["http://www.vihreatsylit.fi/hk/wp-content/gallery/haltiala2/haltiala2-leikkipaikka.jpg"],
+      "name": "Haltialan kotieläintila",
+      "type": "Nähtävyys",
+      "openingHours": {
+        "mon": { "start": "18:00", "end": "20:00" },
+        "tue": { "start": "18:00", "end": "20:00" },
+        "wed": { "start": "18:00", "end": "20:00" },
+        "thu": { "start": "18:00", "end": "20:00" },
+        "fri": { "start": "18:00", "end": "20:00" },
+        "sat": { "start": "11:00", "end": "18:00" },
+        "sun": { "start": "11:00", "end": "18:00" }
+      },
+      "location": { "latitude": 60.2757185, "longitude": 24.9532783 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00690",
+        "street": "Laamannintie 17",
+        "phoneNumber": "050 0607444"
+      },
+      "symbols": ["car", "paw", "subway"],
+      "some": ["https://www.facebook.com/pages/Haltialan-Maatila/327367644353664"],
+      "homepage":
+        "https://www.hel.fi/helsinki/fi/kulttuuri-ja-vapaa-aika/muu-vapaa-aika/lemmikki-ja-kotielaimet/haltialan-kotielaintila/"
+    },
+    {
+      "_id": "5ac8ea5660fc6942b1914b8d",
+      "__v": 0,
+      "info":
+        "Ravintolamme tarjoaa välimeren eri keittiöiden herkkuja uudella modernilla twistillä kauniissa ja vasta remontoidussa ympäristössä. Välimeren keittiölle tyypillisesti käytämme annoksissa pääasiallisesti kauden kasviksia ja vihanneksia mausta ja laadusta tinkimättä.\r\n\r\nArkisin tarjoamme asiakkaillemme makuelämyksiä lounasbuffetin muodossa. Á la Carte listalta löytyvät veden kielelle tuovat salaatit, pastat ja risotot. Listan grilliherkut valmistetaan aidossa hiiligrillissä ja pizzat kiviuunissa. Tiloissamme on mahdollista myös järjestää tilaisuuksia ja juhlia, jotka räätälöidään asiakkaamme tarpeen mukaan.",
+      "picture": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/11/1a/2f/16/sisalta.jpg",
+        "https://media-cdn.tripadvisor.com/media/photo-s/0f/f0/f5/c8/lounas-buffet.jpg"
+      ],
+      "name": "La Locanda Foodland",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "22:00" },
+        "tue": { "start": "10:00", "end": "22:00" },
+        "wed": { "start": "10:00", "end": "22:00" },
+        "thu": { "start": "10:00", "end": "22:00" },
+        "fri": { "start": "10:00", "end": "23:00" },
+        "sat": { "start": "11:00", "end": "23:00" },
+        "sun": { "start": "12:00", "end": "21:30" }
+      },
+      "location": { "latitude": 60.30562260000001, "longitude": 25.0214827 },
+      "address": { "city": "Vantaa", "postalCode": "01300", "street": "Maitikkapolku 1", "phoneNumber": "09 35400120" },
+      "symbols": ["wheelchair", "subway"],
+      "some": ["https://www.facebook.com/lalocanda.fi/"],
+      "homepage": "http://www.lalocanda.fi/"
+    },
+    {
+      "_id": "5aca4ea160fc6942b1914b8e",
+      "__v": 0,
+      "info": "",
+      "picture": [
+        "https://media-cdn.tripadvisor.com/media/photo-s/02/58/15/2e/kabuki-1.jpg",
+        "https://image.citycdn.fi/01/39/31/35/47df0df919212335532fef1d24b88a95.jpeg"
+      ],
+      "name": "Kabuki",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "17:00", "end": "23:00" },
+        "tue": { "start": "17:00", "end": "23:00" },
+        "wed": { "start": "17:00", "end": "23:00" },
+        "thu": { "start": "17:00", "end": "23:00" },
+        "fri": { "start": "17:00", "end": "23:00" },
+        "sat": { "start": "15:00", "end": "23:00" },
+        "sun": { "start": "15:00", "end": "23:00" }
+      },
+      "location": { "latitude": 60.16728010000001, "longitude": 24.9242097 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00180",
+        "street": "Lapinlahdenkatu 12",
+        "phoneNumber": "09 6949446"
+      },
+      "symbols": ["subway"],
+      "some": ["https://www.facebook.com/pages/Ravintola-Kabuki/219908774689439"],
+      "homepage": "http://www.kabuki.fi/"
+    },
+    {
+      "_id": "5aca4f4f60fc6942b1914b8f",
+      "__v": 0,
+      "info":
+        "Millaisessa kahvilassa haluaisin istahtaa alas ja hengähtää hetkeksi? Mukava, lämpöinen olohuone oli\r\npäällimmäisenä ajatuksena, kun suunnittelimme kahvila Rostaa. Konditoriaamme varten rakensimme\r\ntäysin varustellun valmistuskeittiön. Viihtyisään paikkaan valikoitui omistautunut henkilökunta.\r\nViimeisen silauksen olette tehneet te, asiakkaamme! Kiitos!",
+      "picture": ["http://www.rosta.fi/wp-content/uploads/2016/04/Kahvila-e1461823567808.jpg"],
+      "name": "Kahvila Rosta",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "08:00", "end": "18:00" },
+        "tue": { "start": "08:00", "end": "18:00" },
+        "wed": { "start": "08:00", "end": "18:00" },
+        "thu": { "start": "08:00", "end": "18:00" },
+        "fri": { "start": "08:00", "end": "18:00" },
+        "sat": { "start": "10:00", "end": "15:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.1187529, "longitude": 24.4395999 },
+      "address": {
+        "city": "Kirkkonummi",
+        "postalCode": "02400",
+        "street": "Munkinmäentie 19",
+        "phoneNumber": "044 33 16 333"
+      },
+      "symbols": ["car"],
+      "some": ["https://www.instagram.com/kahvilarosta/", "https://www.facebook.com/KahvilaRosta/"],
+      "homepage": "http://www.rosta.fi/"
+    },
+    {
+      "_id": "5acb19a560fc6942b1914b90",
+      "__v": 0,
+      "info": "",
+      "picture": ["https://c1.staticflickr.com/9/8567/28779697675_67c38940c6_c.jpg"],
+      "name": "Vapiano",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "23:00" },
+        "tue": { "start": "11:00", "end": "23:00" },
+        "wed": { "start": "11:00", "end": "23:00" },
+        "thu": { "start": "11:00", "end": "23:00" },
+        "fri": { "start": "11:00", "end": "24:00" },
+        "sat": { "start": "12:00", "end": "24:00" },
+        "sun": { "start": "12:00", "end": "21:00" }
+      },
+      "location": { "latitude": 60.17136929999999, "longitude": 24.9453787 },
+      "address": { "city": "Helsinki", "postalCode": "00100", "street": "Mikonkatu 15", "phoneNumber": "" },
+      "symbols": ["subway", "wifi"],
+      "some": ["https://www.facebook.com/VapianoFIN/"],
+      "homepage": "https://fi.vapiano.com/fi/home/"
+    },
+    {
+      "_id": "5acc96f460fc6942b1914b92",
+      "__v": 0,
+      "info":
+        "Munkkiniemenrannassa, hyvien kulkuyhteyksien varrella sijaitseva Café Torpanranta tarjoaa vuodenaikojen mukaan muuttuvat merimaisemat niin mukavalle kahvihetkelle kuin työpäivän katkaisevalle lounastuokiollekin. Runsaita salaattiannoksia on tarjolla iltaan saakka ja vitriineissämme on sekä suolaisia että makeita herkkuja jokaiseen makuun. Klassiset jäätelöannokset ovat vuodesta toiseen suosittuja.",
+      "picture": ["http://www.torpanranta.fi/@Bin/146375/TR_0176.jpeg"],
+      "name": "Torpanranta",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "19:00" },
+        "tue": { "start": "10:00", "end": "19:00" },
+        "wed": { "start": "10:00", "end": "19:00" },
+        "thu": { "start": "10:00", "end": "19:00" },
+        "fri": { "start": "10:00", "end": "19:00" },
+        "sat": { "start": "10:00", "end": "19:00" },
+        "sun": { "start": "10:00", "end": "19:00" }
+      },
+      "location": { "latitude": 60.194492, "longitude": 24.87103 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00330",
+        "street": "Munkkiniemenranta 2",
+        "phoneNumber": "09 484 250"
+      },
+      "symbols": [],
+      "some": [
+        "https://www.instagram.com/cafetorpanranta/",
+        "https://www.facebook.com/pages/Cafe-Torpanranta/210708942289923"
+      ],
+      "homepage": "http://www.torpanranta.fi/"
+    },
+    {
+      "_id": "5acc986460fc6942b1914b93",
+      "__v": 0,
+      "info": "Max kunnon taitelijakahvila.",
+      "picture": ["https://korvapuusti.files.wordpress.com/2010/11/max.jpg"],
+      "name": "Max's Cafe",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "07:00", "end": "17:30" },
+        "tue": { "start": "07:00", "end": "17:30" },
+        "wed": { "start": "07:00", "end": "17:30" },
+        "thu": { "start": "07:00", "end": "17:30" },
+        "fri": { "start": "07:00", "end": "17:30" },
+        "sat": { "start": "09:00", "end": "16:00" },
+        "sun": { "start": "10:00", "end": "16:00" }
+      },
+      "location": { "latitude": 60.1972681, "longitude": 24.8818692 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00350",
+        "street": "Munkkiniemen puistotie 7",
+        "phoneNumber": "044 5890096"
+      },
+      "symbols": [],
+      "some": ["https://www.facebook.com/MaxsKahvila/"],
+      "homepage": ""
+    },
+    {
+      "_id": "5acc99b060fc6942b1914b94",
+      "__v": 0,
+      "info":
+        "Löyly, pala Helsingin kaunista rantaviivaa, tarjoaa upeita elämyksiä ja lämpimiä hetkiä niin kaupunkilaisille kuin matkailijoille kotimaasta ja merten takaa. Kesäpäivistä kelpaa nauttia upeilla terasseilla ja saunat ovat kuumana joka päivä.\r\n\r\nLöyly on ainutlaatuinen niin sijainnin kuin arkkitehtuurin puolesta. Löyly on myös esimerkillinen kestävän liiketoiminnan ja ekologisen rakentamisen edelläkävijä. Ympäristövastuullisuus on hankkeen keskeisenä lähtökohtana huomioitu aina ekosähköstä FSC-sertifioituihin rakennusmateriaaleihin ja ruokalistaan saakka.\r\n\r\nTervetuloa viihtymään meren äärelle!\r\n\r\nhttp://www.loylyhelsinki.fi ",
+      "picture": [
+        "http://multisite.papa-16.srv.hosting.fi/loyly/wp-content/uploads/sites/9/Lo%E2%95%A0%C3%AAyly_c_pekkakera%E2%95%A0%C3%AAnen4.jpg",
+        "https://i.pinimg.com/originals/64/22/c9/6422c967e8c0684c8f5d7446fa4f8050.jpg",
+        "https://frantic.s3.amazonaws.com/finnair-blog/2016/06/A1_997539_.png",
+        "https://i.ytimg.com/vi/mPR12FWPDBM/maxresdefault.jpg",
+        "http://multisite.papa-16.srv.hosting.fi/loyly/wp-content/uploads/sites/9/160531_lo%C2%A6%C3%AAyly_144-1.jpg"
+      ],
+      "name": "Löyly",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "24:00" },
+        "tue": { "start": "10:00", "end": "24:00" },
+        "wed": { "start": "10:00", "end": "24:00" },
+        "thu": { "start": "10:00", "end": "24:00" },
+        "fri": { "start": "10:00", "end": "02:00" },
+        "sat": { "start": "10:00", "end": "02:00" },
+        "sun": { "start": "10:00", "end": "22:00" }
+      },
+      "location": { "latitude": 60.1521406, "longitude": 24.9304154 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00150",
+        "street": "Hernesaarenranta 4",
+        "phoneNumber": "+358 9 61286550"
+      },
+      "symbols": [],
+      "some": ["https://www.instagram.com/loylyhelsinki/", "https://www.facebook.com/helsinkisauna/"],
+      "homepage": "http://www.loylyhelsinki.fi/fi/ravintola/"
+    },
+    {
+      "_id": "5ace569b0d952e5a8b052b7e",
+      "__v": 0,
+      "info": "Hyvä kuppila",
+      "symbols": [],
+      "picture": ["https://upload.wikimedia.org/wikipedia/commons/e/ea/Huutokonttori.jpg"],
+      "name": "Huutokonttori",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "16:00", "end": "02:00" },
+        "tue": { "start": "16:00", "end": "02:00" },
+        "wed": { "start": "16:00", "end": "02:00" },
+        "thu": { "start": "16:00", "end": "02:00" },
+        "fri": { "start": "16:00", "end": "02:00" },
+        "sat": { "start": "12:00", "end": "02:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.1601361, "longitude": 24.9211251 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00220",
+        "street": "Tyynenmerenkatu 1",
+        "phoneNumber": "044 7107322"
+      },
+      "some": [
+        "https://www.facebook.com/huutokonttorinkanttiini/?hc_ref=ARTmpqrCf-nWrjGZqdU06YbjayPlAX4C0DA6kUoUWKneahmpaISsnKyDyUv2V7z99Z0"
+      ],
+      "homepage": "http://heathermill.fi/portfolio/huutokonttori/"
+    },
+    {
+      "_id": "5acf29550d952e5a8b052b7f",
+      "__v": 0,
+      "info": "Apteekki on avoinna 24/7",
+      "symbols": ["wheelchair", "clock-o"],
+      "picture": ["http://www.effectplan.com/wp-content/uploads/2016/08/ya.png"],
+      "name": "Yliopiston Apteekki 24H",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.18798019999999, "longitude": 24.918288 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00250",
+        "street": "Mannerheimintie 96",
+        "phoneNumber": "0300 20200"
+      },
+      "some": ["https://www.facebook.com/pages/Yliopiston-Apteekki/194122660618585"],
+      "homepage": "https://www.yliopistonapteekki.fi/omh/storelocator/view/id/3/"
+    },
+    {
+      "_id": "5acf64c40d952e5a8b052b80",
+      "__v": 0,
+      "info":
+        "Suomen vanhin golfseura, Helsingin Golfklubi, sijaitsee Pitäjänmäellä lähellä Helsingin keskustaa hyvien kulkuyhteyksien varrella. Vanhat puut ja kaunis kartanomiljöö luovat ainutlaatuisen tunnelman puistomaiselle kentälle, jolle ominaista ovat pienet ja liukkaat viheriöt sekä lyhyet siirtymät väylien välillä. Helsingin Golfklubi on isännöinyt monia kansallisia amatööri- sekä ammattilaistapahtumia vuosien aikana.\r\n\r\nKlubitalona kentän läheisyydessä toimii kaikille avoin ravintola Talin Kartano, jossa voi nauttia myös historiallisesta tunnelmasta sekä upeista näkymistä golfkentälle. Talin monipuoliset harjoitusalueet range, puttiviheriö bunkkereineen sekä pitch-alue ovat avoinna kaikentasoisille pelaajille! Rangepoletteja voi ostaa Caddiemasterin toimistosta, jonka yhteydessä palvelee myös Pro Shop.\r\n\r\nhttp://www.helsingingolfklubi.fi/\r\n\r\nRavintola:\r\nravintola@ravintolatali.fi\r\nPuh. 040 510 7131",
+      "symbols": ["wheelchair", "car"],
+      "picture": [
+        "http://www.discoveringfinland.com/wp-content/uploads/2011/09/helsinki_sports_activities_golf_club.jpg",
+        "http://www.helsingingolfklubi.fi/media/layout/img/logo-valkoinen-236.jpg",
+        "https://i.ytimg.com/vi/ZNn3DcFmdZU/maxresdefault.jpg",
+        "http://kostioniemigolf.fi/wp-content/uploads/sites/29/2018/01/gergw33t-300x199.jpg"
+      ],
+      "name": "Helsingin Golfklubi",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "08:00", "end": "20:00" },
+        "tue": { "start": "08:00", "end": "20:00" },
+        "wed": { "start": "08:00", "end": "20:00" },
+        "thu": { "start": "08:00", "end": "20:00" },
+        "fri": { "start": "08:00", "end": "20:00" },
+        "sat": { "start": "08:00", "end": "20:00" },
+        "sun": { "start": "08:00", "end": "20:00" }
+      },
+      "location": { "latitude": 60.2119385, "longitude": 24.8599674 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00380",
+        "street": "Talin puistotie 12",
+        "phoneNumber": "+358 600 550982"
+      },
+      "some": ["https://www.instagram.com/helsingingolfklubi/", "https://www.facebook.com/helsingingolfklubi/"],
+      "homepage": "http://www.helsingingolfklubi.fi/"
+    },
+    {
+      "_id": "5ad048140d952e5a8b052b81",
+      "__v": 0,
+      "info":
+        "Töölön sairaala kuuluu Helsingin yliopistolliseen keskussairaalaan (HYKS). Sairaalassa tutkitaan ja hoidetaan ortopedian ja traumatologian, käsikirurgian, plastiikkakirurgian, anestesiologian ja tehohoidon sekä neurokirurgian erikoisalojen potilaita.\r\n\r\nTöölön sairaala on HUS-alueen suurin traumatologinen päivystyspiste, jossa helsinkiläisten tapaturmapotilaiden lisäksi hoidetaan vaikeimmat tapaturmat koko Uudenmaan alueelta. Töölön sairaalan tapaturma-asemalle tullaan aina lähetteellä. Sairaala päivystää 24 tuntia \r\n\r\nTopeliuksenkatu 5, Helsinki\r\nPL 266, 00029 HUS\r\n\r\nVaihde 09 4711\r\nNeuvonta 09 471 87383\r\n",
+      "symbols": ["wheelchair", "car", "clock-o", "subway", "wifi"],
+      "picture": [
+        "http://www.hus.fi/sairaanhoito/sairaalat/toolonsairaala/PublishingImages/T%C3%B6%C3%B6l%C3%B6_Hospital_25092013_internetkoko%20578X178px.jpg",
+        "http://1.bp.blogspot.com/-aSheX5L6I-g/UpPXgGAeFvI/AAAAAAAAALg/a72E8UYeF2E/s1600/T%C3%B6%C3%B6l%C3%B6n+sairaala+117.jpg",
+        "http://2.bp.blogspot.com/-86Ftfj3UqqU/UpPXmfFGK2I/AAAAAAAAALo/vSJV1PLOuuQ/s1600/siirto_etu2203in_503_tr.jpg"
+      ],
+      "name": "Töölön sairaala",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.1809436, "longitude": 24.921091 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00260",
+        "street": "Topeliuksenkatu 5",
+        "phoneNumber": "+358 9 4711"
+      },
+      "some": ["https://www.facebook.com/HUS.fi", "https://twitter.com/HUS_uutisoi"],
+      "homepage": "http://www.hus.fi/sairaanhoito/sairaalat/toolonsairaala/Sivut/default.aspx"
+    },
+    {
+      "_id": "5ad0ae410d952e5a8b052b82",
+      "__v": 0,
+      "info": "Perinteinen ja monipuolinen kauppahalli, josta saa myös ruoka-annoksia.",
+      "symbols": ["wheelchair", "car", "subway"],
+      "picture": ["http://www.hakaniemenkauppahalli.fi/wp-content/downloads/Hakaniemen_Kauppahalli_Web.png"],
+      "name": "Hakaniemen kauppahalli",
+      "type": "Ruoka",
+      "openingHours": {
+        "mon": { "start": "08:00", "end": "20:00" },
+        "tue": { "start": "08:00", "end": "20:00" },
+        "wed": { "start": "08:00", "end": "20:00" },
+        "thu": { "start": "08:00", "end": "20:00" },
+        "fri": { "start": "08:00", "end": "20:00" },
+        "sat": { "start": "08:00", "end": "18:00" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.18047189999999, "longitude": 24.9520829 },
+      "address": { "city": "Helsinki", "postalCode": "00530", "street": "Hämeentie 1", "phoneNumber": "0931023560" },
+      "some": ["https://www.facebook.com/hakaniemenhalli"],
+      "homepage": "http://www.hakaniemenkauppahalli.fi/"
+    },
+    {
+      "_id": "5addf4b6fd646a6a885ad353",
+      "__v": 0,
+      "info": "",
+      "symbols": ["wheelchair", "paw", "subway", "wifi"],
+      "some": ["https://www.facebook.com/events/1703561793276007"],
+      "homepage": "http://www.minigolfhelsinki.fi/kaivopuisto/index.html",
+      "picture": ["http://www.minigolfhelsinki.fi/img/slide-1.jpg"],
+      "name": "Minigolf Kaivopuisto",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "11:00", "end": "21:00" },
+        "tue": { "start": "11:00", "end": "21:00" },
+        "wed": { "start": "11:00", "end": "21:00" },
+        "thu": { "start": "11:00", "end": "21:00" },
+        "fri": { "start": "11:00", "end": "21:00" },
+        "sat": { "start": "11:00", "end": "21:00" },
+        "sun": { "start": "11:00", "end": "21:00" }
+      },
+      "location": { "latitude": 60.1540694, "longitude": 24.9421908 },
+      "address": {
+        "city": "Helsinki",
+        "postalCode": "00100",
+        "street": "Merisatamanranta",
+        "phoneNumber": "050-3740820"
+      }
+    },
+    {
+      "_id": "5ae213143bde6e0a4ec81783",
+      "__v": 0,
+      "info":
+        "Iso Omena on kauppakeskus Espoon Matinkylässä. Se avattiin 24. syyskuuta 2001. Isossa Omenassa toimii yhteensä noin 220 muodin, sisustuksen, vapaa-ajan ja hyvän olon erikoisliikettä sekä päivittäistavarakauppoja ja ravintolamaailma. Isossa Omenassa toimii myös kuntosali, terveysasema, kirjasto, elokuvateatteri ja kappeli. Vuokrattavaa liikepinta-alaa kauppakeskuksessa on vuonna 2017 noin 75 500 neliömetriä, mikä tekee siitä Suomen viidenneksi suurimman kauppakeskuksen. ",
+      "symbols": ["wheelchair", "car", "subway", "wifi"],
+      "some": ["https://www.facebook.com/IsoOmena/"],
+      "homepage": "http://www.isoomena.fi/",
+      "picture": ["https://www.rakennusfakta.fi/14/architectobjectfile/04/41/67/iso_omena_pu_iso.png"],
+      "name": "Iso Omena",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "10:00", "end": "21:00" },
+        "tue": { "start": "10:00", "end": "21:00" },
+        "wed": { "start": "10:00", "end": "21:00" },
+        "thu": { "start": "10:00", "end": "21:00" },
+        "fri": { "start": "10:00", "end": "21:00" },
+        "sat": { "start": "10:00", "end": "19:00" },
+        "sun": { "start": "11:00", "end": "18:00" }
+      },
+      "location": { "latitude": 60.1616708, "longitude": 24.7380789 },
+      "address": { "city": "Espoo", "postalCode": "02230", "street": "Piispansilta 11", "phoneNumber": "" }
+    },
+    {
+      "_id": "5af2d7fb3bde6e0a4ec81784",
+      "__v": 0,
+      "info":
+        "Lauttis on kauppakeskus Lauttasaaressa, Helsingissä. Se avattiin 1. joulukuuta 2016. Kauppakeskuksessa on yhteensä 25 liikettä ja siitä on suora yhteys Lauttasaaren metroasemalle.\r\n\r\nKauppakeskuksen päälle rakennettiin 140 asuntoa, jotka valmistuivat loppuvuoden 2016 ja kevään 2017 aikana. Keskuksen yhteyteen rakennettiin myös maanalainen 230 paikan pysäköintilaitos.",
+      "symbols": ["wheelchair", "car", "subway", "wifi"],
+      "some": ["https://www.instagram.com/lauttis_/", "https://www.facebook.com/lauttiskauppakeskus/"],
+      "homepage": "https://www.lauttis.fi/",
+      "picture": ["https://www.ecoreal.fi/wp-content/uploads/2017/08/ecoreal_kauppakeskus_lauttis.jpg"],
+      "name": "Lauttis",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "06:00", "end": "22:00" },
+        "tue": { "start": "06:00", "end": "22:00" },
+        "wed": { "start": "06:00", "end": "22:00" },
+        "thu": { "start": "06:00", "end": "22:00" },
+        "fri": { "start": "06:00", "end": "22:00" },
+        "sat": { "start": "06:00", "end": "22:00" },
+        "sun": { "start": "09:00", "end": "22:00" }
+      },
+      "location": { "latitude": 60.160191, "longitude": 24.8816728 },
+      "address": { "city": "Helsinki", "postalCode": "00200", "street": "Lauttasaarentie 28", "phoneNumber": "" }
+    },
+    {
+      "_id": "5af546043bde6e0a4ec81785",
+      "__v": 0,
+      "info": "",
+      "symbols": [],
+      "some": ["https://www.facebook.com/Pasilankirjasto/"],
+      "homepage": "http://www.helmet.fi/fi-FI/Kirjastot_ja_palvelut/Pasilan_kirjasto",
+      "picture": [
+        "https://kirkanta.kirjastot.fi/media/image_content/large/Kirjastorakennus%20julkisivu%20suihkul%C3%A4hde%205_56a8ae67e5e5d.jpeg"
+      ],
+      "name": "Pasilan kirjasto",
+      "type": "Palvelu",
+      "openingHours": {
+        "mon": { "start": "", "end": "" },
+        "tue": { "start": "", "end": "" },
+        "wed": { "start": "", "end": "" },
+        "thu": { "start": "", "end": "" },
+        "fri": { "start": "", "end": "" },
+        "sat": { "start": "", "end": "" },
+        "sun": { "start": "", "end": "" }
+      },
+      "location": { "latitude": 60.20065109999999, "longitude": 24.9359333 },
+      "address": { "city": "Helsinki", "postalCode": "00520", "street": "Kellosilta 9", "phoneNumber": "09) 3108 5001" }
+    }
+  ]
+}

@@ -44,7 +44,7 @@ export class ClusteredMap extends Component {
             initialRegion={region}
             onRegionChangeComplete={reg => {
               dispatch(regionActions.setRegion(reg));
-              dispatch(dataActions.fetchDataByLocation(region));
+              // dispatch(dataActions.fetchDataByLocation(region));
             }}
             ref={r => {
               this.map = r;

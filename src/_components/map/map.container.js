@@ -12,7 +12,7 @@ import { dataActions, dimensionsActions, userlocationActions, iconActions, targe
 class MapContainer extends Component {
   componentDidMount() {
     const { dispatch } = this.props;
-    const { region } = this.props.region;
+    // const { region } = this.props.region;
 
     BackHandler.addEventListener('hardwareBackPress', this.androidBackHandler);
     Dimensions.addEventListener('change', () => dispatch(dimensionsActions.getDimensions()));
@@ -44,7 +44,7 @@ class MapContainer extends Component {
 
     dispatch(dataActions.fetchData());
     dispatch(iconActions.fetchIcons());
-    dispatch(dataActions.fetchDataByLocation(region));
+    // dispatch(dataActions.fetchDataByLocation(region));
   }
 
   componentWillUnmount() {
@@ -66,7 +66,7 @@ class MapContainer extends Component {
 
     setTimeout(() => {
       this._backPress = 0;
-    }, 1000);
+    }, 1500);
 
     this._backPress += 1;
     if (this._backPress <= 1) {
@@ -82,7 +82,7 @@ class MapContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  data: filter(state.locationdata.data, state.checkbox),
+  data: filter(state.alldata.data, state.checkbox),
   dimensions: state.dimensions,
   region: state.region,
   userlocation: state.userlocation,
